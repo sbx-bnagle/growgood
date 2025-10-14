@@ -1,0 +1,183 @@
+/**
+  * Component: Journal Top
+  * Kind of a confused section, ended up moving from top to just below 'today' 
+  * and added more controls
+  * 
+  * @description
+  * -
+  */
+
+.journalpage__top {
+  @include grid-parent();
+  @include stack(lg);
+
+  h1 {
+    grid-column: 1/13;
+    @include stack(md);
+  }
+
+  .journalpage__controlbar {
+    grid-column: 1/-1;
+    @include grid-child($cols: 16);
+    background-color: color(neutral, X);
+    border-top: 1px solid color(neutral, XXX);
+    border-bottom: 1px solid color(neutral, XXX);
+    position: sticky;
+    top: 72px;
+    height: 60px;
+    align-self: start;
+    @include stack(sm);
+    z-index: 20;
+  }
+
+  .journalpage__subscribe {
+    grid-column: 1/8;
+    list-style: none;
+    margin-top: 16px;
+  }
+
+  .journalpage__subscribe li {
+    display: inline-block;
+    margin-right: bl(1);
+    height: 20px;
+    width: 24px;
+    border-radius: 24px;
+    border: 2px solid color(neutral, XXX);
+    background-color: color(neutral, XXX);
+  }
+
+  .journalpage__subscribe li.follow {
+    @include typestyle($sans-sm-bld);
+    margin-right: bl(2);
+    border-radius: none;
+    width: auto;
+    border: unset;
+    background-color: unset;
+  }
+
+  .journalpage__subscribe li a {
+    @include typestyle($icon-xs);
+    color: color(neutral, X);
+  }
+
+  .journalpage__subscribe li a::before { 
+    position: relative;
+    bottom: 2px;
+    left: 5px;
+  }
+  .journalpage__subscribe li a.email::before     { content: '\e900'; }
+  .journalpage__subscribe li a.instagram::before { content: '\ea92'; }
+  .journalpage__subscribe li a.facebook::before  { content: '\ea90'; }
+  .journalpage__subscribe li a.youtube::before   { content: '\ea9d'; }
+  .journalpage__subscribe li a.tiktok::before    { content: '\e91b'; }
+  .journalpage__subscribe li a.pinterest::before { content: '\ead1'; }
+
+
+  .journalpage__helpers {
+    grid-column: 8/-1;
+    justify-self: end;
+  }
+
+
+  .journalpage__top-filter {
+    color: color(green, XXX);
+    margin-top: 8px;
+    position: relative;
+    width: 240px;
+    margin-right: bl(4);
+    display: inline-block;
+  }
+
+  .cat_select_bttn {
+    @include typestyle($sans-sm-bld);
+    text-align: center;
+    height: 42px;
+    border-radius: 60px;
+    border: 2px solid color(green, XXX);
+    background-color: color(neutral, X);
+    width: 100%;
+  } 
+
+  .cat_select_unavailable {
+    opacity: 0.25;
+    cursor: auto;
+  }
+
+  .cat_select_menu{
+    background-color: color(neutral, XXX);
+    color: color(neutral, X);
+    border-radius: 8px;
+    padding: bl(4) bl(6);
+    position: absolute;
+    top: 64px;
+    // left: 0;
+    width: calc(100% + 12px);
+    box-sizing: border-box;
+    display: none;
+  }
+
+  .cat_select_menu li.selected {
+    text-decoration: underline;
+  }
+
+  .cat_select_menu ul{
+    list-style: none;
+  }
+
+  .cat_select_menu ul li{
+    padding-bottom: bl(4);
+  }
+
+  .cat_select_menu ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  .journalpage__search {
+    display: inline-block;
+    position: relative;
+  }
+
+  #search-input {
+    @include typestyle($sans-sm-bld);
+    width: 43px;
+    height: 43px;
+    border-radius: 60px;
+    margin-top: 8px;
+    border: 2px solid color(green, XXX);
+    background-color: transparent;
+    padding-left: 5px;
+    padding-top: 0;
+    box-sizing: border-box;
+    transition: all .1s ease-in;
+    position: relative;
+    z-index: 200;
+  }
+
+  .journalpage__search::before {
+    @include typestyle($icon-md);
+    content: '\e903';
+    color: color(green, XXX);
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    // z-index: 200;
+  }
+
+  #search-input:focus {
+    width: 240px;
+    padding-left: bl(10);
+    outline: none;
+  }
+
+  // #search-input::placeholder {
+  //   @include typestyle($icon-md);
+  //   content: '\e903';
+  //   color: color(neutral, XXX);
+  // }
+
+}
+
+
+

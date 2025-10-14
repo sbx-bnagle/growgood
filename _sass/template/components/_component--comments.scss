@@ -1,0 +1,23 @@
+/**
+  * Component: Contact
+  *  
+  * @description
+  * -
+  */
+
+.comments {
+  width: 100vw;
+  background-color: color(neutral, X);
+  color: color(neutral, XXX);
+  padding-top: bl(8);
+
+  .comments__text {
+    @include grid-parent();
+  }
+
+  #cusdis_thread {
+    grid-column: 1 / 13;
+  }
+}
+
+// Most relevant styles are injected via js (because of the iframe)

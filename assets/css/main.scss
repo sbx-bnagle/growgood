@@ -1,0 +1,56 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// @import 'minima';
+
+
+// import vendor files
+@import
+	'z_boilerplate/plumber';
+
+
+// import files from utils folder
+@import
+	'utils/mixins',
+	'utils/functions';
+
+
+// import files from config folder
+@import
+	'config/type',
+	'config/layout',
+	'config/color',
+	'config/spacing';
+
+
+// import files from base folder
+@import
+	'z_boilerplate/reset',	
+	'z_boilerplate/typography';
+
+
+// import base file
+@import
+	'template/base';
+
+
+
+// import files from components folder
+@import
+	'template/components/component--comments',
+	'template/components/component--subscribe',
+	'template/components/component--entries-today',
+	'template/components/component--journal-top',
+	'template/components/component--community',
+	'template/components/component--diy',
+	'template/components/component--header',
+	'template/components/component--hero',
+	'template/components/component--services',
+	'template/components/component--values',
+	// 'template/components/component--work',
+	'template/components/component--quotes',
+	'template/components/component--contact',
+	'template/components/component--footer',
+	'template/components/component--entry-list';
+

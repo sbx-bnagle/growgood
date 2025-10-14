@@ -1,0 +1,68 @@
+<div class='contact'>
+  <div class='contact__text'>
+
+    <h2 class='contact__title'>Contact</h2>
+
+    <p class='contact__blurb'>
+      We love to hear from you, actual email and phone as well. Quick brown fox jumps over the lazy dog.
+      <br><br>
+      312 771-1876<br>
+      fagan.leah@gmail.com
+      <br><br>
+      2906 N Kildare<br>
+      Chicago, IL 60641
+    </p>
+
+    <form
+      action= 'https://formspree.io/f/xanpovoq'
+      method= 'POST'
+      class = 'contact__form'
+    >
+
+      <label>Your email</label>
+      <input type="email" name="email" class='contact__email' placeholder='address@email.com'>
+      <br>
+      
+      <label>Your message</label>
+      <textarea name="message" rows="10" class='contact__message' placeholder='Tell us a little about your project&hellip;'></textarea>
+      <br>
+      
+      <fieldset class='contact__services'>
+        <legend>Services I'm interested in</legend>
+
+        <label for='design'>
+        <input type='checkbox' id='design' name='services' value='design'>
+        Design</label>
+
+        <label for='installation'>
+        <input type='checkbox' id='installation' name='services' value='installation'>
+        Installation</label>
+
+        <label for='consulting'>
+        <input type='checkbox' id='consulting' name='services' value='consulting'>
+        Consulting</label> 
+
+        <label for='diy'>
+        <input type='checkbox' id='diy' name='services' value='diy'>
+        Custom DIY</label>
+
+        <label for='maintenance'>
+        <input type='checkbox' id='maintenance' name='services' value='maintenance'>
+        Maintenance</label>
+
+        <label for='other'>
+        <input type='checkbox' id='other' name='services' value='other'>
+        Other</label>
+        
+      </fieldset>
+     
+      <!-- your other form fields go here -->
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</div>
+
+
+
+

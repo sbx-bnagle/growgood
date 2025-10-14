@@ -1,0 +1,57 @@
+/**
+  * Component: Footer
+  *  
+  * @description
+  * -
+  */
+
+footer {
+	width: 100vw;
+	background-color: color(neutral, XXX);
+	color: color(neutral, X);
+	padding: bl(4) 0;
+
+	.footer__text {
+		@include grid-parent();
+	}
+
+	.footer__text .copyright {
+		grid-column: 1 / 7;
+	}
+
+	.footer__text .social {
+		list-style: none;
+		grid-column: 7 / -1;
+		justify-self: end;
+	}
+
+	.footer__text .social li {
+		display: inline-block;
+		padding-left: bl(3);
+	}
+
+	.footer__text .social a {
+		@include typestyle($icon-sm);
+	}
+
+	.footer__text a.instagram::before {
+		content: '\ea92';
+	}
+
+	.footer__text a.facebook::before {
+		content: '\ea90';
+	}
+
+	.footer__text a.youtube::before {
+		content: '\ea9d';
+	}
+
+	.footer__text a.tiktok::before {
+		content: '\e91b';
+	}
+
+	.footer__text a.pinterest::before {
+		content: '\ead1';
+	}
+}
+

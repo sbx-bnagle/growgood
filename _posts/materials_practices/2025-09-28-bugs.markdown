@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Bring in the Bugs"
+entry_img: "bug.png"
+category: "materials_practices"
+---
+
+## Good Bugs
+
+## Attracting Bugs
+
+## Stocking Bugs

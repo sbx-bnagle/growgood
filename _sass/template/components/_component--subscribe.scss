@@ -1,0 +1,58 @@
+/**
+  * Component: Contact
+  *  
+  * @description
+  * -
+  */
+
+.subscribe {
+  width: 100vw;
+  background-color: color(neutral, XXX);
+  color: color(neutral, X);
+  padding-top: bl(8);
+
+  .subscribe__text {
+    @include grid-parent();
+    // @include stack(lg);
+  }  
+
+  .subscribe__title {
+    color: color(neutral, X);
+    grid-column: 1 / 7;
+  }
+
+  .subscribe__form {
+    grid-column: 7 / -1;
+    @include stack(xs);
+  }
+
+  .subscribe__form label {
+    display: block;
+    // @include stack(xs);
+    padding-bottom: bl(4);
+  }
+
+  .subscribe__email {
+    width: calc(100% - 168px);
+    @include stack(sm);
+    @include typestyle($sans-sm-reg);
+    color: color(neutral, XXX);
+    padding: bl(3);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  button {
+    @include typestyle($sans-sm-bld);
+    height: 42px;
+    border-radius: 60px;
+    padding: bl(2) bl(4);
+    background-color: color(green, XX);
+    text-align: center;
+    color: color(green, XXX);
+    box-sizing: border-box;
+    width: 140px;
+    margin-left: bl(5);
+  }
+}
+

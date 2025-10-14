@@ -1,0 +1,82 @@
+/**
+  * Component: Contact
+  *  
+  * @description
+  * -
+  */
+
+.contact {
+  width: 100vw;
+  background-color: color(green, XXX);
+  color: color(neutral, X);
+  padding-top: bl(12);
+
+  .contact__text {
+    @include grid-parent();
+    // @include stack(lg);
+  }  
+
+  .contact__title {
+    color: color(green, XX);
+    grid-column: 1 / -1;
+  }
+
+  .contact__blurb {
+    grid-column: 1 / 7;
+  }
+
+  .contact__form {
+    grid-column: 7 / -1;
+    @include stack(lg);
+  }
+
+  .contact__form label {
+    display: block;
+    // @include stack(xs);
+    padding-bottom: bl(4);
+  }
+
+  .contact__form .contact__email,
+  .contact__form .contact__message {
+    width: 100%;
+    @include stack(sm);
+    @include typestyle($sans-sm-reg);
+    color: color(neutral, XXX);
+    padding: bl(3);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  // .contact__form .contact__email {
+  //   height: bl(8);
+  // }
+
+  .contact__services {
+    border: none;
+    padding: 0;
+    @include grid-child($cols: 3);
+    @include stack(md);
+  }
+
+  .contact__services legend {
+    display: inline-block;
+    padding-bottom: bl(4);
+  }
+
+  .contact__services label {
+    display: inline-block;
+    @include typestyle($sans-sm-reg);
+    padding-bottom: bl(3);
+  }
+
+  .contact__form button {
+    @include typestyle($sans-sm-bld);
+    height: 42px;
+    border-radius: 60px;
+    padding: bl(2) bl(4);
+    background-color: color(green, XX);
+    text-align: center;
+    color: color(green, XXX);
+  }
+}
+

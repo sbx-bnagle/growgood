@@ -1,0 +1,33 @@
+/**
+  * Component: Services
+  *  
+  * @description
+  * -
+  */
+
+.services {
+  width: 100vw;
+  @include stack(lg);
+  padding: 42px 0;
+
+  .services__text{
+    @include grid-parent();
+
+    h2 {
+      grid-column: 1/-1;
+    }
+
+    .services__item {
+      grid-column: span 4;
+    }
+
+    .services__item h3 {
+      @include typestyle($sans-sm-bld);
+      @include stack(xs);
+      border-bottom: 1px solid color(green, XXX);
+    }
+
+  }
+
+}
+

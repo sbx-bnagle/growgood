@@ -1,0 +1,72 @@
+/**
+  * Component: Community
+  *  
+  * @description
+  * -
+  */
+
+.community {
+  @include stack(xl);
+  width: 100vw;
+
+  .community_img {
+    width: calc(100vw - 60px);
+    margin: 0 auto;
+    border-radius: 8px;
+    @include stack(sm);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .community_img-bg {
+    width: 100%;
+  }
+
+  .community_img-bird {
+    position: absolute;
+    left: 75px;
+    top: 125px;
+    width: 250px;
+  }
+
+  .community_text {
+    @include grid-parent();
+  }
+
+  h2 {
+    grid-column: 1/-1;
+  }
+
+  .community__cta {
+    grid-column: 1/16;
+  }
+
+  .community__cta p {
+    @include stack(md);
+    @include typestyle($sans-md-reg);
+  }
+
+  .community__cta button {
+    height: 42px;
+    border-radius: 60px;
+    padding: 0 bl(8);
+    background-color: color(green, XXX);
+    text-align: center;
+    color: color(green, X);
+    @include typestyle($sans-sm-bld);
+    position: relative;
+    margin-left: bl(11);
+
+    &::before {
+      display: inline-block;
+      content: '';
+      width: bl(11);
+      height: bl(11);
+      background: url('../images/arrow.svg');
+      position: absolute;
+      top: 0;
+      left: calc(bl(11) * -1);
+    }
+  }
+}
+

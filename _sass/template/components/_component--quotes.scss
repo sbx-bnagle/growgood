@@ -1,0 +1,12 @@
+/**
+  * Component: Quotes
+  *  
+  * @description
+  * -
+  */
+
+.quotes {
+  @include grid-parent();
+  @include stack(lg);
+}
+

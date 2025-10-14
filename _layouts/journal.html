@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang='{{ page.lang | default: site.lang | default: "en" }}'>
+{%- include head.html -%}
+
+  <body class='journalpage'>
+
+    {%- include header.html -%}
+
+    <div class='journalpage__top'>
+      <h1>Journal</h1>
+
+
+      <div class='journalpage__today'>
+        <div class='journalpage__today-entry'>
+          <h2>Today</h2>
+          {% for post in site.posts %}
+            {% if post.category == 'materials_practices'%}
+                {% assign category_label = 'materials &amp; practices'%}
+              {% elsif post.category == 'advocacy'%}
+                {% assign category_label = 'advocacy'%}
+              {% elsif post.category == 'events'%}
+                {% assign category_label = 'event'%}
+              {% elsif post.category == 'howto'%}
+                {% assign category_label = 'how-to'%}
+              {% elsif post.category == 'gg_news'%}
+                {% assign category_label = 'Grow Good news'%}
+              {% elsif post.category == 'people_places'%}
+                {% assign category_label = 'people &amp; places'%}
+              {% elsif post.category == 'resources'%}
+                {% assign category_label = 'resources'%}
+              {% elsif post.category == 'headlines'%}
+                {% assign category_label = 'headlines'%}
+            {% endif %}
+
+            {% assign entry_date = post.date | date: '%m / %d / %Y'%}
+            {% assign site_date  = site.time | date: '%m / %d / %Y'%}
+          
+            {% if entry_date == site_date and post.category != 'headlines' %} 
+              <a href="{{ post.url }}">
+                <h3 class='entry__title'>{{ post.title }}</h3>
+                <!-- <p class='entry__meta'>
+                  <span class='entry__category'>{{ category_label }}</span>
+                </p> -->
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+            
+        <div class='journalpage__today-headlines'>
+          <h2>Headlines</h2>
+          {% for post in site.posts %}
+            {% if post.category == 'materials_practices'%}
+                {% assign category_label = 'materials &amp; practices'%}
+              {% elsif post.category == 'advocacy'%}
+                {% assign category_label = 'advocacy'%}
+              {% elsif post.category == 'events'%}
+                {% assign category_label = 'event'%}
+              {% elsif post.category == 'howto'%}
+                {% assign category_label = 'how-to'%}
+              {% elsif post.category == 'gg_news'%}
+                {% assign category_label = 'Grow Good news'%}
+              {% elsif post.category == 'people_places'%}
+                {% assign category_label = 'people &amp; places'%}
+              {% elsif post.category == 'resources'%}
+                {% assign category_label = 'resources'%}
+              {% elsif post.category == 'headlines'%}
+                {% assign category_label = 'headlines'%}
+            {% endif %}
+
+            {% assign entry_date = post.date | date: '%m / %d / %Y'%}
+            {% assign site_date  = site.time | date: '%m / %d / %Y'%}
+
+            {% if entry_date == site_date and post.category == 'headlines' %} 
+              {{ post.content }}
+            {% endif %}
+          {% endfor %}
+        </div>
+        
+      </div>
+
+
+
+      <div id='js_controlbar' class='journalpage__controlbar'>
+        <ul class='journalpage__subscribe'>
+          <li class='follow'>follow</li>
+          <li><a href='#' class='email'>&nbsp;</a></li>
+          <li><a href='#' class='instagram'>&nbsp;</a></li>
+          <li><a href='#' class='facebook'>&nbsp;</a></li>
+          <li><a href='#' class='youtube'>&nbsp;</a></li>
+          <li><a href='#' class='tiktok'>&nbsp;</a></li>
+          <li><a href='#' class='pinterest'>&nbsp;</a></li>
+        </ul>
+
+        <div class='journalpage__helpers'>
+          <div id='js_cat_select' class='journalpage__top-filter'>
+            <button id='js_cat_select_bttn' class='cat_select_bttn'>
+              Filter entries&hellip;
+            </button>
+            <div id='js_cat_select_menu' class='cat_select_menu'>
+              <ul>
+                <li class='js_cat_menuitem selected' data-cat='all'>show all entries</li>
+                <li class='js_cat_menuitem' data-cat='materials_practices'>materials &amp; practices</li>
+                <li class='js_cat_menuitem' data-cat='people_places'>people &amp; places</li>
+                <li class='js_cat_menuitem' data-cat='howto'>how-to</li>
+                <li class='js_cat_menuitem' data-cat='resources'>resources</li>
+                <li class='js_cat_menuitem' data-cat='advocacy'>advocacy</li>
+                <li class='js_cat_menuitem' data-cat='gg_news'>Grow Good news</li>
+                <li class='js_cat_menuitem' data-cat='events'>events</li>
+                <li class='js_cat_menuitem' data-cat='headlines'>headlines</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class='journalpage__search'>
+            <form id="search-form" action="/journal/" method="get">
+              <input type="text" id="search-input" name="query" />
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+      <!-- hidden at first, selection revealed by searchbar -->
+      <!-- <ul id="search-results"></ul> -->
+      <script>
+        // Template to generate the JSON to search
+        window.store = [];
+        {% for post in site.posts %}
+          window.store.push({
+            "title": "{{ post.title | xml_escape }}",
+            "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+            "url": "{{ post.url | xml_escape }}"
+          });
+        {% endfor %}
+      </script>
+ 
+
+
+
+      <!-- the entry list needs to be contained by journalpage__top so that the filter will remain sticky -->
+      <div id='js_entry-list' class='entry-list'>
+        <ul id='js_entry-list-ul'>
+          {% for post in site.posts %}
+            {% if post.category == 'materials_practices'%}
+              {% assign category_label = 'materials &amp; practices'%}
+            {% elsif post.category == 'advocacy'%}
+              {% assign category_label = 'advocacy'%}
+            {% elsif post.category == 'events'%}
+              {% assign category_label = 'event'%}
+            {% elsif post.category == 'howto'%}
+              {% assign category_label = 'how-to'%}
+            {% elsif post.category == 'gg_news'%}
+              {% assign category_label = 'Grow Good news'%}
+            {% elsif post.category == 'people_places'%}
+              {% assign category_label = 'people &amp; places'%}
+            {% elsif post.category == 'resources'%}
+              {% assign category_label = 'resources'%}
+            {% elsif post.category == 'headlines'%}
+              {% assign category_label = 'headlines'%}
+            {% endif %}
+
+            <li class='js_entry' data-cat='{{ post.category }}'>
+              <a href="{{ post.url }}">
+                <h2 class='entry__title'>{{ post.title }}</h2>
+                {% if post.entry_img != null %}
+                <img src="/assets/images/{{ post.entry_img }}" />
+                {% endif %}
+                <p class='entry__meta'>
+                  <span class='entry__date'>{{ post.date | date: '%m / %d / %Y'  }}</span>|
+                  <span class='entry__category'>{{ category_label }}</span>
+                </p>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    
+    
+    
+    {%- include subscribe.html -%}
+    {%- include contact.html -%}
+    {%- include footer.html -%}
+
+    <!-- script specific to the journal entries -->
+    <script src="{{site.url}}/assets/js/lunr.min.js"></script>
+    <script src="{{site.url}}/assets/js/fuse.basic.min.js"></script>
+    <script src="{{site.url}}/assets/js/mark.min.js"></script>
+    <script async src="{{site.url}}/assets/js/journal.js"></script>
+    <!-- <script async src="{{site.url}}/assets/js/entry-filter.js"></script> -->
+    <!-- <script async src="{{site.url}}/assets/js/journal-search.js"></script> -->
+  </body>
+
+</html>
+
+
+

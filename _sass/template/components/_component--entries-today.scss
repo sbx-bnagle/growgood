@@ -1,0 +1,53 @@
+/**
+  * Component: Entries Today
+  *  
+  * @description
+  * -
+  */
+
+.journalpage__today {
+  grid-column: 1/-1;
+  @include grid-child($cols: 16);
+  border-top: 1px solid color(neutral, XXX);
+  grid-template-rows: auto 1fr;
+  // border-bottom: 1px solid color(neutral, XXX);
+  box-sizing: border-box;
+  padding: bl(4) 0 bl(8);
+  min-height: 320px;
+
+  h2 {
+    @include typestyle($sans-sm-bld);
+    grid-column: 1/-1;
+  }
+
+  .journalpage__today-entry {
+    grid-column: 1 / 12;
+  }
+
+  .journalpage__today-entry h3 {
+    @include typestyle($sans-lg-reg);
+  }
+
+  .journalpage__today-headlines {
+    grid-column: 12 / -1;
+  }
+
+  .journalpage__today-headlines ul {
+    list-style: none;
+  }
+
+  .journalpage__today-headlines li {
+    @include stack(xs);
+  }
+
+  .journalpage__today-headlines li a:hover{
+    text-decoration: underline;
+  }
+
+  .journalpage__today-headlines li em {
+    display: block;
+  }
+
+
+}
+

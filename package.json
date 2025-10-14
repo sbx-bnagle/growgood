@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "fuse.js": "^7.1.0",
+    "lunr": "^2.3.9"
+  },
+  "devDependencies": {
+    "mark.js": "^8.11.1"
+  }
+}

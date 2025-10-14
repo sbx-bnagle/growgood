@@ -1,0 +1,12 @@
+/**
+  * Component: Work
+  *  
+  * @description
+  * -
+  */
+
+.featuredwork {
+  @include grid-parent();
+  @include stack(lg);
+}
+

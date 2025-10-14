@@ -1,0 +1,62 @@
+/**
+  * Component: Header
+  *  
+  * @description
+  * -
+  */
+
+header {
+	background: color(neutral, X);
+  width: 100vw;
+  padding: bl(5) 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  .header__text {
+  	@include grid-parent();
+    
+    .nav__masthead {
+    	grid-column: 1 / 7;
+    }
+
+
+    h1, h1 a {
+      @include typestyle($sans-sm-bld); // set 2x cuz line-height applies to h1 and font to the a tag
+    }
+
+    nav {
+    	color: color(neutral, XXX);
+    	grid-column: 7 / -1;
+      justify-self: end;
+    }
+
+    nav ul {
+    	list-style: none;
+    }
+
+    nav ul li {
+    	display: inline-block;
+      padding-left: bl(4);
+    }
+
+    nav ul a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    .nav-desktop__contact-btn {
+      @include typestyle($sans-sm-bld);
+      height: 42px;
+      border-radius: 60px;
+      padding: bl(2) bl(4);
+      background-color: color(green, XX);
+      text-align: center;
+      margin-left: bl(4);
+      color: color(green, XXX);
+    }
+  }
+
+}
+

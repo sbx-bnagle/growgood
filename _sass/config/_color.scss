@@ -1,0 +1,54 @@
+/**
+  * Color Configuration
+  *
+  * @description
+  * Configuration of colors and additional styles for use with the color(),
+  * gradient(), and alpha() functions. 
+  *
+  * The color map is the only requirement, the other maps are available as
+  * necessary. 
+  *
+  * The color maps use the name of the color as a key and a map of its 
+  * variants as the value. Different schemes may be used to name the variants,
+  * such as 'background' or 'highlight'.
+  * 
+  * Gradient maps are indexed by the name of the gradient, the gradient's 
+  * definition is provided as a map including the gradient's angle, it's 
+  * flavor ('linear' or 'radial') and stops. 
+  *
+  * Alpha maps are indexed by a series of 'X's to represent the level of 
+  * opacity, the values are a unitless number between 0 (transparent) and 
+  * 1 (opaque)
+  *
+  * For more detailed documentation see the code guidelines  
+  */
+
+
+
+
+
+// Colors
+// ----------------------------------------------------------------------------
+
+/**
+  * $colors
+  *
+  * @description
+  * The default map of the color() function
+  * 'base' is the default variant of the color() function
+  *
+  */
+
+$colors   : (
+  neutral : 
+  (X: #f0efeb, XX: #dadbd9, XXX: #1a1a1a),
+  green : 
+  (X: #dee6df, XX: #4ff062, XXX: #323431),
+  red : 
+  (X: #e0513e, XX: #b84233),
+  gold : 
+  (X: #ccb528, XX: #877223),
+  purple : 
+  (X: #6f63b0, XX: #504867), //5c5278
+);
+
