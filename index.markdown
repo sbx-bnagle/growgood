@@ -3,7 +3,7 @@ layout: home
 ---
 
 {% include hero.html 
-	intro = "is a landscape design practice helping people and communities develop outdoor spaces for themselves. EXCUSE THE DUST: you've found a site under construction!"
+	intro = "ASKS YOU KINDLY TO EXCUSE THE DUST: you've found a site under construction!"
    	cta   = "Let's Talk!"
 %}
 
