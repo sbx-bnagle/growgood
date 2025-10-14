@@ -28,4 +28,4 @@ layout: home
 
 {% include quotes.html %}
 
-<div class='sk-ww-google-reviews' data-embed-id='25610200'></div><script src='https://widgets.sociablekit.com/google-reviews/widget.js' defer></script>
+<iframe src='https://widgets.sociablekit.com/google-reviews/iframe/25610200' frameborder='0' width='100%' height='1000'></iframe>
