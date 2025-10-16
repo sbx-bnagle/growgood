@@ -10,12 +10,13 @@
   @include stack(xl);
 
   h2 {
-    grid-column: 1/-1;
+    grid-column: 7/-1;
   }
 
   img {
     grid-column: 1/7;
-    border-radius: 8px;
+    border-radius: 800px;
+    margin-top: -60px;
   }
 
   .diy__cta {
