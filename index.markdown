@@ -21,11 +21,6 @@ layout: home
 
 
 {% include diy.html %}
-
-
 {% include community.html %}
-
-
 {% include quotes.html %}
 
-<iframe src='https://widgets.sociablekit.com/google-reviews/iframe/25610200' frameborder='0' width='100%' height='1000'></iframe>

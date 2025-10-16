@@ -6,7 +6,24 @@
   */
 
 .quotes {
-  @include grid-parent();
-  @include stack(lg);
+  width: 100vw;
+  text-align: center;
+  margin-bottom: -36px;
+
+  .quotes__text {
+    @include grid-parent();
+    text-align: left;
+    margin-bottom: -20px;
+  }
+
+  h2 {
+    @include stack(xs);
+  }
+
+  iframe {
+    margin: 0 auto;
+    width: calc(100vw - 16px);
+    height: 300px;
+  }
 }
 
