@@ -7,9 +7,12 @@ permalink: /about/
 # About
 
 
-## Leah Fagan
+## Grow Good is commited to...
 
-The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+Description of priorities in first person. Signed like a letter.
+
+Leah Fagan
+![babe-a-licious]({{ site.baseurl }}/assets/images/leah.jpg)
 
 ## Process
 
