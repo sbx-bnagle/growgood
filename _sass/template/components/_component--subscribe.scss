@@ -9,7 +9,24 @@
   width: 100vw;
   background-color: color(neutral, XXX);
   color: color(neutral, X);
-  padding-top: bl(8);
+  padding-top: bl(5);
+
+  h2 {
+    @include typestyle($sans-sm-bld);
+    position: relative;
+    padding-top: 14px;
+  }
+
+  h2::before {
+    content: '\e900';
+    @include typestyle($icon-xs);
+    color: color(neutral, X);
+    font-size: 22px;
+    padding-right: bl(2);
+    position: relative;
+    top: 2px;
+  }
+
 
   .subscribe__text {
     @include grid-parent();
@@ -23,23 +40,78 @@
 
   .subscribe__form {
     grid-column: 7 / -1;
-    @include stack(xs);
+    padding-bottom: 6px;
+    position: relative;
   }
 
-  .subscribe__form label {
+  // label {
+  //   display: block;
+  //   position: absolute;
+  //   top: 14px;
+  //   pointer-events: none;
+  //   transition: all ease-in .2s;
+  //   opacity: .6;
+  //   // @include stack(xs);
+  //   // padding-bottom: bl(4);
+  // }
+
+  label:after{
+    content: '';
+    background-image: url(../images/blinker.gif);
+    width: 11px;
+    height: 21px;
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+
+  label.floater {
+    transition: all ease-in .2s;
     display: block;
-    // @include stack(xs);
+    position: absolute;
+    pointer-events: none;
     padding-bottom: bl(4);
+    color: color(neutral, X);
+  }
+
+  label.js_float:after {
+    display: none;
+  }
+  
+  label.js_unfloat {
+    display: block;
+    position: absolute;
+    top: 14px;
+    pointer-events: none;
+    opacity: .6;
+  }
+
+  label.js_float {
+    top: -12px;
+    font-size: 14px;
+    opacity: 1;
+    position: absolute;
   }
 
   .subscribe__email {
     width: calc(100% - 168px);
     @include stack(sm);
     @include typestyle($sans-sm-reg);
-    color: color(neutral, XXX);
-    padding: bl(3);
+    padding: bl(4) bl(3) bl(3);
     box-sizing: border-box;
-    border-radius: 4px;
+    outline: none;
+    background-color: color(neutral, XXX);
+    border-bottom: solid 1.5px rgba(240, 239, 235, .5);
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-radius: 0;
+    transition: all ease-in .2s;
+    color: color(neutral, X);
+  }
+
+  .subscribe__email:focus{
+    border-bottom: solid 1.5px rgba(240, 239, 235, 1);
   }
 
   button {

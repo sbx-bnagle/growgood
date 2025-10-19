@@ -22,5 +22,5 @@ layout: home
 
 {% include diy.html %}
 {% include community.html %}
-{% include quotes.html %}
+
 

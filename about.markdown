@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: about
 title: About
 permalink: /about/
 ---
@@ -15,4 +15,5 @@ Description of priorities in first person. Signed like a letter.
 
 Leah Fagan
 ![babe-a-licious]({{ site.baseurl }}/assets/images/leah.jpg)
+
 
