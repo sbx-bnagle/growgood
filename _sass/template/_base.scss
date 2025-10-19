@@ -6,6 +6,10 @@
   * only file where element selectors should be used
   */
 
+html {
+  background: color(neutral, XXX);
+  scroll-behavior: smooth;
+}
 
 body {
   background: color(neutral, X);
