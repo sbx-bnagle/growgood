@@ -50,11 +50,21 @@ header {
       @include typestyle($sans-sm-bld);
       height: 42px;
       border-radius: 60px;
-      padding: bl(2) bl(4);
+      padding: bl(1.5) bl(4);
       background-color: color(green, XX);
+      border: 2px solid color(green, XX);
       text-align: center;
       margin-left: bl(4);
       color: color(green, XXX);
+      box-sizing: border-box;
+      // display: inline-block;
+      transition: all .1s ease-in;
+
+      &:hover {
+        text-decoration: none;
+        background-color: color(neutral, X);
+        border-color: color(neutral, XXX);
+      }
     }
   }
 

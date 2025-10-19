@@ -29,6 +29,7 @@
     grid-column: 7 / -1;
     @include stack(lg);
     position: relative;
+    margin-top: -11px;
   }
 
   .contact__form label {
@@ -66,23 +67,8 @@
     border-radius: 0;
   }
 
-  // .contact__form .contact__email {
-  //   height: bl(8);
-  // }
-
-  // label.floater {
-  //   display: block;
-  //   position: absolute;
-  //   top: 8px;
-  //   pointer-events: none;
-  //   transition: all ease-in .2s;
-  //   opacity: .6;
-  //   // @include stack(xs);
-  //   // padding-bottom: bl(4);
-  // }
-
   label.floater {
-    transition: all ease-in .2s;
+    transition: all .1s ease-in;
   }
   
   label.js_unfloat {
@@ -114,8 +100,8 @@
   }
 
   .contact__message{
-    background-color: #5e615d;
-    border-color: #5e615d;
+    background-color: #474A45;
+    border-color: #474A45;
   }
 
   .contact__message::placeholder {
@@ -146,8 +132,18 @@
     border-radius: 60px;
     padding: bl(2) bl(4);
     background-color: color(green, XX);
+    border: 2px solid color(green, XX);
     text-align: center;
     color: color(green, XXX);
+    transition: all .1s ease-in;
+
+
+    &:hover {
+      text-decoration: none;
+      border-color: color(green, X);
+      color: color(green, X);
+      background-color: color(green, XXX);
+    }
   }
 }
 

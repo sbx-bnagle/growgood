@@ -1,10 +1,10 @@
 toc:
   - title: Pre-planned kits
-    slug: offerings
-    url: offerings
+    slug: preplanned
+    url: preplanned
   - title: Custom DIY
-    slug: offerings
-    url: offerings
+    slug: custom
+    url: custom
   - title: Journal
     slug: journal
     url: journal

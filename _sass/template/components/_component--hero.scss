@@ -23,18 +23,13 @@
   .hero__cta {
     height: 42px;
     border-radius: 60px;
-    // background-color: color(green, XX);
-    // border: 2px solid color(green, XX);
     background-color: color(green, XXX);
     text-align: center;
-    // color: color(green, XXX);
     color: color(green, X);
     @include typestyle($sans-sm-bld);
-    // padding: bl(2) bl(4);
     grid-column: 1/5;
     position: relative;
     margin-left: bl(11);
-    // box-sizing: border-box;
     border: 2px solid color(green, XXX);
 
     &:hover {
