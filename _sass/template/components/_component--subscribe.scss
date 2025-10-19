@@ -106,7 +106,7 @@
     border-top: none;
     border-right: none;
     border-radius: 0;
-    transition: all ease-in .2s;
+    transition: all .1s ease-in;
     color: color(neutral, X);
   }
 
@@ -118,13 +118,22 @@
     @include typestyle($sans-sm-bld);
     height: 42px;
     border-radius: 60px;
-    padding: bl(2) bl(4);
+    padding: bl(1.5) bl(4);
     background-color: color(green, XX);
+    border: 2px solid color(green, XX);
     text-align: center;
     color: color(green, XXX);
     box-sizing: border-box;
     width: 140px;
     margin-left: bl(5);
+    transition: all .1s ease-in;
+
+    &:hover {
+      text-decoration: none;
+      border-color: color(green, X);
+      color: color(green, X);
+      background-color: color(neutral, XXX);
+    }
   }
 }
 

@@ -16,7 +16,7 @@
   img {
     grid-column: 1/7;
     border-radius: 800px;
-    margin-top: -60px;
+    margin-top: -100px;
   }
 
   .diy__cta {
@@ -28,27 +28,27 @@
     @include typestyle($sans-md-reg);
   }
 
-  .diy__cta button {
-    height: 42px;
-    border-radius: 60px;
-    padding: 0 bl(8);
-    background-color: color(green, XXX);
-    text-align: center;
-    color: color(green, X);
-    @include typestyle($sans-sm-bld);
-    position: relative;
-    margin-left: bl(11);
+  // .diy__cta button {
+  //   height: 42px;
+  //   border-radius: 60px;
+  //   padding: 0 bl(8);
+  //   background-color: color(green, XXX);
+  //   text-align: center;
+  //   color: color(green, X);
+  //   @include typestyle($sans-sm-bld);
+  //   position: relative;
+  //   margin-left: bl(11);
 
-    &::before {
-      display: inline-block;
-      content: '';
-      width: bl(11);
-      height: bl(11);
-      background: url('../images/arrow.svg');
-      position: absolute;
-      top: 0;
-      left: calc(bl(11) * -1);
-    }
-  }
+  //   &::before {
+  //     display: inline-block;
+  //     content: '';
+  //     width: bl(11);
+  //     height: bl(11);
+  //     background: url('../images/arrow.svg');
+  //     position: absolute;
+  //     top: 0;
+  //     left: calc(bl(11) * -1);
+  //   }
+  // }
 }
 
