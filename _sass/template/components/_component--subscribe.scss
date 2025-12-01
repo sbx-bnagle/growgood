@@ -5,11 +5,13 @@
   * -
   */
 
-.subscribe {
+
+#subscribe {
   width: 100vw;
   background-color: color(neutral, XXX);
   color: color(neutral, X);
   padding-top: bl(5);
+  scroll-margin-top: 72px;
 
   h2 {
     @include typestyle($sans-sm-bld);

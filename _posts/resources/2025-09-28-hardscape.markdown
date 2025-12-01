@@ -1,10 +1,12 @@
 ---
+title: Local Hardscape Materials
 layout: post
-title:  "Local Hardscape Materials"
-category: "resources"
+category: resources
 ---
 
 ## Stone
+
+![TEST]({{ 'assets/images/bird.gif' | relative_url }})
 
 ## Recycled
 

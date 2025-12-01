@@ -4,6 +4,7 @@
     "lunr": "^2.3.9"
   },
   "devDependencies": {
+    "@types/node": "^24.10.1",
     "mark.js": "^8.11.1"
   }
 }

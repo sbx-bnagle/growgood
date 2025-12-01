@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
+
+  <body class='dashboard'>
+
+    
+    <div class='content-wrapper plantpicker'>
+
+      <h1>Plant Picker</h1>
+      <ul id='plantlist' class='pl-visible'>
+      </ul>
+
+      <button id='filter_open'>Query</button>
+
+      <button id="authorize_button" onclick="window.handleAuthClick()">Authorize</button>
+      <button id="signout_button" onclick="window.handleSignoutClick()">Sign Out</button>
+    </div>
+
+
+    <div id='plants-selected' class='closed'>
+      <div class='content-wrapper'>
+        <h2 id='selected-title'>Picks</h2>
+        <ul id='plantpicks'>
+        </ul>
+      </div>
+    </div>
+
+
+    {%- include picker-filter.html -%}
+    {%- include plant-details.html -%}
+
+    <hr>
+
+    <div class='content-wrapper'>
+      {{ content }}
+    </div>
+
+
+    
+    <script src='{{site.url}}/assets/js/fuse.basic.min.js'></script>
+    <script src="{{site.url}}/assets/js/plantpicker_plant-classes.js"></script>
+    <script src='{{site.url}}/assets/js/plantpicker_app.js' type='module'></script>
+    <script src='{{site.url}}/assets/js/init_plantpicker.js' type='module'></script>
+    <script defer src='https://apis.google.com/js/api.js' onload='window.gapiLoaded()'></script>
+    <script defer src='https://accounts.google.com/gsi/client' onload='window.gisLoaded()'></script>
+    
+
+  </body>
+</html>
+
+
+

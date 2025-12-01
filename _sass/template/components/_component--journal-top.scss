@@ -38,13 +38,20 @@
 
   .journalpage__subscribe li {
     display: inline-block;
-    margin-right: bl(1);
+    margin-right: bl(2);
     height: 20px;
     width: 24px;
     border-radius: 24px;
     border: 2px solid color(neutral, XXX);
     background-color: color(neutral, XXX);
+    transition: all .1s ease-in;
   }
+
+  // .journalpage__subscribe li:hover {
+  //   transition-delay: .15s;
+  // }
+  
+
 
   .journalpage__subscribe li.follow {
     @include typestyle($sans-sm-bld);
@@ -53,11 +60,13 @@
     width: auto;
     border: unset;
     background-color: unset;
-  }
+  }  
 
   .journalpage__subscribe li a {
-    @include typestyle($icon-xs);
+    // @include typestyle($icon-xs);
     color: color(neutral, X);
+    position: relative;
+    transition: all .1s ease-in;
   }
 
   .journalpage__subscribe li a::before { 
@@ -65,12 +74,28 @@
     bottom: 2px;
     left: 5px;
   }
-  .journalpage__subscribe li a.email::before     { content: '\e900'; }
-  .journalpage__subscribe li a.instagram::before { content: '\ea92'; }
-  .journalpage__subscribe li a.facebook::before  { content: '\ea90'; }
-  .journalpage__subscribe li a.youtube::before   { content: '\ea9d'; }
-  .journalpage__subscribe li a.tiktok::before    { content: '\e91b'; }
-  .journalpage__subscribe li a.pinterest::before { content: '\ead1'; }
+
+  .journalpage__subscribe li:hover {
+    background-color: color(neutral, X);
+    border-radius: 1px solid (neutral, XXX);
+  }
+
+  .journalpage__subscribe li:hover a {
+    // @include typestyle($icon-xs);
+    color: color(neutral, XXX);
+    position: relative;
+  }
+
+
+  
+
+  .journalpage__subscribe li.email a::before     { @include typestyle($icon-xs); content: '\e900'; }
+  .journalpage__subscribe li.instagram a::before { @include typestyle($icon-xs); content: '\ea92'; }
+  .journalpage__subscribe li.facebook a::before  { @include typestyle($icon-xs); content: '\ea90'; }
+  .journalpage__subscribe li.youtube a::before   { @include typestyle($icon-xs); content: '\ea9d'; }
+  .journalpage__subscribe li.tiktok a::before    { @include typestyle($icon-xs); content: '\e91b'; }
+  .journalpage__subscribe li.pinterest a::before { @include typestyle($icon-xs); content: '\ead1'; }
+
 
 
   .journalpage__helpers {

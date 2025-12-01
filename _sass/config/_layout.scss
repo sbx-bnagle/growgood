@@ -57,6 +57,15 @@ $grid-full: (
   width     : 100vw,
 );
 
+$grid-selected: (
+  columns   : 12,
+  rows      : auto,
+  gutter-h  : 24px,
+  gutter-v  : 0,
+  width     : calc(100% - 12px * 2),
+  max-width : 2100px,
+);
+
 
 
 

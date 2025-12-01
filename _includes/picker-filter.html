@@ -1,0 +1,845 @@
+<div id='plantfilter' class='display-none'>
+  <button id='filter_close'>&#x2716;</button>
+  <div class='content-wrapper'>
+    <h2>Query</h2>
+    <form id='plantQuery'>
+
+      <!-- Search Names -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      
+      <fieldset class='query_name'>
+        <h3>Name</h3>
+        <input type='text' name='name'/>
+      </fieldset>
+
+
+
+      <!-- Features -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      
+      <fieldset class='halfsy'>
+        <div class='checkbig'>
+          <input type='checkbox' class='cb_easy' name='easy'>
+          <span></span>
+        </div>
+        <h3 class='inline'>Low Maintenance</h3>
+      </fieldset>
+      <fieldset class='halfsy'>
+        <div class='checkbig'>
+          <input type='checkbox' class='cb_xerophytic' name='xerophytic'>
+          <span></span>
+        </div>
+        <h3 class='inline'>Drought Resistant</h3>
+      </fieldset>
+
+
+
+      <!-- Native To -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      
+      <fieldset>
+        <h3>Native to</h3>
+        <span class='checkpill'>
+          <input type='checkbox' name='native__eastern_mixed_wood_plains'>
+          <label class='eastern_mixed_wood_plains'>Eastern Mixed Wood Plains</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='native__central_usa_plains'>
+          <label class='central_usa_plains'>Central USA Plains</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='native__southeastern_usa_plains'>
+          <label class='southeastern_usa_plains'>Southeastern USA Plains</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='native__norhtern_mixed_wood_shield'>
+          <label class='norhtern_mixed_wood_shield'>Northern Mixed Wood Shield</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='native__northern_atlantic_highlands'>
+          <label class='northern_atlantic_highlands'>Northern Atlantic Highlands</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='native__eastern_mississippi_alluvial'>
+          <label class='eastern_mississippi_alluvial'>Eastern Mississippi Alluvial</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='native__great_plains_temperate_prairie'>
+          <label class='great_plains_temperate_prairie'>Great Plains Temperate Prairie</label> 
+        </span>
+      </fieldset>
+
+
+
+      <!-- Category -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->     
+
+      <fieldset>
+        <h3>Category</h3>
+        <span class='checkpill'>
+          <input type='checkbox' name='cat__grass'>
+          <label>Grass</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='cat__bulb'>
+          <label>Bulb</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='cat__flower'>
+          <label>Flower</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='cat__shrub'>
+          <label>Shrub</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='cat__cover'>
+          <label>Cover</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='cat__sedge'>
+          <label>Sedge</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='cat__vine'>
+          <label>Vine</label>
+        </span>
+      </fieldset>
+
+
+
+      <!-- Context -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      
+      <fieldset>
+        <h3>Context</h3>
+        <span class='checkpill'>
+          <input type='checkbox' name='context__parkway'>
+          <label class='parkway'>Parkway</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='context__raingarden'>
+          <label class='raingarden'>Raingarden</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='context__container'>
+          <label class='container'>Container</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='context__woodland'>
+          <label class='woodland'>Woodland</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='context__prairie'>
+          <label class='prairie'>Prairie</label> 
+        </span>
+      </fieldset>
+
+
+
+      <!-- Garden Attributes -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->     
+
+      <fieldset>
+        <h3>Gardent Attributes</h3>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__attractive_seedhead'>
+          <label class='attractive_seedhead'>Attractive Seedhead</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__fragrant'>
+          <label class='fragrant'>Fragrant</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__long_bloomtime'>
+          <label class='long_bloomtime'>Long Bloomtime</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__groundcover'>
+          <label class='groundcover'>Groundcover</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__border'>
+          <label class='border'>Border</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__textural'>
+          <label class='textural'>Textural</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__specimen'>
+          <label class='specimen'>Specimen</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__cut_dry'>
+          <label class='cut_dry'>Cut & Dry</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__workhorse'>
+          <label class='workhorse'>Workhorse</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__deer_resistant'>
+          <label class='deer_resistant'>Deer Resistant</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__pollinator_friendly'>
+          <label class='pollinator_friendly'>Pollinator Friendly</label> 
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='attributes__edible'>
+          <label class='edible'>Edible</label> 
+        </span>
+      </fieldset>
+
+
+
+      <!-- Seasonal Interest: Bloom -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      
+      <fieldset class='section_starter'>
+        <h3>Seasonal Interest: Bloom</h3>
+        <div class='checkseg checkseg_mar_e'>
+          <input type='checkbox' name='si_bloom__mar_e'>
+          <span></span>
+          <label>Mar</label>
+        </div>
+        <div class='checkseg checkseg_mar_l'>
+          <input type='checkbox' name='si_bloom__mar_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_apr_e'>
+          <input type='checkbox' name='si_bloom__apr_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_apr_l'>
+          <input type='checkbox' name='si_bloom__apr_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_may_e'>
+          <input type='checkbox' name='si_bloom__may_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_may_l'>
+          <input type='checkbox' name='si_bloom__may_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jun_e'>
+          <input type='checkbox' name='si_bloom__jun_e'>
+          <span></span>
+          <label>Jun</label>
+        </div>
+        <div class='checkseg checkseg_jun_l'>
+          <input type='checkbox' name='si_bloom__jun_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jul_e'>
+          <input type='checkbox' name='si_bloom__jul_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jul_l'>
+          <input type='checkbox' name='si_bloom__jul_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_aug_e'>
+          <input type='checkbox' name='si_bloom__aug_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_aug_l'>
+          <input type='checkbox' name='si_bloom__aug_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_sept_e'>
+          <input type='checkbox' name='si_bloom__sept_e'>
+          <span></span>
+          <label>Sept</label>
+        </div>
+        <div class='checkseg checkseg_sept_l'>
+          <input type='checkbox' name='si_bloom__sept_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_oct_e'>
+          <input type='checkbox' name='si_bloom__oct_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_oct_l'>
+          <input type='checkbox' name='si_bloom__oct_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_nov_e'>
+          <input type='checkbox' name='si_bloom__nov_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_nov_l'>
+          <input type='checkbox' name='si_bloom__nov_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_dec_e'>
+          <input type='checkbox' name='si_bloom__dec_e'>
+          <span></span>
+          <label>Dec</label>
+        </div>
+        <div class='checkseg checkseg_dec_l'>
+          <input type='checkbox' name='si_bloom__dec_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jan_e'>
+          <input type='checkbox' name='si_bloom__jan_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jan_l'>
+          <input type='checkbox' name='si_bloom__jan_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_feb_e'>
+          <input type='checkbox' name='si_bloom__feb_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_feb_l'>
+          <input type='checkbox' name='si_bloom__feb_l'>
+          <span></span>
+        </div>
+      </fieldset>
+
+
+
+
+      <!-- Seasonal Interest: Fall -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      
+      <fieldset class='section_starter'>
+        <h3>Seasonal Interest: Fall</h3>
+        <div class='checkseg checkseg_mar_e'>
+          <input type='checkbox' name='si_fall__mar_e'>
+          <span></span>
+          <label>Mar</label>
+        </div>
+        <div class='checkseg checkseg_mar_l'>
+          <input type='checkbox' name='si_fall__mar_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_apr_e'>
+          <input type='checkbox' name='si_fall__apr_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_apr_l'>
+          <input type='checkbox' name='si_fall__apr_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_may_e'>
+          <input type='checkbox' name='si_fall__may_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_may_l'>
+          <input type='checkbox' name='si_fall__may_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jun_e'>
+          <input type='checkbox' name='si_fall__jun_e'>
+          <span></span>
+          <label>Jun</label>
+        </div>
+        <div class='checkseg checkseg_jun_l'>
+          <input type='checkbox' name='si_fall__jun_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jul_e'>
+          <input type='checkbox' name='si_fall__jul_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jul_l'>
+          <input type='checkbox' name='si_fall__jul_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_aug_e'>
+          <input type='checkbox' name='si_fall__aug_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_aug_l'>
+          <input type='checkbox' name='si_fall__aug_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_sept_e'>
+          <input type='checkbox' name='si_fall__sept_e'>
+          <span></span>
+          <label>Sept</label>
+        </div>
+        <div class='checkseg checkseg_sept_l'>
+          <input type='checkbox' name='si_fall__sept_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_oct_e'>
+          <input type='checkbox' name='si_fall__oct_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_oct_l'>
+          <input type='checkbox' name='si_fall__oct_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_nov_e'>
+          <input type='checkbox' name='si_fall__nov_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_nov_l'>
+          <input type='checkbox' name='si_fall__nov_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_dec_e'>
+          <input type='checkbox' name='si_fall__dec_e'>
+          <span></span>
+          <label>Dec</label>
+        </div>
+        <div class='checkseg checkseg_dec_l'>
+          <input type='checkbox' name='si_fall__dec_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jan_e'>
+          <input type='checkbox' name='si_fall__jan_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jan_l'>
+          <input type='checkbox' name='si_fall__jan_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_feb_e'>
+          <input type='checkbox' name='si_fall__feb_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_feb_l'>
+          <input type='checkbox' name='si_fall__feb_l'>
+          <span></span>
+        </div>
+      </fieldset>
+
+
+
+
+      <!-- Seasonal Interest: Seedhead -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      
+      <fieldset class='section_starter'>
+        <h3>Seasonal Interest: Seedhead</h3>
+        <div class='checkseg checkseg_mar_e'>
+          <input type='checkbox' name='si_seedhead__mar_e'>
+          <span></span>
+          <label>Mar</label>
+        </div>
+        <div class='checkseg checkseg_mar_l'>
+          <input type='checkbox' name='si_seedhead__mar_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_apr_e'>
+          <input type='checkbox' name='si_seedhead__apr_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_apr_l'>
+          <input type='checkbox' name='si_seedhead__apr_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_may_e'>
+          <input type='checkbox' name='si_seedhead__may_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_may_l'>
+          <input type='checkbox' name='si_seedhead__may_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jun_e'>
+          <input type='checkbox' name='si_seedhead__jun_e'>
+          <span></span>
+          <label>Jun</label>
+        </div>
+        <div class='checkseg checkseg_jun_l'>
+          <input type='checkbox' name='si_seedhead__jun_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jul_e'>
+          <input type='checkbox' name='si_seedhead__jul_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jul_l'>
+          <input type='checkbox' name='si_seedhead__jul_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_aug_e'>
+          <input type='checkbox' name='si_seedhead__aug_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_aug_l'>
+          <input type='checkbox' name='si_seedhead__aug_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_sept_e'>
+          <input type='checkbox' name='si_seedhead__sept_e'>
+          <span></span>
+          <label>Sept</label>
+        </div>
+        <div class='checkseg checkseg_sept_l'>
+          <input type='checkbox' name='si_seedhead__sept_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_oct_e'>
+          <input type='checkbox' name='si_seedhead__oct_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_oct_l'>
+          <input type='checkbox' name='si_seedhead__oct_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_nov_e'>
+          <input type='checkbox' name='si_seedhead__nov_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_nov_l'>
+          <input type='checkbox' name='si_seedhead__nov_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_dec_e'>
+          <input type='checkbox' name='si_seedhead__dec_e'>
+          <span></span>
+          <label>Dec</label>
+        </div>
+        <div class='checkseg checkseg_dec_l'>
+          <input type='checkbox' name='si_seedhead__dec_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jan_e'>
+          <input type='checkbox' name='si_seedhead__jan_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_jan_l'>
+          <input type='checkbox' name='si_seedhead__jan_l'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_feb_e'>
+          <input type='checkbox' name='si_seedhead__feb_e'>
+          <span></span>
+        </div>
+        <div class='checkseg checkseg_feb_l'>
+          <input type='checkbox' name='si_seedhead__feb_l'>
+          <span></span>
+        </div>
+      </fieldset>
+
+
+
+
+      <!-- Color -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+
+      <fieldset class='section_starter'>
+        <h3>Color</h3>
+        <span class='checkpill'>
+          <input type='checkbox' name='color__purple'>
+          <label class='purple'>Purple</label> 
+        </span>
+        <span class='checkpill'>        
+          <input type='checkbox' name='color__yellow'>
+          <label class='yellow'>Yellow</label>
+        </span>
+        <span class='checkpill'>          
+          <input type='checkbox' name='color__white'>
+          <label class='white'>White</label>  
+        </span>
+        <span class='checkpill'>        
+          <input type='checkbox' name='color__orange'>
+          <label class='orange'>Orange</label> 
+        </span>  
+        <span class='checkpill'>      
+          <input type='checkbox' name='color__red'>
+          <label class='red'>Red</label>   
+        </span>
+        <span class='checkpill'>       
+          <input type='checkbox' name='color__pink'>
+          <label class='pink'>Pink</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='color__blue'>
+          <label class='blue'>Blue</label>
+        </span>
+      </fieldset>
+
+
+
+      <!-- Habit -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->     
+
+      <fieldset>
+        <h3>Habit</h3>
+        <span class='checkpill'>
+          <input type='checkbox' name='habit__vertical'>
+          <label>Vertical</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='habit__vase'>
+          <label>Vase</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='habit__mound'>
+          <label>Mound</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='habit__irregular'>
+          <label>Irregular</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='habit__clump'>
+          <label>Clump</label>
+        </span>  
+      </fieldset>
+
+
+      <!-- Flower -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+
+      <fieldset>
+        <h3>Flower</h3>
+        <span class='checkpill'>
+          <input type='checkbox' name='flower__spire_spike'>
+          <label>Spire/Spike</label>
+        </span> 
+        <span class='checkpill'>
+          <input type='checkbox' name='flower__plume'>
+          <label>Plume</label>
+        </span> 
+        <span class='checkpill'>
+          <input type='checkbox' name='flower__see_through'>
+          <label>See-through</label>
+        </span> 
+        <span class='checkpill'>
+          <input type='checkbox' name='flower__buttons'>
+          <label>Buttons</label>
+        </span>  
+      </fieldset>
+
+
+
+      <!-- Leaf -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ --> 
+
+      <fieldset>
+        <h3>Leaf</h3>
+        <span class='checkpill'>
+          <input type='checkbox' name='leaf__dark_greem'>
+          <label>Dark Green</label>
+        </span>  
+        <span class='checkpill'>
+          <input type='checkbox' name='leaf__fine'>
+          <label>Fine</label>
+        </span> 
+        <span class='checkpill'>
+          <input type='checkbox' name='leaf__bold'>
+          <label>Bold</label>
+        </span> 
+        <span class='checkpill'>
+          <input type='checkbox' name='leaf__blue_green'>
+          <label>Blue Green</label>
+        </span> 
+        <span class='checkpill'>
+          <input type='checkbox' name='leaf__light_green'>
+          <label>Light Green</label>
+        </span> 
+        <span class='checkpill'>
+          <input type='checkbox' name='leaf__evergreen'>
+          <label>Evergreen</label>
+        </span> 
+        <span class='checkpill'>
+          <input type='checkbox' name='leaf__linear'>
+          <label>Linear</label>
+        </span> 
+        <span class='checkpill'>
+          <input type='checkbox' name='leaf__dark'>
+          <label>Dark</label>
+        </span> 
+        <span class='checkpill'>
+          <input type='checkbox' name='leaf__fall_color'>
+          <label>Fall Color</label>
+        </span> 
+      </fieldset> 
+
+
+
+      
+
+
+
+      <!-- Height -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      
+      <fieldset>
+        <h3>Height Range (ft)</h3>
+        <div class='range_container'>
+          <div class='sliders_control'>
+            <input id='fromSliderH' type='range' value='1' min='1' max='20'/>
+            <input id='toSliderH' type='range' value='20' min='1' max='20'/>
+          </div>
+          <div class='form_control'>
+            <div class='form_control_container_min'>
+              <input class='form_control_container__time__input' type='number' id='fromInputH' value='1' min='1' max='20' name='height__min'>
+            </div>
+            <div class='form_control_container_max'>
+              <input class='form_control_container__time__input' type='number' id='toInputH' value='20' min='1' max='20' name='height__max'>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+
+
+      <!-- Spread -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      
+      <fieldset>
+        <h3>Spread Range (ft)</h3>
+        <div class='range_container'>
+          <div class='sliders_control'>
+            <input id='fromSliderS' type='range' value='1' min='1' max='20'>
+            <input id='toSliderS' type='range' value="20" min='1' max='20'>
+          </div>
+          <div class='form_control'>
+            <div class='form_control_container_min'>
+              <input class='form_control_container__time__input' type='number' id='fromInputS' value='1' min='1' max='20' name='spread__min'>
+            </div>
+            <div class="form_control_container_max">
+              <input class="form_control_container__time__input" type="number" id="toInputS" value="20" min="1" max="20" name='spread__max'>
+            </div>
+          </div>
+        </div>
+      </fieldset> 
+
+
+
+      <!-- Sun -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      
+      <fieldset class='section_starter'>
+        <h3>Sun</h3>
+        <span class='checkpill'>
+          <input type='checkbox' name='sun__full_sun'>
+          <label>Full-sun</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='sun__part_sun'>
+          <label>Part-sun</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='sun__shade'>
+          <label>Shade</label>
+        </span>
+      </fieldset>
+
+
+
+      <!-- Water -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      
+      <fieldset>
+        <h3>Water</h3>
+        <span class='checkpill'>
+          <input type='checkbox' name='water__wet'>
+          <label>Wet</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='water__medium'>
+          <label>Medium</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='water__dry'>
+          <label>Dry</label>
+        </span>
+      </fieldset>
+      <fieldset>
+
+
+
+      <!-- Soil -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+
+        <h3>Soil</h3>
+        <span class='checkpill'>
+          <input type='checkbox' name='soil__clay'>
+          <label>Clay</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='soil__sand'>
+          <label>Sand</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='soil__silt'>
+          <label>Silt</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='soil__loam'>
+          <label>Loam</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='soil__peat'>
+          <label>Peat</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='soil__chalk'>
+          <label>Chalk</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='soil__well_drained'>
+          <label>Well-drained</label>
+        </span>
+        <span class='checkpill'>
+          <input type='checkbox' name='soil__moist'>
+          <label>Moist</label>
+        </span>
+      </fieldset>
+
+
+
+      <!-- Submit/Reset Buttons -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+
+      <div class='buttons_wrapper'>
+        <button class='button_filter' type='submit' value='Submit'>Make Query</button>
+        <button class='button_reset'>&#9850;</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
