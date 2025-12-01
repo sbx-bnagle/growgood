@@ -27,7 +27,7 @@ const cntrl_bar       = document.getElementById('js_controlbar');
 const searchInput     = document.getElementById('search-input');
 const searchForm      = document.getElementById('search-form');
 const header          = document.getElementById('js_header');
-const entryList      = document.getElementById('js_entry-list');
+const entryList       = document.getElementById('js_entry-list');
 const entryListUL     = document.getElementById('js_entry-list-ul');
 const entries         = document.getElementsByClassName('js_entry');
 

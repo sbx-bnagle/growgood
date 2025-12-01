@@ -5,11 +5,12 @@
   * -
   */
 
-.contact {
+#contact {
   width: 100vw;
   background-color: color(green, XXX);
   color: color(neutral, X);
   padding-top: bl(12);
+  scroll-margin-top: 72px;
 
   .contact__text {
     @include grid-parent();
