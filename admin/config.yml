@@ -1,7 +1,46 @@
+## DECAP CMS - GitHub OAuth Configuration with Cloudflare Workers
+##
+## Setup Instructions (Cloudflare Workers + GitHub Pages):
+##
+## 1. Create a GitHub OAuth App:
+##    - Go to GitHub Settings → Developer settings → OAuth Apps → New OAuth App
+##    - Application name: "GrowGood CMS"
+##    - Homepage URL: https://growgood.example.com (your GitHub Pages domain)
+##    - Authorization callback URL: https://auth.growgood.example.com/callback
+##      (or your Cloudflare Worker custom domain)
+##    - Save the Client ID and Client Secret securely
+##
+## 2. Deploy Cloudflare Worker:
+##    - Install Wrangler CLI: npm install -g wrangler
+##    - Create a new worker project: wrangler init github-oauth
+##    - Copy the worker script from this repo's /workers/github-oauth.js
+##    - Add secrets: wrangler secret put GITHUB_CLIENT_ID
+##    - Add secrets: wrangler secret put GITHUB_CLIENT_SECRET
+##    - Deploy: wrangler deploy
+##    - Note the Worker URL (e.g., https://github-oauth.your-account.workers.dev)
+##
+## 3. Set up custom domain (optional, for cleaner URLs):
+##    - In Cloudflare dashboard → Workers & Pages → your-worker → Settings → Domains & Routes
+##    - Add a route like auth.growgood.example.com
+##    - Update OAuth App callback URL if using custom domain
+##
+## 4. Update auth_endpoint below:
+##    - Replace <worker-url> with your Cloudflare Worker URL or custom domain
+##    - Format: https://<your-worker-domain>/callback
+##
+## 5. Local Testing:
+##    - Run: wrangler dev
+##    - Update GitHub OAuth App callback to http://localhost:8787/callback
+##    - Test with admin UI at http://localhost:1313/admin/
+
+
 backend:
-  name: git-gateway
+  name: github
   repo: sbx-bnagle/growgood
-  branch: main 
+  branch: main
+  login: true
+  auth_endpoint: "https://auth.growgoodgardens.com/callback"  # Replace with your Cloudflare Worker URL
+
 
 media_folder: "assets/uploads" # Folder where media files will be stored
 public_folder: "/assets/uploads" # Public path for media files
