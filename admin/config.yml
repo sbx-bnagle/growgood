@@ -39,7 +39,7 @@ backend:
   repo: sbx-bnagle/growgood
   branch: main
   login: true
-  auth_endpoint: "https://growgood-github-oauth.fagan-leah.workers.dev/auth"  # Replace with your Cloudflare Worker URL
+  auth_endpoint: "https://growgood-github-oauth.fagan-leah.workers.dev"  # Replace with your Cloudflare Worker URL
 
 
 media_folder: "assets/uploads" # Folder where media files will be stored
