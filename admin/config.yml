@@ -1,60 +1,32 @@
-## DECAP CMS - GitHub OAuth Configuration with Cloudflare Workers
-##
-## Setup Instructions (Cloudflare Workers + GitHub Pages):
-##
-## 1. Create a GitHub OAuth App:
-##    - Go to GitHub Settings → Developer settings → OAuth Apps → New OAuth App
-##    - Application name: "GrowGood CMS"
-##    - Homepage URL: https://growgood.example.com (your GitHub Pages domain)
-##    - Authorization callback URL: https://auth.growgood.example.com/callback
-##      (or your Cloudflare Worker custom domain)
-##    - Save the Client ID and Client Secret securely
-##
-## 2. Deploy Cloudflare Worker:
-##    - Install Wrangler CLI: npm install -g wrangler
-##    - Create a new worker project: wrangler init github-oauth
-##    - Copy the worker script from this repo's /workers/github-oauth.js
-##    - Add secrets: wrangler secret put GITHUB_CLIENT_ID
-##    - Add secrets: wrangler secret put GITHUB_CLIENT_SECRET
-##    - Deploy: wrangler deploy
-##    - Note the Worker URL (e.g., https://github-oauth.your-account.workers.dev)
-##
-## 3. Set up custom domain (optional, for cleaner URLs):
-##    - In Cloudflare dashboard → Workers & Pages → your-worker → Settings → Domains & Routes
-##    - Add a route like auth.growgood.example.com
-##    - Update OAuth App callback URL if using custom domain
-##
-## 4. Update auth_endpoint below:
-##    - Replace <worker-url> with your Cloudflare Worker URL or custom domain
-##    - Format: https://<your-worker-domain>/callback
-##
-## 5. Local Testing:
-##    - Run: wrangler dev
-##    - Update GitHub OAuth App callback to http://localhost:8787/callback
-##    - Test with admin UI at http://localhost:1313/admin/
-
-
+# Use DecapBridge PKCE auth (required)
 backend:
-  name: github
+  name: git-gateway
   repo: sbx-bnagle/growgood
   branch: main
-  login: true
-  # Netlify-compatible auth endpoint (Cloudflare Worker)
-  auth_endpoint: "https://growgood-github-oauth.fagan-leah.workers.dev/auth"
-  open_authoring: true
-  publish_mode: editorial_workflow
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/bc97b2c7-86e6-4245-bcf3-e5e025311555/pkce
+  auth_token_endpoint: /sites/bc97b2c7-86e6-4245-bcf3-e5e025311555/token
+  gateway_url: https://gateway.decapbridge.com
 
-media_folder: "assets/uploads" # Folder where media files will be stored
-public_folder: "/assets/uploads" # Public path for media files
+  # See who did what (optional)
+  commit_messages:
+    create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
 
-collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      # Add more fields as needed for your posts
+# Enable PKCE fields (optional, recommended)
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+# Better Decap + Bridge logo (optional)
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+# Add site links in Decap CMS (optional)
+site_url: https://growgoodgardens.com
