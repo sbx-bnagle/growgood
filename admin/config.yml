@@ -35,7 +35,7 @@
 
 
 backend:
-  name: github
+  name: git-gateway
   repo: sbx-bnagle/growgood
   branch: main
   login: true
