@@ -27,9 +27,15 @@ export default {
       return handleCallback(request, env);
     }
 
-    // /auth - Initiate OAuth flow by redirecting to GitHub (accept GET or POST)
-    if (url.pathname === '/auth' && (request.method === 'GET' || request.method === 'POST')) {
-      return handleAuth(request, env);
+    // /auth - Netlify-compatible OAuth endpoint
+    // GET /auth?code=XXX - Handle GitHub callback (Netlify/Decap style)
+    // POST /auth - Start OAuth flow or validate token
+    if (url.pathname === '/auth') {
+      if (request.method === 'GET') {
+        return handleAuthGet(request, env);
+      } else if (request.method === 'POST') {
+        return handleAuthPost(request, env);
+      }
     }
 
     // Root: redirect to /auth to help with misconfigured endpoints
@@ -161,7 +167,127 @@ async function handleCallback(request, env) {
 }
 
 /**
- * Handle GET /auth - Redirect user to GitHub authorize URL to start OAuth
+ * Handle GET /auth?code=XXX - Netlify-compatible OAuth callback
+ * GitHub redirects here with the authorization code
+ * Return a token in Netlify's expected format
+ */
+async function handleAuthGet(request, env) {
+  try {
+    const url = new URL(request.url);
+    const code = url.searchParams.get('code');
+    const error = url.searchParams.get('error');
+
+    if (error) {
+      return jsonResponse({ error: `Authorization failed: ${error}` }, 401);
+    }
+
+    if (!code) {
+      // If no code, redirect to GitHub to start OAuth flow
+      const clientId = env.GITHUB_CLIENT_ID;
+      if (!clientId) {
+        return jsonResponse({ error: 'Server misconfigured' }, 500);
+      }
+      const scope = 'repo';
+      const redirectUri = `${url.origin}/auth`;
+      const params = new URLSearchParams({
+        client_id: clientId,
+        redirect_uri: redirectUri,
+        scope,
+        state: 'decap-cms',
+      });
+      const githubAuthUrl = `https://github.com/login/oauth/authorize?${params.toString()}`;
+      return Response.redirect(githubAuthUrl, 302);
+    }
+
+    const clientId = env.GITHUB_CLIENT_ID;
+    const clientSecret = env.GITHUB_CLIENT_SECRET;
+
+    if (!clientId || !clientSecret) {
+      console.error('Missing GitHub OAuth credentials');
+      return jsonResponse({ error: 'Server misconfigured' }, 500);
+    }
+
+    // Exchange code for access token with GitHub
+    const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        client_id: clientId,
+        client_secret: clientSecret,
+        code,
+      }),
+    });
+
+    if (!tokenResponse.ok) {
+      console.error('GitHub token exchange failed:', tokenResponse.status);
+      return jsonResponse({ error: 'Token exchange failed' }, 500);
+    }
+
+    const tokenData = await tokenResponse.json();
+
+    if (tokenData.error) {
+      console.error('GitHub error:', tokenData.error_description);
+      return jsonResponse({ error: tokenData.error_description || 'GitHub error' }, 401);
+    }
+
+    if (!tokenData.access_token) {
+      console.error('No access token in response');
+      return jsonResponse({ error: 'No access token received' }, 500);
+    }
+
+    // Return token in Netlify/Decap-compatible format
+    return jsonResponse({
+      token: tokenData.access_token,
+      provider: 'github',
+    }, 200);
+  } catch (error) {
+    console.error('Error in handleAuthGet:', error);
+    return jsonResponse({ error: error.message || 'Internal server error' }, 500);
+  }
+}
+
+/**
+ * Handle POST /auth - Netlify-compatible OAuth initiation
+ * Decap CMS may POST to /auth to start the flow
+ * Return redirect info or start URL
+ */
+async function handleAuthPost(request, env) {
+  try {
+    const clientId = env.GITHUB_CLIENT_ID;
+    if (!clientId) {
+      return jsonResponse({ error: 'Server misconfigured' }, 500);
+    }
+
+    const url = new URL(request.url);
+    const scope = 'repo';
+    const redirectUri = `${url.origin}/auth`;
+
+    const params = new URLSearchParams({
+      client_id: clientId,
+      redirect_uri: redirectUri,
+      scope,
+      state: 'decap-cms',
+    });
+
+    const githubAuthUrl = `https://github.com/login/oauth/authorize?${params.toString()}`;
+
+    // Return auth URL in Netlify format
+    return jsonResponse({
+      auth_url: githubAuthUrl,
+    }, 200);
+  } catch (error) {
+    console.error('Error in handleAuthPost:', error);
+    return jsonResponse({ error: error.message }, 500);
+  }
+}
+
+/**
+ * Handle GET / - Redirect to GitHub OAuth authorize
+ * Called by browser when user clicks "Login with GitHub" in Decap CMS
+ * This mimics Netlify's behavior
  */
 async function handleAuth(request, env) {
   try {
