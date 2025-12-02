@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GrowGood CMS</title>
+    <link rel="stylesheet" href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css" />
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      // Custom GitHub OAuth configuration
+      const authConfig = {
+        apiRoot: "https://api.github.com",
+        tokenEndpoint: "https://growgood-github-oauth.fagan-leah.workers.dev/auth",
+        authorizationEndpoint: "https://github.com/login/oauth/authorize",
+        clientId: "YOUR_GITHUB_CLIENT_ID", // Set via environment or directly
+      };
+
+      // Initialize Decap CMS with GitHub backend
+      window.CMS_MANUAL_INIT = true;
+
+      // Wait for Decap to load
+      window.addEventListener("load", function () {
+        if (window.CMS && window.CMS_MANUAL_INIT) {
+          CMS.init();
+
+          // Register custom auth backend
+          CMS.registerBackend("github", (function () {
+            const GitHubBackend = window.CMS.Backends.github;
+
+            class CustomGitHubBackend extends GitHubBackend {
+              constructor(config) {
+                super(config);
+              }
+
+              async authenticate(credentials) {
+                console.log("Authenticating with GitHub...");
+                const code = credentials?.code;
+
+                if (!code) {
+                  // Redirect to GitHub
+                  const state = Math.random().toString(36).substring(7);
+                  const scope = "repo";
+                  const redirectUri = window.location.origin + window.location.pathname;
+
+                  const params = new URLSearchParams({
+                    client_id: this.clientId,
+                    redirect_uri: redirectUri,
+                    scope,
+                    state,
+                  });
+
+                  window.location.href = `https://github.com/login/oauth/authorize?${params.toString()}`;
+                  return;
+                }
+
+                // Exchange code for token via our worker
+                try {
+                  const response = await fetch(authConfig.tokenEndpoint, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ code }),
+                  });
+
+                  if (!response.ok) {
+                    throw new Error("Token exchange failed");
+                  }
+
+                  const data = await response.json();
+                  return {
+                    token: data.token,
+                    provider: "github",
+                  };
+                } catch (err) {
+                  console.error("Auth error:", err);
+                  throw err;
+                }
+              }
+            }
+
+            return {
+              AuthClass: CustomGitHubBackend,
+            };
+          })());
+        }
+      });
+    </script>
+  </head>
+  <body />
+</html>
