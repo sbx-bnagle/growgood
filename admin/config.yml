@@ -35,11 +35,12 @@
 
 
 backend:
-  name: git-gateway
+  name: github
   repo: sbx-bnagle/growgood
   branch: main
   login: true
-  auth_endpoint: "https://growgood-github-oauth.fagan-leah.workers.dev/auth"  # Cloudflare Worker OAuth endpoint
+  # Netlify-compatible auth endpoint (Cloudflare Worker)
+  auth_endpoint: "https://growgood-github-oauth.fagan-leah.workers.dev/auth"
 
 
 media_folder: "assets/uploads" # Folder where media files will be stored

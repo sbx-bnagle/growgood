@@ -10,6 +10,3 @@ account_id = "a0432d479ca11b124c5051f475d9b84f"  # Add your Cloudflare account I
 # routes = [
 #   { pattern = "auth.growgood.example.com", zone_name = "growgood.example.com" }
 # ]
-
-# Enable cors
-cors = true
