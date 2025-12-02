@@ -31,8 +31,8 @@ logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 # Add site links in Decap CMS (optional)
 site_url: https://growgoodgardens.com
 
-media_folder: "assets/uploads" # Folder where media files will be stored
-public_folder: "/assets/uploads" # Public path for media files
+media_folder: "assets/images" # Folder where media files will be stored
+public_folder: "/assets/images" # Public path for media files
 
 collections:
   - name: "posts"
