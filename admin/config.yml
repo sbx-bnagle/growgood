@@ -41,7 +41,7 @@ backend:
   login: true
   # Netlify-compatible auth endpoint (Cloudflare Worker)
   auth_endpoint: "https://growgood-github-oauth.fagan-leah.workers.dev/auth"
-
+  open_authoring: true
 
 media_folder: "assets/uploads" # Folder where media files will be stored
 public_folder: "/assets/uploads" # Public path for media files
