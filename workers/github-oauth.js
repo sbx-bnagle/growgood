@@ -27,9 +27,15 @@ export default {
       return handleCallback(request, env);
     }
 
-    // GET /auth - Initiate OAuth flow by redirecting to GitHub
-    if (url.pathname === '/auth' && request.method === 'GET') {
+    // /auth - Initiate OAuth flow by redirecting to GitHub (accept GET or POST)
+    if (url.pathname === '/auth' && (request.method === 'GET' || request.method === 'POST')) {
       return handleAuth(request, env);
+    }
+
+    // Root: redirect to /auth to help with misconfigured endpoints
+    if (url.pathname === '/' && request.method === 'GET') {
+      const redirectUrl = `${url.origin}/auth`;
+      return Response.redirect(redirectUrl, 302);
     }
 
     // GET /callback - Handle redirect from GitHub (for browser-based flow)
@@ -45,7 +51,16 @@ export default {
       });
     }
 
-    return new Response('Not found', { status: 404 });
+    // Helpful diagnostic response for unknown routes
+    return new Response(JSON.stringify({
+      error: 'Not found',
+      path: url.pathname,
+      method: request.method,
+      info: 'Worker deployed but route not handled. Ensure auth_endpoint points to /auth and callback to /callback'
+    }, null, 2), {
+      status: 404,
+      headers: { 'Content-Type': 'application/json' }
+    });
   },
 };
 
