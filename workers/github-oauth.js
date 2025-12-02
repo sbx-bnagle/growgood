@@ -50,8 +50,38 @@ export default {
  */
 async function handleCallback(request, env) {
   try {
-    const body = await request.json();
-    const { code } = body;
+    // Accept code from JSON body, form-encoded body, or query string
+    const ct = request.headers.get('content-type') || '';
+    let code;
+
+    if (ct.includes('application/json')) {
+      try {
+        const body = await request.json();
+        code = body.code || body?.payload?.code;
+      } catch (err) {
+        // ignore JSON parse error and try other parsers
+      }
+    } else if (ct.includes('application/x-www-form-urlencoded')) {
+      const text = await request.text();
+      const params = new URLSearchParams(text);
+      code = params.get('code') || params.get('payload');
+    } else {
+      // try parsing as JSON or form-encoded as a fallback
+      const text = await request.text();
+      try {
+        const maybe = JSON.parse(text || '{}');
+        code = maybe.code || maybe?.payload?.code;
+      } catch (err) {
+        const params = new URLSearchParams(text);
+        code = params.get('code') || params.get('payload');
+      }
+    }
+
+    // Also allow code via query string (some flows redirect with GET)
+    try {
+      const url = new URL(request.url);
+      if (!code) code = url.searchParams.get('code');
+    } catch (e) {}
 
     if (!code) {
       return jsonResponse({ error: 'Missing authorization code' }, 400);
