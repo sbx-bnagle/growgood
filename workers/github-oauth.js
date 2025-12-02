@@ -27,6 +27,11 @@ export default {
       return handleCallback(request, env);
     }
 
+    // GET /auth - Initiate OAuth flow by redirecting to GitHub
+    if (url.pathname === '/auth' && request.method === 'GET') {
+      return handleAuth(request, env);
+    }
+
     // GET /callback - Handle redirect from GitHub (for browser-based flow)
     if (url.pathname === '/callback' && request.method === 'GET') {
       return handleCallbackGet(request, env);
@@ -137,6 +142,40 @@ async function handleCallback(request, env) {
   } catch (error) {
     console.error('Error in callback handler:', error);
     return jsonResponse({ error: error.message || 'Internal server error' }, 500);
+  }
+}
+
+/**
+ * Handle GET /auth - Redirect user to GitHub authorize URL to start OAuth
+ */
+async function handleAuth(request, env) {
+  try {
+    const url = new URL(request.url);
+    const origin = url.origin;
+    const clientId = env.GITHUB_CLIENT_ID;
+
+    if (!clientId) {
+      return new Response('Server misconfigured: missing GITHUB_CLIENT_ID', { status: 500 });
+    }
+
+    // Allow optional scope and state via query string
+    const scope = url.searchParams.get('scope') || 'repo';
+    const state = url.searchParams.get('state') || '';
+
+    const redirectUri = `${origin}/callback`;
+    const params = new URLSearchParams({
+      client_id: clientId,
+      redirect_uri: redirectUri,
+      scope,
+    });
+    if (state) params.set('state', state);
+
+    const githubAuthUrl = `https://github.com/login/oauth/authorize?${params.toString()}`;
+
+    return Response.redirect(githubAuthUrl, 302);
+  } catch (err) {
+    console.error('Error initiating auth:', err);
+    return new Response('Error initiating authorization', { status: 500 });
   }
 }
 
