@@ -44,4 +44,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Post Type", name: "type", widget: "select", options:['advocacy', 'events', 'Grow Good news', 'headlines', 'how-to', 'materials & practices', 'people & places', 'resources']}
       # Add more fields as needed for your posts
