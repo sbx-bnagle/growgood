@@ -39,11 +39,12 @@ collections:
     label: "Posts"
     folder: "_posts"
     create: true
+    path: "{{type}}/{{slug}}" # e.g., content/posts/news/my-first-post/index.md
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Post Type", name: "type", widget: "select", options: ["advocacy", "events", "Grow Good news", "headlines", "how-to", "materials & practices", "people & places", "resources"]}
-      - {label: "List Image", name: "list_img", widget: "image"}
+      - {label: "List Image", name: "list_img", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       # Add more fields as needed for your posts
