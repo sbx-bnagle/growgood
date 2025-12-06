@@ -32,7 +32,7 @@ logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 site_url: https://growgoodgardens.com
 
 media_folder: "assets/images" # Folder where media files will be stored
-public_folder: "/assets/images" # Public path for media files
+public_folder: "assets/images" # Public path for media files
 
 collections:
   - name: "posts"
