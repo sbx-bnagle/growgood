@@ -39,12 +39,12 @@ collections:
     label: "Posts"
     folder: "_posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    path: "{{category}}}/{{slug}}" 
+    path: "{{category}}/{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Post Type", name: "category", widget: "select", options: ["advocacy", "events", "Grow Good news", "headlines", "how-to", "materials & practices", "people & places", "resources"]}
-      - {label: "List Image", name: "list_img", widget: "image", required: false}
+      - {label: "Post Type", name: "category", widget: "select", options: [{label: "Advocacy", value: "advocacy"}, {label: "Events", value: "events"}, {label: "Grow Good News", value: "gg_news"}, {label: "Headlines", value: "headlines"}, {label: "How-To", value: "howtos"}, {label: "Materials & Practices", value: "materials_practices"}, {label: "People & Places", value: "people_places"}, {label: "Resources", value: "resources"}]}
+      - {label: "List Image", name: "entry_img", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       # Add more fields as needed for your posts
