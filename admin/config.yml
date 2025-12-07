@@ -41,8 +41,8 @@ collections:
     create: true
     path: "{{category}}/{{year}}-{{month}}-{{day}}-{{slug}}"
     slug: "{{slug}}"
-    media_folder: "assets/images" 
-    public_folder: "/assets/images"
+    media_folder: "assets/images/uploads" 
+    public_folder: "/assets/images/uploads"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
