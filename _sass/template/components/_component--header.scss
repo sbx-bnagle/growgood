@@ -15,11 +15,35 @@ header {
   z-index: 100;
 
   .header__text {
-  	@include grid-parent();
+  	@include grid-parent($grid-mobile);
+    @include respond-to(m){
+      @include grid-parent($grid-16);
+    }
     
     .nav__masthead {
     	grid-column: 1 / 7;
     }
+
+    .nav__menu {
+      display: none;
+      @include respond-to(m){
+        display: block;
+      }
+    }
+
+    .nav__mobile-menu {
+      display: block;
+      @include respond-to(m){
+        display: none;
+      }
+    }
+
+    .mobile-menu__toggle::before {
+      @include typestyle($icon-sm);
+      content: '\ead1';
+    }
+
+
 
 
     h1, h1 a {

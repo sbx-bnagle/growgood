@@ -23,7 +23,10 @@ html, body {
 }
 
 .content-wrapper {
-  @include grid-parent();
+  @include grid-parent($grid-mobile);
+  @include respond-to(m){
+    @include grid-parent($grid-16);
+  }
   @include stack(lg);
 }
 

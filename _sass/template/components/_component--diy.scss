@@ -7,7 +7,7 @@
 
 .diy {
   @include grid-parent();
-  @include stack(xl);
+  @include stack(xxl);
 
   h2 {
     grid-column: 7/-1;

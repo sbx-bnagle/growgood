@@ -40,12 +40,21 @@
   *
   */
 
-$grid-12: (
+$grid-16: (
   columns   : 16,
   rows      : auto,
   gutter-h  : 24px,
   gutter-v  : 0,
   width     : calc(100% - 80px * 2),
+  max-width : 1240px,
+);
+
+$grid-mobile: (
+  columns   : 16,
+  rows      : auto,
+  gutter-h  : 20px,
+  gutter-v  : 0,
+  width     : calc(100% - 20px * 2),
   max-width : 1240px,
 );
 
@@ -82,7 +91,7 @@ $grid-selected: (
   */
 
 $breakpoints: (
-  s : 900px,
-  m : 992px,
-  l : 1200px,
+  s : 640px,
+  m : 768px,
+  l : 1024px,
 );
