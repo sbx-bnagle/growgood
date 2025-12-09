@@ -6,8 +6,11 @@
   */
 
 .hero {
-	@include grid-parent();
-  @include stack(lg);
+	@include grid-parent($grid-mobile);
+  @include respond-to(m){
+    @include grid-parent($grid-16);
+  }
+  @include stack(xxl);
   
   .hero__deck {
     grid-column: 1 / -1;

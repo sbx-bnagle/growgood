@@ -42,7 +42,7 @@
   * @return  CSS rules to configure a grid template
   */
 
-@mixin grid-child($flavor: 'grid', $grid: $grid-12, $col-start: auto, $cols: auto, $row-start: auto, $rows: auto, $gutter-h: map-get($grid, gutter-h), $gutter-v: map-get($grid, gutter-v)) {
+@mixin grid-child($flavor: 'grid', $grid: $grid-16, $col-start: auto, $cols: auto, $row-start: auto, $rows: auto, $gutter-h: map-get($grid, gutter-h), $gutter-v: map-get($grid, gutter-v)) {
   @if $flavor == 'grid' {
     display: grid;
     grid-template-columns: repeat($cols, 1fr);
@@ -77,7 +77,7 @@
   * @return  CSS rules to configure a grid template
   */
 
-@mixin grid-parent($config: $grid-12) {
+@mixin grid-parent($config: $grid-16) {
   $col: map-get($config, columns);
   $row: map-get($config, rows);
   $gut-h: map-get($config, gutter-h);
