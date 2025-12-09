@@ -12,22 +12,37 @@ footer {
 	padding: bl(4) 0;
 
 	.footer__text {
-		@include grid-parent();
+		@include grid-parent($grid-mobile);
+    @include respond-to(m){
+      @include grid-parent($grid-16);
+    }
 	}
 
 	.footer__text .copyright {
-		grid-column: 1 / 7;
+		grid-column: 1 / -1;
+		@include stack(xs);
+    @include respond-to(m){
+      grid-column: 1 / 7;
+      @include stack(x);
+    }
 	}
 
 	.footer__text .social {
 		list-style: none;
-		grid-column: 7 / -1;
-		justify-self: end;
+		grid-column: 1 / -1;
+		
+		@include respond-to(m){
+      grid-column: 7 / -1;
+      justify-self: end;
+    }
 	}
 
 	.footer__text .social li {
 		display: inline-block;
-		padding-left: bl(3);
+		padding-right: bl(3);
+		@include respond-to(m){
+      padding-left: bl(3);
+    }
 	}
 
 	.footer__text .social a {

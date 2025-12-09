@@ -11,26 +11,46 @@
 
   .community_img {
     width: calc(100vw - 60px);
+    height: calc(100vw - 60px * .25);
     margin: 0 auto;
     border-radius: 8px;
     @include stack(md);
     position: relative;
     overflow: hidden;
+    @include respond-to(s){
+      height: auto;
+    }
   }
 
   .community_img-bg {
-    width: 100%;
+    height: 100%;
+    max-width: none;
+    position: relative;
+    right: 220%;
+    @include respond-to(s){
+      width: 100%;
+      height: auto;
+      right: unset;
+    }
   }
 
   .community_img-bird {
-    position: absolute;
-    left: 75px;
-    top: 125px;
-    width: 250px;
+    display: none;
+    @include respond-to(l){
+      display: block;
+      @include grid-parent($grid-16);
+      position: absolute;
+      left: 75px;
+      top: 125px;
+      width: 250px;
+    }
   }
 
   .community_text {
-    @include grid-parent();
+    @include grid-parent($grid-mobile);
+    @include respond-to(m){
+      @include grid-parent($grid-16);
+    }
   }
 
   h2 {

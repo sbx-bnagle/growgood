@@ -9,10 +9,15 @@
   width: 100vw;
   background: color(green, X);
   color: color(purple, XX);
-  @include stack(xl);
-  padding: 50px 0;
+  @include stack(lg);
+  padding: 0 0 50px 0;
   text-align: center;
   position: relative;
+  @include respond-to(m){
+    padding: 50px 0;
+    @include stack(xl);
+  }
+
 
   .values__butterfly {
     z-index: 50;
@@ -26,16 +31,24 @@
     z-index: 50;
     position: absolute;
     left: 120px;
-    bottom: 400px;
+    bottom: 300px;
     width: 150px;
+    display: none;
+    @include respond-to(l){
+      display: block;
+    }
   }
 
   .video_wrapper{
-    width: calc(100vw - 60px);
-    height: calc((100vw - 100px) * .45);
-    border-radius: 8px;
-    margin: 0 auto 20px auto;
+      width: calc(100vw);
+      height: calc((100vw) * .45);
+      margin: 0 auto 20px auto;
     overflow: hidden;
+    @include respond-to(m){
+      width: calc(100vw - 60px);
+      height: calc((100vw - 100px) * .45);
+      border-radius: 8px;
+    }
   }
 
   video{
@@ -43,7 +56,10 @@
   }
 
   .values__text{
-    @include grid-parent();
+    @include grid-parent($grid-mobile);
+    @include respond-to(m){
+      @include grid-parent($grid-16);
+    }
     text-align: left;
 
     h2 {
@@ -52,12 +68,19 @@
     }
 
     .values__item {
-      grid-column: span 4;
+      grid-column: span 16;
+      @include stack(sm);
+      @include respond-to(s){
+        grid-column: span 8;
+      }
+      @include respond-to(m){
+        grid-column: span 4;
+      }
     }
 
     .values__item h3 {
       // @include typestyle($sans-md-reg);
-      @include stack(xs);
+      @include stack(xxs);
       border-bottom: 1px solid color(purple, XX);
     }
 

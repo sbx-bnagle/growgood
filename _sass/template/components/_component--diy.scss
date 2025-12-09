@@ -6,21 +6,29 @@
   */
 
 .diy {
-  @include grid-parent();
+  @include grid-parent($grid-mobile);
+  @include respond-to(m){
+    @include grid-parent($grid-16);
+  }
   @include stack(xxl);
 
-  h2 {
-    grid-column: 7/-1;
-  }
 
   img {
-    grid-column: 1/7;
+    display: none;
+    grid-column: 2/15;
     border-radius: 800px;
     margin-top: -100px;
+    @include respond-to(m){
+      display: block;
+      grid-column: 1/7;
+    }
   }
 
-  .diy__cta {
-    grid-column: 7/-1;
+  h2, .diy__cta {
+    grid-column: 1/-1;
+    @include respond-to(m){
+      grid-column: 7/-1;
+    }
   }
 
   .diy__cta p {

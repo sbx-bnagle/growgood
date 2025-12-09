@@ -26,24 +26,73 @@ header {
 
     .nav__menu {
       display: none;
-      @include respond-to(m){
+      @include respond-to(l){
         display: block;
       }
     }
 
     .nav__mobile-menu {
       display: block;
-      @include respond-to(m){
+      position: relative;
+      @include respond-to(l){
         display: none;
       }
     }
 
+    .mobile-menu__toggle {
+      @include typestyle($sans-sm-bld);
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    
+
     .mobile-menu__toggle::before {
       @include typestyle($icon-sm);
-      content: '\ead1';
+      position: relative;
+      right: 4px;
     }
 
+    .mobile-menu__pane {
+      background-color: color(neutral, XXX);
+      color: color(green, X);
+      padding: bl(4) bl(5);
+      position: absolute;
+      top: bl(13);
+      left: 0;
+      width: 50vw;
+      transition: opacity .25s ease-in, display .25s ease-in allow-discrete;
+    }
 
+    .mobile-menu__pane ul li {
+      display: block;
+      @include stack(xxs);
+      padding-left: 0;
+    }
+
+    .mobile-menu__pane ul li a {
+      @include typestyle($sans-sm-bld);
+    }
+
+    .js-dd__pane-hidden {
+      opacity: 0;
+      display: none;
+    }
+
+    .js-dd__pane-visible {
+      opacity: 1;
+      display: block;
+    }
+
+    .js-dd__toggle-closed::before {
+      content: '\e901';
+      top: 2px;
+    }
+
+    .js-dd__toggle-open::before {
+      content: '\2716';
+      color: color(red, XX);
+    }
 
 
     h1, h1 a {
@@ -81,7 +130,6 @@ header {
       margin-left: bl(4);
       color: color(green, XXX);
       box-sizing: border-box;
-      // display: inline-block;
       transition: all .1s ease-in;
 
       &:hover {
