@@ -95,20 +95,20 @@ $sans-lg-bld: (
 );
 
 
-// MD 42/52    2.625
+// MD 52/52   
 
 $sans-md-reg: (
-  null    : (normal, normal, 400, 3,  13,  $sans, 0, 0),
-  s       : (normal, normal, 400, 3,  13,  $sans, 0, 0),
-  m       : (normal, normal, 400, 3,  13,  $sans, 0, 0),
-  l       : (normal, normal, 400, 3,  13,  $sans, 0, 0),   
+  null    : (normal, normal, 400, 2.25,  9,  $sans, 0, 0),
+  s       : (normal, normal, 400, 2.25,  9,  $sans, 0, 0),
+  m       : (normal, normal, 400, 3.25,  13,  $sans, 0, 0),
+  l       : (normal, normal, 400, 3.25,  13,  $sans, 0, 0),   
 );
 
 $sans-md-bld: (
-  null    : (normal, normal, 700, 3,  13,  $sans, 0, 0),
-  s       : (normal, normal, 700, 3,  13,  $sans, 0, 0),
-  m       : (normal, normal, 700, 3,  13,  $sans, 0, 0),
-  l       : (normal, normal, 700, 3,  13,  $sans, 0, 0),   
+  null    : (normal, normal, 700, 2.25,  9,  $sans, 0, 0),
+  s       : (normal, normal, 700, 2.25,  9,  $sans, 0, 0),
+  m       : (normal, normal, 700, 3.25,  13,  $sans, 0, 0),
+  l       : (normal, normal, 700, 3.25,  13,  $sans, 0, 0),   
 );
 
 

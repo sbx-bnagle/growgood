@@ -13,7 +13,10 @@
   scroll-margin-top: 72px;
 
   .contact__text {
-    @include grid-parent();
+    @include grid-parent($grid-mobile);
+    @include respond-to(m){
+      @include grid-parent($grid-16);
+    }
     // @include stack(lg);
   }  
 
@@ -23,14 +26,21 @@
   }
 
   .contact__blurb {
-    grid-column: 1 / 7;
+    grid-column: 1 / -1;
+    @include stack(md);
+    @include respond-to(m){
+      grid-column: 1 / 7;
+    }
   }
 
   .contact__form {
-    grid-column: 7 / -1;
+    grid-column: 1 / -1;
     @include stack(lg);
     position: relative;
-    margin-top: -11px;
+    @include respond-to(m){
+      grid-column: 7 / -1;
+      margin-top: -11px;
+    }
   }
 
   .contact__form label {

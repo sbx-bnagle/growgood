@@ -31,19 +31,28 @@
 
 
   .subscribe__text {
-    @include grid-parent();
+    @include grid-parent($grid-mobile);
+    @include respond-to(m){
+      @include grid-parent($grid-16);
+    }
     // @include stack(lg);
   }  
 
   .subscribe__title {
     color: color(neutral, X);
-    grid-column: 1 / 7;
+    grid-column: 1 / -1;
+    @include respond-to(m){
+      grid-column: 1 / 7;
+    }
   }
 
   .subscribe__form {
-    grid-column: 7 / -1;
+    grid-column: 1 / -1;
     padding-bottom: 6px;
     position: relative;
+    @include respond-to(m){
+      grid-column: 7 / -1;
+    }
   }
 
   // label {

@@ -23,34 +23,37 @@
     color: color(gold, X);
   }
 
-  .hero__cta {
-    height: 42px;
-    border-radius: 60px;
-    background-color: color(green, XXX);
-    text-align: center;
-    color: color(green, X);
-    @include typestyle($sans-sm-bld);
-    grid-column: 1/5;
-    position: relative;
-    margin-left: bl(11);
-    border: 2px solid color(green, XXX);
-
-    &:hover {
-      color: color(green, XXX);
-      background-color: color(neutral, X);
-    }
-
-    &::before {
-      display: inline-block;
-      content: '';
-      width: bl(11);
-      height: bl(11);
-      background: url('../images/arrow.svg');
-      position: absolute;
-      top: -3px;
-      left: calc(#{bl(11)} * -1 - 3px);
-    }
+  .bttn_wrapper {
+    grid-column: 1/-1;
   }
+  // .hero__cta {
+  //   height: 42px;
+  //   border-radius: 60px;
+  //   background-color: color(green, XXX);
+  //   text-align: center;
+  //   color: color(green, X);
+  //   @include typestyle($sans-sm-bld);
+  //   grid-column: 1/5;
+  //   position: relative;
+  //   margin-left: bl(11);
+  //   border: 2px solid color(green, XXX);
+
+  //   &:hover {
+  //     color: color(green, XXX);
+  //     background-color: color(neutral, X);
+  //   }
+
+  //   &::before {
+  //     display: inline-block;
+  //     content: '';
+  //     width: bl(11);
+  //     height: bl(11);
+  //     background: url('../images/arrow.svg');
+  //     position: absolute;
+  //     top: -3px;
+  //     left: calc(#{bl(11)} * -1 - 3px);
+  //   }
+  // }
 
 }
 

@@ -24,11 +24,24 @@
 
     <nav class="nav__mobile-menu">
       <ul>             
-        <li class='mobile-menu__toggle'>
-          <a class="current" href="#">Menu</a>
-        </li>                   
+        <li id='js-dd__toggle' class='mobile-menu__toggle js-dd__toggle-closed'>Menu</li>       
         <a href="#contact" class='nav-desktop__contact-btn'>Contact</a>
       </ul>
+      <div id='js-dd__pane' class='mobile-menu__pane js-dd__pane-hidden'>
+        <ul>
+          {% for item in site.data.nav-config.toc %}
+            {% if page.permalink contains item.url %}             
+              <li>
+                <a class="current" href="{{ site.url }}/{{ item.url }}">{{ item.title }}</a>
+              </li>           
+            {% else %}
+              <li>
+                <a href="{{ site.url }}/{{ item.url }}">{{ item.title }}</a>
+              </li>
+            {% endif %}          
+          {% endfor %}
+        </ul>
+      </div>
     </nav>
   </div>
 </header>

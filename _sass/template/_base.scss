@@ -75,7 +75,8 @@ mark{
     text-align: center;
     color: color(green, X);
     @include typestyle($sans-sm-bld);
-    grid-column: 1/5;
+    // grid-column: 1/5;
+    white-space: nowrap;
     position: relative;
     margin-left: bl(11);
     border: 2px solid color(green, XXX);
@@ -112,7 +113,12 @@ mark{
 
 .anim_floating {
   position: relative;
-  animation: floating 3s ease-in-out infinite;
+  animation: floating 4s ease-in-out infinite;
+}
+
+.anim_floating-butterfly {
+  position: relative;
+  animation: floating-butterfly 7s ease-in-out infinite;
 }
 
 .anim_buzzing {
@@ -120,15 +126,27 @@ mark{
   animation: buzzing .5s ease-in-out infinite;
 }
 
-@keyframes floating {
+@keyframes floating-butterfly {
   0% {
-    transform: translateY(0);
+    transform: translateY(20px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-140px);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(20px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
