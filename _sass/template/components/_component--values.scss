@@ -79,7 +79,7 @@
     }
 
     .values__item h3 {
-      @include typestyle($sans-md-reg);
+      @include typestyle($sans-md2-reg);
       @include stack(xxs);
       // border-bottom: 1.75px solid rgba(79,72,101,.25);
       text-shadow:
@@ -97,7 +97,7 @@
     }
 
     .values__item h3:before {
-      @include typestyle($sans-md-reg);
+      // @include typestyle($sans-md2-reg);
       content:'\263B';
       color: color(gold, XX);
       padding-right: 8px;

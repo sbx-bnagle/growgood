@@ -95,6 +95,24 @@ $sans-lg-bld: (
 );
 
 
+// MD2  
+
+$sans-md2-reg: (
+  null    : (normal, normal, 400, 2,     9,  $sans, 0, 0),
+  s       : (normal, normal, 400, 2,     9,  $sans, 0, 0),
+  m       : (normal, normal, 400, 2.5,  13,  $sans, 0, 0),
+  l       : (normal, normal, 400, 2.5,  13,  $sans, 0, 0),   
+);
+
+$sans-md2-bld: (
+  null    : (normal, normal, 700, 2,     9,  $sans, 0, 0),
+  s       : (normal, normal, 700, 2,     9,  $sans, 0, 0),
+  m       : (normal, normal, 700, 2.5,  13,  $sans, 0, 0),
+  l       : (normal, normal, 700, 2.5,  13,  $sans, 0, 0),   
+);
+
+
+
 // MD 52/52   
 
 $sans-md-reg: (
