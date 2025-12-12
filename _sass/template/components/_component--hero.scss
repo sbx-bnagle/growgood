@@ -28,7 +28,7 @@
   }
 
   .hero__bttn {
-    @include typestyle($sans-md-reg);
+    @include typestyle($sans-md2-reg);
     height: 60px;
     border-radius: 60px;
     padding: 0 bl(10);
