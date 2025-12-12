@@ -14,7 +14,7 @@
   text-align: center;
   position: relative;
   @include respond-to(m){
-    padding: 50px 0;
+    padding: 30px 0 50px 0;
     @include stack(xl);
   }
 
@@ -22,17 +22,17 @@
   .values__butterfly {
     z-index: 50;
     position: absolute;
-    right: 60px;
+    right: 140px;
     top: -60px;
-    width: 250px;
+    width: 300px;
   }
 
   .values__bee {
     z-index: 50;
     position: absolute;
-    left: 120px;
-    bottom: 300px;
-    width: 150px;
+    left: 80px;
+    bottom: 420px;
+    width: 120px;
     display: none;
     @include respond-to(l){
       display: block;
@@ -73,15 +73,49 @@
       @include respond-to(s){
         grid-column: span 8;
       }
-      @include respond-to(m){
-        grid-column: span 4;
-      }
+      // @include respond-to(m){
+      //   grid-column: span 4;
+      // }
     }
 
     .values__item h3 {
-      // @include typestyle($sans-md-reg);
+      @include typestyle($sans-md-reg);
       @include stack(xxs);
-      border-bottom: 1px solid color(purple, XX);
+      // border-bottom: 1.75px solid rgba(79,72,101,.25);
+      text-shadow:
+        -2px -2px 0 color(green, X), /* Top-left shadow */
+        2px -2px 0 color(green, X),  /* Top-right shadow */
+        -7px 2px 0 color(green, X),  /* Bottom-left shadow */
+        2px 2px 0 color(green, X);   /* Bottom-right shadow */
+      @include respond-to(m){
+        text-shadow:
+        -3px -3px 0 color(green, X), /* Top-left shadow */
+        3px -3px 0 color(green, X),  /* Top-right shadow */
+        -3px 3px 0 color(green, X),  /* Bottom-left shadow */
+        3px 3px 0 color(green, X);   /* Bottom-right shadow */
+      }
+    }
+
+    .values__item h3:before {
+      @include typestyle($sans-md-reg);
+      content:'\263B';
+      color: color(gold, XX);
+      padding-right: 8px;
+      font-size: 28px;
+      opacity: .8;
+      @include respond-to(m){
+        padding-right: 12px;
+        font-size: 38px;
+      }
+    }
+
+    .val-hr {
+      margin-top: -8px;
+      border: none;
+      border-bottom: 2px solid rgba(79,72,101,.35);
+      @include respond-to(m){
+        margin-top: -12px;
+      }
     }
 
   }

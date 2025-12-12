@@ -118,7 +118,7 @@ mark{
 
 .anim_floating-butterfly {
   position: relative;
-  animation: floating-butterfly 7s ease-in-out infinite;
+  animation: floating-butterfly 8s ease-in-out infinite;
 }
 
 .anim_buzzing {
@@ -131,7 +131,7 @@ mark{
     transform: translateY(20px);
   }
   50% {
-    transform: translateY(-140px);
+    transform: translateY(-180px);
   }
   100% {
     transform: translateY(20px);

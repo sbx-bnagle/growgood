@@ -26,6 +26,19 @@
   .bttn_wrapper {
     grid-column: 1/-1;
   }
+
+  .hero__bttn {
+    @include typestyle($sans-md-reg);
+    height: 60px;
+    border-radius: 60px;
+    padding: 0 bl(10);
+    margin-left: bl(15);
+    &::before {
+      width: bl(15);
+      height: bl(15);
+      left: calc(#{bl(15)} * -1 - 3px);
+    }
+  }
   // .hero__cta {
   //   height: 42px;
   //   border-radius: 60px;
