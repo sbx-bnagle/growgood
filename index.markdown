@@ -4,7 +4,7 @@ layout: home
 
 {% include hero.html 
 	intro = "ASKS YOU KINDLY TO EXCUSE THE DUST: you've found a site under construction!"
-   	cta   = "Let's Talk!"
+   	cta   = "Get Started!"
 %}
 
 
