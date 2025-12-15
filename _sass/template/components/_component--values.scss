@@ -21,10 +21,20 @@
 
   .values__butterfly {
     z-index: 50;
-    position: absolute;
-    right: 140px;
-    top: -60px;
-    width: 300px;
+    position: absolute;   
+    display: none;
+    @include respond-to(m){
+      display: block;
+      width: 212px;
+      top: 32px;
+      right: 120px;
+    }
+    @include respond-to(l){
+      display: block;
+      width: 300px;
+      top: -52px;
+      right: 140px;
+    }
   }
 
   .values__bee {
@@ -80,20 +90,13 @@
 
     .values__item h3 {
       @include typestyle($sans-md2-reg);
-      @include stack(xxs);
+      padding-bottom: 6px;
       // border-bottom: 1.75px solid rgba(79,72,101,.25);
       text-shadow:
         -2px -2px 0 color(green, X), /* Top-left shadow */
         2px -2px 0 color(green, X),  /* Top-right shadow */
         -7px 2px 0 color(green, X),  /* Bottom-left shadow */
         2px 2px 0 color(green, X);   /* Bottom-right shadow */
-      @include respond-to(m){
-        text-shadow:
-        -3px -3px 0 color(green, X), /* Top-left shadow */
-        3px -3px 0 color(green, X),  /* Top-right shadow */
-        -3px 3px 0 color(green, X),  /* Bottom-left shadow */
-        3px 3px 0 color(green, X);   /* Bottom-right shadow */
-      }
     }
 
     .values__item h3:before {
@@ -107,6 +110,13 @@
         padding-right: 12px;
         font-size: 38px;
       }
+    }
+
+    .values__item p {
+      color: color(purple, XXX);
+      @include typestyle($sans-sm-reg);
+      margin-top: 0;
+      padding-top: 0;
     }
 
     .val-hr {
