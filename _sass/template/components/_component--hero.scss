@@ -10,17 +10,35 @@
   @include respond-to(m){
     @include grid-parent($grid-16);
   }
-  @include stack(xxl);
+  @include stack(lg);
   
   .hero__deck {
     grid-column: 1 / -1;
-    @include typestyle($sans-lg-reg);
     @include stack(md);
+    position: relative;
+    @include typestyle($sans-lg-reg);
   }
 
-  .hero__deck span {
+  // .hero__deck p {
+  //   @include typestyle($sans-lg-reg);
+  //   display: inline;
+  // }
+
+  .hero__deck span.logo {
     @include typestyle($sans-lg-bld);
     color: color(gold, X);
+  }
+
+  .hero__deck img {
+    display: none;
+    width: 112px;
+    position: relative;
+    left: 6px;
+    // padding-right: 4px;
+    top: 0;
+    @include respond-to(m){
+      display: inline;
+    }
   }
 
   .bttn_wrapper {

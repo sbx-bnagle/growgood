@@ -1,9 +1,10 @@
 <div class='hero'>
-  <p class='hero__deck'>
-    <span>Grow Good</span> {{ include.intro }}
-  </p>
+  <div class='hero__deck'>
+    <span class='logo'>Grow Good</span>&ensp;garden designs and perennial plants for the DIYers of the Upper <span class='no_wrap'>Midwest 
+    <img class='hero__img' src='{{ site.url }}/assets/images/gg_map.png'></span>
+  </div>
   <div class='bttn_wrapper'>
-    <button class='gg_button hero__bttn' href='#'>
+    <button class='gg_button hero__bttn' href='{{ site.url }}/{{ item.url }}{{ include.destination }}'>
       <!-- hero__cta -->
       {{ include.cta }}
     </button>
