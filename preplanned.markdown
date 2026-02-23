@@ -65,10 +65,22 @@ Don&rsquo;t hesitate to [reach out](#) with any questions about which kit is rig
 
 <script>
   document.getElementById('checkout-button').addEventListener('click', async () => {
-    const qty = document.getElementById('item-quantity').value; 
-    const response = await fetch('https://stripe-payment-link.fagan-leah.workers.dev'+qty);
-    const { url } = await response.json();    
-    window.location.href = url;
+    const qty = document.getElementById('item-quantity').value;
+	const workerUrl = "https://stripe-payment-link.fagan-leah.workers.dev" + qty;
+
+	fetch(workerUrl, {
+	  method: 'GET', // Explicitly set GET
+	  mode: 'cors'   // Explicitly set CORS
+	})
+	.then(res => res.json())
+	.then(data => {
+	  if (data.url) window.location.href = data.url;
+	  else console.error("Stripe Error:", data.error);
+	})
+	.catch(err => console.error("Fetch Error:", err));
   });
+
+
+  
 </script>
 
