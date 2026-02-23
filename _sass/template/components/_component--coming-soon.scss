@@ -1,0 +1,121 @@
+/**
+  * Component: Contact
+  *  
+  * @description
+  * -
+  */
+
+
+.coming-soon {
+  display: none;
+  width: 80vw;
+  background-color: color(red, XX);
+  color: color(neutral, X);
+  padding: bl(4) bl(20) bl(20);
+  position: fixed;
+  top: 45%;
+  left: 52%;
+  min-height: 360px;
+  transform: rotate(-4deg) translate(-50%, -50%);
+  border-radius: 12px;
+  z-index: 9999;
+  box-sizing: border-box;
+  
+
+  h2 {
+    @include typestyle($sans-xl-bld);
+    position: relative;
+    padding-top: 14px;
+  }
+
+  p {
+    @include typestyle($sans-md2-reg);
+    padding-top: 14px;
+  }
+
+
+
+  .subscribe__form {
+    position: relative;
+    margin-top: bl(18)
+  }
+
+   .subscribe__text {
+    // @include typestyle($sans-xl-bld);
+    padding-bottom: bl(1);
+   }
+
+
+
+  label.floater {
+    transition: all ease-in .2s;
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    padding-bottom: bl(4);
+    color: color(neutral, X);
+  }
+
+  label.js_float:after {
+    display: none;
+  }
+  
+  label.js_unfloat {
+    display: block;
+    position: absolute;
+    top: 14px;
+    pointer-events: none;
+    opacity: .6;
+  }
+
+  label.js_float {
+    top: -12px;
+    font-size: 14px;
+    opacity: 1;
+    position: absolute;
+  }
+
+  .subscribe__email {
+    width: calc(100% - 168px);
+    @include stack(sm);
+    @include typestyle($sans-sm-reg);
+    padding: bl(4) bl(3) bl(3);
+    box-sizing: border-box;
+    outline: none;
+    background-color: color(red, XX);
+    border-bottom: solid 1.5px color(neutral, X);
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-radius: 0;
+    transition: all .1s ease-in;
+    color: color(neutral, X);
+  }
+
+  .subscribe__email:focus{
+    border-bottom: solid 1.5px rgba(240, 239, 235, 1);
+  }
+
+  button {
+    @include typestyle($sans-sm-bld);
+    height: 42px;
+    border-radius: 60px;
+    padding: bl(1.5) bl(4);
+    background-color: color(neutral, XXX);
+    border: 2px solid color(neutral, XXX);
+    text-align: center;
+    color: color(neutral, X);
+    box-sizing: border-box;
+    width: 140px;
+    margin-left: bl(5);
+    transition: all .1s ease-in;
+
+    &:hover {
+      text-decoration: none;
+      border-color: color(neutral, X);
+      color: color(neutral, X);
+      background-color: color(red, XX);
+    }
+  }
+}
+
