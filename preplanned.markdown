@@ -66,7 +66,7 @@ Don&rsquo;t hesitate to [reach out](#) with any questions about which kit is rig
 <script>
   document.getElementById('checkout-button').addEventListener('click', async () => {
     const qty = document.getElementById('item-quantity').value;
-	const workerUrl = "https://stripe-payment-link.fagan-leah.workers.dev" + qty;
+	const workerUrl = "https://stripe-payment-link.fagan-leah.workers.dev?qty=" + qty;
 
 	fetch(workerUrl, {
 	  method: 'GET', // Explicitly set GET
