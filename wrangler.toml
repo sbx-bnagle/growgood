@@ -1,7 +1,25 @@
-name = "growgood-github-oauth"
-main = "workers/github-oauth.js"
-compatibility_date = "2024-12-01"
+# name = "growgood-github-oauth"
+# main = "workers/github-oauth.js"
+# compatibility_date = "2024-12-01"
+
+
+name = "stripe-payment-link"
+main = "workers/stripe-payment-link/src/worker.js" # Path to your JavaScript file
+compatibility_date = "2026-02-27"
 account_id = "a0432d479ca11b124c5051f475d9b84f"  # Add your Cloudflare account ID here
+
+[[durable_objects.bindings]]
+name = "ORDERNO_COUNTER"
+class_name = "OdernoCounter"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["OdernoCounter"]
+
+[[d1_databases]]
+binding = "KIT_ORDERS" 
+database_name = "kit_orders"
+database_id = "70570fb7-332e-4398-b3b4-bfd1a3e6d647"
 
 # Secrets (set via: wrangler secret put GITHUB_CLIENT_ID)
 # These are securely stored and injected at runtime

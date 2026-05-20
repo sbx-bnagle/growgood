@@ -38,7 +38,11 @@
 
 // import files from components folder
 @import
+	'template/components/component--banner',
+	'template/components/component--card',
 	'template/components/component--dashboard',
+	'template/components/component--gardenolator',
+	'template/components/component--faq',
 	'template/components/component--comments',
 	'template/components/component--subscribe',
 	'template/components/component--coming-soon',
@@ -48,6 +52,8 @@
 	'template/components/component--diy',
 	'template/components/component--header',
 	'template/components/component--hero',
+	'template/components/component--order-block',
+	'template/components/component--post-content',
 	'template/components/component--services',
 	'template/components/component--values',
 	'template/components/component--quotes',

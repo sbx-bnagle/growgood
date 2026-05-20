@@ -58,52 +58,66 @@ p, a, li {
   @include typestyle($sans-sm-reg);
 }
 
+p {
+  @include stack(xs);
+}
+
 h1, h2, h3, h4, p, ul {
   grid-column: 1 / 13;
 }
 
 mark{
-  background: color(gold, X);
+  background: #f5ea8b; //color-mix(in oklab, color(neutral, X) 75%, color(gold, X) 25%);
   color: color(neutral, XXX);
   // padding: 0 3px;
 }
 
 .gg_button {
-    height: 42px;
-    border-radius: 60px;
-    background-color: color(green, XXX);
-    text-align: center;
-    color: color(green, X);
-    @include typestyle($sans-sm-bld);
-    // grid-column: 1/5;
-    white-space: nowrap;
-    position: relative;
-    margin-left: bl(11);
-    border: 2px solid color(green, XXX);
-    padding: 0 bl(6);
-    transition: all .1s ease-in;
+  height: 42px;
+  border-radius: 60px;
+  background-color: color(green, XXX);
+  text-align: center;
+  color: color(green, X);
+  @include typestyle($sans-sm-bld);
+  // grid-column: 1/5;
+  white-space: nowrap;
+  position: relative;
+  margin-left: bl(11);
+  border: 2px solid color(green, XXX);
+  padding: 0 bl(6);
+  transition: all .1s ease-in;
+  display: inline-block;
+
+  &:hover {
+    color: color(green, XXX);
+    background-color: color(neutral, X);
+  }
+
+  &::before {
     display: inline-block;
-
-    &:hover {
-      color: color(green, XXX);
-      background-color: color(neutral, X);
-    }
-
-    &::before {
-      display: inline-block;
-      content: '';
-      width: bl(11);
-      height: bl(11);
-      background: url('../images/arrow.svg');
-      position: absolute;
-      top: -3px;
-      left: calc(#{bl(11)} * -1 - 3px);
-    }
+    content: '';
+    width: bl(11);
+    height: bl(11);
+    background: url('../images/arrow.svg');
+    position: absolute;
+    top: -3px;
+    left: calc(#{bl(11)} * -1 - 3px);
   }
+}
 
-  span.no_wrap {
-    white-space: nowrap;
-  }
+span.no_wrap {
+  white-space: nowrap;
+}
+
+hr {
+  grid-column: span 16;
+  width: 100%;
+  height: 1px;
+  border: none;
+  border-top: 1px solid color-mix(in oklab, color(neutral, X) 75%, color(neutral, XXX) 25%);
+  margin-top: bl(20);
+  @include stack(lg);
+}
 
 
 
@@ -173,9 +187,104 @@ mark{
 
 
 
+// Lenis smooth scrolling 
+// ----------------------------------------------------------------------------
+
+
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+
+
+// Grid list on kits page (should be moved to its own file) 
+// ----------------------------------------------------------------------------
+
+.gridlist-intro {
+  grid-column: 1 / -1;
+  @include typestyle($sans-md2-reg);
+  @include stack(lg);  
+}
+
+.gridlist-icons {
+  @include grid-child($cols: 16);
+  list-style: none;
+
+  li {
+    grid-column: span 4;
+    padding-right: bl(24);
+    @include stack(md);
+    @include typestyle($sans-sm-bld);
+    // padding: bl(12);
+    // border-right: 1px solid color-mix(in oklab, color(neutral, X) 75%, color(neutral, XXX) 25%);
+    // border-radius: 8px;
+  }
+
+  li img {
+    @include stack(sm);
+    padding-bottom: bl(4);
+    box-sizing: border-box;
+    border-bottom: 1px solid color-mix(in oklab, color(neutral, X) 75%, color(neutral, XXX) 25%);
+  }
+}
+
+
+
+
+
+// Some styles for the services page, diff than the component,
+// Should probably have its own file
+// ----------------------------------------------------------------------------
+
+.services__map {
+  display: inline-block;
+  width: 80px;
+}
+
+.deck {
+  @include typestyle($sans-md-bld);
+  @include stack(lg);
+  grid-column: 1 / 13;
+}
+
+
 
 // Helpers
 // ----------------------------------------------------------------------------
 
 .display-none { display: none; }
 .display-block { display: block; }
+.no-scroll { overflow: hidden; }
+.left { grid-column: 1/9; }
+.right { grid-column: 10/-1; }
+.full { grid-column: 1/-1; }
+.button {
+  @include typestyle($sans-sm-bld);
+  background-color: color(neutral, XXX);
+  color: color(neutral, X);
+  padding: bl(2) bl(6) bl(2) bl(6);
+  border-radius: 50px;
+  display: inline-block;
+  @include stack(md);
+}
+.download::before {
+  content:'';
+  position: relative;
+  width: 13px;
+  height: 13px;
+  background: url('../images/dwnld-light.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  left: -8px;
+}
+.rounded { border-radius: 8px; }

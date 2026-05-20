@@ -1,0 +1,128 @@
+
+
+.card {
+	display: grid;
+	grid-column: span 8;
+	min-height: 10rem;
+	box-sizing: border-box;
+	@include stack(sm);
+	background-color: color(green, X);
+	border-radius: 20px;
+	position: relative;
+	transition: all .1s ease-in;
+
+	&:hover {
+		background-color: color-mix(in oklab, color(green, X), color(neutral, X) 10%);
+	}
+
+	h2 {
+		@include stack(xs);
+		transition: all .1s ease-in;
+	}
+
+	p {
+		transition: all .1s ease-in;
+	}
+
+	span {
+		position: absolute;
+		bottom: 32px;
+		height: 42px;
+		box-sizing: border-box;
+		border-radius: 60px;
+		text-align: center;
+		color: color(neutral, X);
+		background-color: transparent;
+		@include typestyle($sans-sm-bld);
+		white-space: nowrap;
+		margin-left: bl(11);
+		border: 2px solid color(neutral, X);
+		padding: bl(2) bl(6) 0;
+		transition: all .1s ease-in;
+		display: inline-block;
+
+
+		&::before {
+		  display: inline-block;
+		  content: '';
+		  width: bl(11);
+		  height: bl(11);
+		  background: url('../images/arrow-ko.svg');
+		  background-size: contain;
+		  position: absolute;
+		  top: -3px;
+		  left: calc(#{bl(11)} * -1 - 3px);
+		}
+	}
+
+	a {
+		display: block; 
+		box-sizing: border-box;
+		height: 100%;
+		width: 100%;
+		padding: bl(3) bl(8) bl(28);
+
+
+		&:hover {
+			h2 {
+				text-decoration: underline;
+			}
+			span {
+				color: color(neutral, XXX);
+		  		background-color: color(neutral, X);
+			}	
+		}
+	}
+}
+
+.card.purple {
+	background-color: color(purple, XX);
+	color: color(neutral, X);
+	&:hover {
+		background-color: color-mix(in oklab, color(purple, XX), color(neutral, X) 15%);
+	}
+	a:hover {
+		span {
+			color: color(purple, XX);
+		}
+	}
+}
+
+.card.gold {
+	background-color: color(gold, XX);
+	color: color(neutral, X);
+	&:hover {
+		background-color: color-mix(in oklab, color(gold, XX), color(neutral, X) 15%);
+	}
+	a:hover {
+		span {
+			color: color(gold, XX);
+		}
+	}
+}
+
+.card.red {
+	background-color: color(red, X);
+	color: color(neutral, X);
+	&:hover {
+		background-color: color-mix(in oklab, color(red, X), color(neutral, X) 15%);
+	}
+	a:hover {
+		span {
+			color: color(red, X);
+		}
+	}
+}
+
+.card.green {
+	background-color: color(green, XXX);
+	color: color(neutral, X);
+	&:hover {
+		background-color: color-mix(in oklab, color(green, XXX), color(neutral, X) 15%);
+	}
+	a:hover {
+		span {
+			color: color(green, XXX);
+		}
+	}
+}

@@ -1,0 +1,19 @@
+
+
+.post-content {
+	ul {
+		@include stack(xs);
+	}
+
+	img {
+		margin: 0 auto;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+	small {
+		display: block;
+	}
+}

@@ -83,8 +83,15 @@ $icon: (
 $sans-xl-bld: (
   null    : (normal, normal, 700, 5,  13,  $sans, 0, 0),
   s       : (normal, normal, 700, 5,  13,  $sans, 0, 0),
-  m       : (normal, normal, 700, 8,  24,  $sans, 0, 0),
-  l       : (normal, normal, 700, 8,  24,  $sans, 0, 0),   
+  m       : (normal, normal, 700, 7,  24,  $sans, 0, 0),
+  l       : (normal, normal, 700, 7,  24,  $sans, 0, 0),   
+);
+
+$sans-xl-reg: (
+  null    : (normal, normal, 400, 5,  13,  $sans, 0, 0),
+  s       : (normal, normal, 400, 5,  13,  $sans, 0, 0),
+  m       : (normal, normal, 400, 7,  24,  $sans, 0, 0),
+  l       : (normal, normal, 400, 7,  24,  $sans, 0, 0),   
 );
 
 
@@ -158,20 +165,20 @@ $sans-sm-bld: (
 );
 
 
-// XS 14.5/16
+// XS 16/20
 
 $sans-xs-reg: (
-  null    : (normal, normal, 400, .90625,  4,  $sans, 0, 0),
-  s       : (normal, normal, 400, .90625,  4,  $sans, 0, 0),
-  m       : (normal, normal, 400, .90625,  4,  $sans, 0, 0),
-  l       : (normal, normal, 400, .90625,  4,  $sans, 0, 0),   
+  null    : (normal, normal, 400, 1,  5,  $sans, 0, 0),
+  s       : (normal, normal, 400, 1,  5,  $sans, 0, 0),
+  m       : (normal, normal, 400, 1,  5,  $sans, 0, 0),
+  l       : (normal, normal, 400, 1,  5,  $sans, 0, 0),   
 );
 
 $sans-xs-bld: (
-  null    : (normal, normal, 700, .90625,  4,  $sans, 0, 0),
-  s       : (normal, normal, 700, .90625,  4,  $sans, 0, 0),
-  m       : (normal, normal, 700, .90625,  4,  $sans, 0, 0),
-  l       : (normal, normal, 700, .90625,  4,  $sans, 0, 0),   
+  null    : (normal, normal, 700, 1,  5,  $sans, 0, 0),
+  s       : (normal, normal, 700, 1,  5,  $sans, 0, 0),
+  m       : (normal, normal, 700, 1,  5,  $sans, 0, 0),
+  l       : (normal, normal, 700, 1,  5,  $sans, 0, 0),   
 );
 
 

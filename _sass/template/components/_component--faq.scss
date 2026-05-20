@@ -1,0 +1,56 @@
+
+
+.faq {
+	@include grid-child($cols: 16);
+	@include stack(lg);
+
+	h2 {
+		grid-column: 4 / 14;
+		@include stack(xs);
+	}
+
+	ul {
+		grid-column: 4 / 14;
+		list-style: none;
+	}
+
+	li {
+		border-top: 1px solid color-mix(in oklab, color(neutral, X) 75%, color(neutral, XXX) 25%);
+		padding: bl(4) 0 bl(8);
+	}
+
+	.faq_q {
+		@include typestyle($sans-sm-bld);
+		margin-left: bl(5);
+	}
+
+	.faq_q:hover {
+		cursor: pointer;
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+	}
+
+	.faq_q:before {
+		content:'';
+	  position: relative;
+	  width: 20px;
+	  height: 20px;
+	  background: url('../images/open.svg');
+	  background-size: contain;
+	  background-repeat: no-repeat;
+	  display: inline-block;
+	  left: -12px;
+	  top: 3px;
+	}
+
+	.faq_a {
+		padding-left: bl(10);
+		margin-top: bl(8);
+	}
+
+	.hidden {
+		visibility: hidden;
+		height: 0;
+		margin-top: 0;
+	}
+}

@@ -1,5 +1,6 @@
 ---
 layout: home
+# Add this below once ready: {% include diy.html %}
 ---
 
 {% include hero.html 
@@ -20,7 +21,7 @@ layout: home
 %}
 
 
-{% include diy.html %}
+
 {% include community.html %}
 
 

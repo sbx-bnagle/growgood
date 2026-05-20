@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
+
+  <body class='kits'>
+
+    {%- include header.html -%}
+    
+    <div class='order-wrapper'>
+      <div class='order-image'>
+        <div class="carousel-wrap">
+          <div class="main-image" id="mainImg">
+            <div class="arrow arrow-prev disabled" id="prevBtn">
+              <img src='/assets/images/arrow-bw.svg'>
+            </div>
+            <div class="arrow arrow-next" id="nextBtn">
+              <img src='/assets/images/arrow-bw.svg'>
+            </div>
+          </div>
+          <div class="thumbs" id="thumbs"></div>
+        </div>
+        <!-- <img src='/assets/images/fpo.png'> -->
+      </div>
+      <div class='order-info'>
+        <h1>Garden Kits</h1>
+        <span class='cost'>$4.50/sq ft</span>
+        <span class='order-by'>Order by 00/00/0000 for Spring 2026</span>
+        <span class='order-next'>Next Delivery Late Summer 2026</span>
+        <div class='order__configure'>
+          <h2>Build Your Order</h2>
+          <p>Every garden is different. Use the kit calculator below, and we&rsquo;ll put together the right kit combination and quantities for your order.</p>
+          <button id='gadenolator-open' class='order__button-primary'>Start Building Your Order</button>
+        </div>
+        <div class='order__purchase'>
+          <h2>Cart</h2>
+          <ul>
+            <li><input type="number" id="item-quantity" class='order__quantity' value="0" min="0"><span>Type I</span><div>&nbsp;</div><span class='item-price' id='item-price'>$0.00</span></li>
+            <li><input type="number" id="item2-quantity" class='order__quantity' value="0" min="0"><span>Type II</span><div>&nbsp;</div><span class='item-price' id='item2-price'>$0.00</span></li>
+            <li><input type="number" id="item3-quantity" class='order__quantity' value="0" min="0"><span>Type III</span><div>&nbsp;</div><span class='item-price' id='item3-price'>$0.00</span></li>
+            <li class='total'><span class='order__quantity'>&nbsp;</span><span>Shipping</span><div>&nbsp;</div><span>$25.00</span></li>
+            <li class='total'><span id='total__quantity'>00</span><span>Total</span><div>&nbsp;</div><span id='total-price'>$0.00</span></li>
+          </ul>
+          <div id='checkout'>
+            <button id="checkout-button" class='order__button-primary'>Place Order for Spring 2026</button>
+            <div id='checkout-spinner'>
+              <div></div>
+            </div>
+          </div>
+          <!-- <span class='purchase__delivery'>Delivery Spring 2026</span> -->
+        </div>
+        <p>
+          Our kits bring together native perennial plants designed for beauty, function, and your local habitat. Every kit delivers real color and texture alongside real benefits for birds, bugs, and the community that grows around them.
+        </p>
+        <p>
+          Kits are sold by the square foot and scale from a small patio to a full backyard. Each includes:
+        </p>
+        <ul>
+          <li>a garden plan tailored to your site conditions,</li>
+          <li>plants ready to go in the ground,</li>
+          <li>installation instructions,</li>
+          <li>and a long-term maintenance guide.</li>
+        </ul>
+        <p>
+          Low-maintenance and complete on their own, our kits also serve as a foundation to expand and make your own over time. Plant selection rotates with the season, but every kit is designed to perform.
+        </p>
+      </div>
+    </div>
+
+    <div class='content-wrapper'>
+      {{ content }}
+    </div>
+    
+    
+    {%- include subscribe.html -%}
+    {%- include contact.html -%}
+    {%- include footer.html -%}
+
+    <script>
+      document.getElementById('checkout-button').addEventListener('click', () => {
+        const spinner = document.getElementById('checkout-spinner');
+        spinner.style.opacity = '1';
+      });
+    </script>
+    <script src="{{site.url}}/assets/js/carousel.js"></script>
+  </body>
+
+</html>
+
+
+

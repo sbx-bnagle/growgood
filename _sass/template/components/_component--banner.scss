@@ -1,0 +1,16 @@
+
+
+.banner {
+	// @include grid-child($cols: 16);
+	grid-column: 1 / -1;
+	background-color: color(green, X);
+	// color: color(neutral, X);
+	padding: bl(4) bl(8) bl(12);
+
+	// p { grid-column: 1 / -1; }
+	a.button {
+		display: inline-block; 
+		margin-top: bl(12);
+		@include stack(xs);
+	}
+}

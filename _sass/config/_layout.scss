@@ -59,11 +59,12 @@ $grid-mobile: (
 );
 
 $grid-full: (
-  columns   : 5,
+  columns   : 16,
   rows      : auto,
-  gutter-h  : 24px,
+  gutter-h  : 20px,
   gutter-v  : 0,
-  width     : 100vw,
+  width     : 100%,
+  max-width : 1800px,
 );
 
 $grid-selected: (

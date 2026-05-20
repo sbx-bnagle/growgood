@@ -1,0 +1,93 @@
+<div class='gardenolator js-gardenolator display-none'>
+  <h2>Kit Calculator</h2>
+  <button id='gardenolator-close' class='close' type='button'>&times;</button>
+
+  <div id='plotter__instructions'>
+    <div class='plotter__step-one'>
+      <div class='plotter__step-no'>1</div>
+      <div class='plotter__step-info'>
+        <h3>Garden Dimensions</h3>
+        <p>Enter the approximate length and width of your garden in feet. <br>Don&rsquo;t worry about irregular shapes—we&rsquo;ll sort that out next.</p>
+      </div>
+    </div>
+
+    <div class='plotter__step-two'>
+      <div class='plotter__step-no'>2</div>
+      <div class='plotter__step-info'>
+        <h3>Kit Selection</h3>
+        <p>Select a kit and fill in the squares where you&rsquo;d like it planted.<br>We&rsquo;ll compile the order from your plan.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id='plotter__controls'>
+    <form id='plotter__dimensions'>
+      <span>Square Feet</span>
+      <input id='plotter__x-axis' type='number' min="1" max="60"> <span>&times;</span>
+      <input id='plotter__y-axis' type='number' min="1" max="60">
+      <input id='plotter__form-submit' type='submit' value='Show Me my Plot'>
+    </form>
+    <form id='plotter__kits'>
+      <div>
+        <input type='radio' id='plotter__kits-I' value='type-I' name='kits' checked='checked'>
+        <label for='plotter__kits-I' name='kits'>Kit Type-I</label>
+        <p>The quick brown fox jumps over the lazy dog.</p>
+      </div>
+      <div>
+        <input type='radio' id='plotter__kits-II' value='type-II' name='kits'>
+        <label for='plotter__kits-II' name='kits'>Kit Type-II</label>
+        <p>The quick brown fox jumps over the lazy dog.</p>
+      </div>
+      <div>
+        <input type='radio' id='plotter__kits-III' value='type-III' name='kits'>
+        <label for='plotter__kits-I' name='kits'>Kit Type-III</label>
+        <p>The quick brown fox jumps over the lazy dog.</p>
+      </div>
+    </form>
+  </div>
+
+  <div id='plotter__plot-wrapper'>
+    <div id='plot'></div>   
+  </div>
+
+  <button id='plotter__amounts-update' type='button'>Create my Order</button>
+</div>
+
+
+<!-- 
+
+TO DO
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+-- Style native form elements (likely by replacing them)
+-- Non-plantable areas in drawtypes, trees, paths, wall, etc. 
+   (just tall and short?)
+-- Plan info needs to be emailed to Leah with way to tie it to stripe payment
+   (order #)
+   EITHER create a json object with matrix coordinates and a value (ex: 1-5-shade)
+   OR create a pdf via library like html2pdf.js upload it to hidden form spree input and send there
+   *****SEE BELOW*****
+-- Zoom?
+-- Use a custom cursor like a garden spade when hovering over garden plot squares
+-- Vertically center garden plot when smaller than the containing area
+-- Responsive
+-- Accessible
+-- Animate open/close of garden-o-lator
+-- Close drawtype menu when new type is selected
+-- Scroll to and highlight updated quantities once Garden-o-lator is closed
+-- BG scrim behind modal?
+-- Export to PDF?
+-- Choosing NWSE
+
+** TEST with folks to get an idea if they get it **
+
+***** I THINK IT SHOULD *****
+01/ Create a json object wth coordinates and values, along with the order number (available?)
+02/ Send json object to Cloudflare worker, which uses it to update a spreadsheet somewhere (google sheets?)
+    - Try using POST instead of GET with setup variables 
+    - Cloudflare can both update a row in Google sheets and send an email with the info
+03/ Use spreadsheet to feed info to a list of orders and view of the customer plans, 
+    maybe with the ability to export shapes to pdf/svg for easier inclusion in design plan
+
+ -->
+

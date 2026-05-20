@@ -1,0 +1,36 @@
+{
+  "name": "stripe-payment-link",
+  "main": "src/worker.js",
+  "workers_dev": true,
+  "preview_urls": true,
+  "compatibility_date": "2026-02-23",
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "ORDERNO_COUNTER",
+        "class_name": "OrdernoCounter"
+      }
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "KIT_ORDERS",
+      "database_id": "70570fb7-332e-4398-b3b4-bfd1a3e6d647"
+    }
+  ],
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": ["OdernoCounter"]
+    },
+    {
+      "tag": "v2",
+      "renamed_classes": [
+        {
+          "from": "OdernoCounter",
+          "to": "OrdernoCounter"
+        }
+      ]
+    }
+  ]
+}

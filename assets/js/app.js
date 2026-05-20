@@ -1,7 +1,3 @@
-
-
-
-
 // Include drop downs
 // ----------------------------------------------------------------------------
 var dropdowns = document.getElementsByClassName('js-drop');
@@ -106,62 +102,8 @@ body.addEventListener("click", function(event) {
 
 
 
-
-// Pagination with list.js (https://listjs.com/)
+// Set up gardenolator
 // ----------------------------------------------------------------------------
 
+// const gardenolator = document.querySelector('.js-gardenolator');
 
-// // Get list.js up and running if needed
-// const perPage = 25;
-// const itemCount = document.getElementById('js-upcoming-events').getElementsByClassName('list')[0].getElementsByTagName('li').length;
-
-// if( itemCount > perPage ){
-
-// 	const options = {
-// 	  page: perPage,
-// 	  pagination: [{
-// 	      outerWindow: 1	 
-// 	    }]
-// 	};
-
-// 	const upcomingList = new List('js-upcoming-events', options);
-
-
-// 	// Add prev and next buttons
-// 	let prev, 
-// 			next,
-// 			current;
-
-// 	// Find total pages
-// 	const pageCount = Math.ceil(upcomingList.size() / perPage);
-
-// 	// Grab and add relevant elements
-// 	const pagination = document.getElementById('js-pagination');
-// 	pagination.insertAdjacentHTML('beforebegin', '<div id="js-prev" class="btn-prev"> Prev </div>');
-// 	pagination.insertAdjacentHTML('afterend', '<div id="js-next" class="btn-next"> Next </div>');
-
-// 	// function to set everything up and update as needed
-// 	const position = function(){
-// 		prev = document.getElementById('js-prev');
-// 		next = document.getElementById('js-next');
-// 		current = Math.ceil(upcomingList.i / perPage);
-// 	}
-
-// 	// call the function to set up values
-// 	position();
-
-// 	// set up event listeners
-// 	prev.addEventListener("click", function(){
-// 		if(current > 1) {
-// 			upcomingList.show(upcomingList.i - perPage, upcomingList.page);
-// 			position();
-// 		}
-// 	});
-// 	next.addEventListener("click", function(){
-// 		if(current < pageCount) {
-// 			upcomingList.show(upcomingList.i + perPage, upcomingList.page);
-// 			position();
-// 		} 	
-// 	});
-	
-// }
