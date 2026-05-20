@@ -201,7 +201,7 @@ We're flexible and happy to talk through whatever you have in mind, big or small
 
   .main-image { 
     width: 100%; 
-    aspect-ratio: 3/2;  
+    aspect-ratio: 2/1;  
     border-radius: 8px; 
     overflow: hidden; 
     position: relative;
