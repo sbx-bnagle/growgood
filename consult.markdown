@@ -7,21 +7,24 @@ permalink: /consult
 # Site assessment & consultation
 
 <p class='deck'>
-	The quick brown fox jemps over the lazy doggg.
+	Not sure what will grow in your space? We can help!
 </p>
 
-## Consultations topics
+A site visit is the first step in any custom garden design project and a useful service on its own. Whether you're planning a full garden design or just want expert eyes on your space, a visit gives you a clear, honest picture of what will work and why.
 
-### Design
+## What we do
 
-### Conditions
+We come out to your space and assess soil conditions, light exposure, and drainage. We take measurements and photographs, talk through your goals and budget, and share our initial recommendations before we leave. By the end of the visit you'll know exactly what your space can support and what your options are.
 
-### Project Plan
+## What you get
 
+- Written site notes covering soil, light, and drainage conditions
+- Native plant recommendations suited to your specific site
+- A summary of realistic options for your space and budget
+- Clear next steps, whether that's a full garden design or a DIY plan you can act on yourself
 
-### You receive
-- The quick brown fox jemps over the lazy doggg. The quick brown fox jemps over the lazy doggg. The quick brown fox jemps over the lazy doggg.
-- The quick brown fox jemps over the lazy doggg. The quick brown fox jemps over the lazy doggg. The quick brown fox jemps over the lazy doggg.
+## Cost
+$[X] for a standalone consultation. If you decide to move forward with a custom garden design, the fee is applied toward your project.
 
 ___
 
