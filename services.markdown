@@ -85,100 +85,68 @@ ___
    <ul>
       <li>
          <div class='faq_q' aria-expanded='false' aria-controls='faq-1'>
-            How long with they keep before being planted?
+            How much does native garden design cost Chicago?
          </div>
          <div class='faq_a hidden' id='faq-1'>
-            Answers!
+            Every project is different, so we don't publish fixed prices. A site visit and consultation starts at $[X], which is applied toward your garden plan if you decide to move forward. Get in touch and we'll give you a clear picture of what to expect before you commit to anything.
          </div>
       </li>
       <li>
          <div class='faq_q' aria-expanded='false' aria-controls='faq-2'>
-            Returns/unhealthy plants?
+            Can I install a native garden myself?
          </div>
          <div class='faq_a hidden' id='faq-2'>
-            Answers!
+            Yes, and we encourage it. Every garden plan comes with detailed step-by-step instructions for bed preparation, planting, and long-term care. Installing your own garden saves money and the process of getting your hands in the soil is part of what makes a garden worth having. If you'd prefer to hand off the installation, we can connect you with a trusted contractor.
          </div>
       </li>
       <li>
          <div class='faq_q' aria-expanded='false' aria-controls='faq-3'>
-            Where are plants sourced from?
+            What is a garden site assessment?
          </div>
          <div class='faq_a hidden' id='faq-3'>
-            Answers!
+            A site assessment is a one-hour visit to your space where we assess soil conditions, light exposure, and drainage. You'll receive written site notes, native plant recommendations suited to your specific conditions, and a clear summary of your options and next steps. It's the first step in any custom design project and a useful service on its own.
          </div>
       </li>
       <li>
          <div class='faq_q' aria-expanded='false' aria-controls='faq-4'>
-            Why the long lead times?
+            How long do native perennials take to establish?
          </div>
          <div class='faq_a hidden' id='faq-4'>
-            Answers!
+            Most native perennials take two to three years to fully establish. The first year they focus on developing root systems rather than top growth, which is normal and expected. By the third year most plants are thriving with minimal intervention, which is when the low-maintenance qualities of a well-designed native garden really become apparent.
          </div>
       </li>
       <li>
          <div class='faq_q' aria-expanded='false' aria-controls='faq-5'>
-            Which growing zones?
+            Do you only use native plants?
          </div>
          <div class='faq_a hidden' id='faq-5'>
-            Answers!
+            We prioritize native plants because they're the best fit for our climate, require less maintenance once established, and provide the most benefit to local wildlife. That said, we occasionally include non-native but non-invasive plants when they serve the design well. We never use invasive species.
          </div>
       </li>
       <li>
          <div class='faq_q' aria-expanded='false' aria-controls='faq-6'>
-            What types of plants are in your kits?
+            Do you guarantee your plants?
          </div>
          <div class='faq_a hidden' id='faq-6'>
-            Answers!
+            We source healthy, climate-adapted plants from trusted nurseries and stand behind their quality at the time of delivery. We don't offer a guarantee against plant loss after installation since establishment depends on factors outside our control, including watering, weather, and site conditions. We do provide detailed care instructions and are happy to troubleshoot if something isn't performing as expected.
          </div>
       </li>
       <li>
          <div class='faq_q' aria-expanded='false' aria-controls='faq-9'>
-            Are your plants native to the upper midwest?
+            Do I need a site visit before getting a garden plan?
          </div>
          <div class='faq_a hidden' id='faq-9'>
-            Answers!
+            A site visit is strongly recommended and is the first step in our standard design process. It lets us assess your specific soil, light, and drainage conditions so the plan we produce is suited to your actual site rather than your general area. In some cases we can work from detailed photographs and measurements, but a visit produces a better result.
          </div>
       </li>
       <li>
          <div class='faq_q' aria-expanded='false' aria-controls='faq-10'>
-            Can I mix kits in the same garden?
+            Can I get a garden plan without buying plants from you?
          </div>
          <div class='faq_a hidden' id='faq-10'>
-            Answers!
+            Yes. We're happy to provide a garden plan as a standalone service. You're welcome to source plants yourself, use a local nursery, or purchase through us. We'll note our recommendations either way and can advise on what to look for when sourcing plants independently.
          </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-11'>
-            How much maintenance do these gardens require?
-         </div>
-         <div class='faq_a hidden' id='faq-11'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-12'>
-            When is the best time to plant?
-         </div>
-         <div class='faq_a hidden' id='faq-12'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-13'>
-            What if some plants don't survive?
-         </div>
-         <div class='faq_a hidden' id='faq-13'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-15'>
-            Are these plants safe for pets and children?
-         </div>
-         <div class='faq_a hidden' id='faq-15'>
-            Answers!
-         </div>
-      </li>     
+      </li>  
    </ul>
 </div>
 
