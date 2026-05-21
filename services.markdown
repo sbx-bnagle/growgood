@@ -6,7 +6,7 @@ permalink: /services
 
 {% include coming-soon.html %}
 
-# Custom Design & Consulting Services
+# Custom Garden Design & Consulting Services
 
 <p class='deck'>
   For Chicagoland and the upper midwest.
