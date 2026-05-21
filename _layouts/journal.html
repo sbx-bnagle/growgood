@@ -10,7 +10,7 @@
       <h1>Journal</h1>
 
 
-      <div class='journalpage__today'>
+      <!-- <div class='journalpage__today'>
         <div class='journalpage__today-entry'>
           <h2>Today</h2>
           {% for post in site.posts %}
@@ -38,16 +38,13 @@
             {% if entry_date == site_date and post.category != 'headlines' %} 
               <a href="{{ post.url }}">
                 <h3 class='entry__title'>{{ post.title }}</h3>
-                <!-- <p class='entry__meta'>
-                  <span class='entry__category'>{{ category_label }}</span>
-                </p> -->
               </a>
             {% endif %}
           {% endfor %}
-        </div>
+        </div> -->
 
             
-        <div class='journalpage__today-headlines'>
+        <!-- <div class='journalpage__today-headlines'>
           <h2>Headlines</h2>
           {% for post in site.posts %}
             {% if post.category == 'materials_practices'%}
@@ -75,9 +72,10 @@
               {{ post.content }}
             {% endif %}
           {% endfor %}
-        </div>
-        
-      </div>
+        </div>  
+               
+      </div>-->
+
 
 
 
