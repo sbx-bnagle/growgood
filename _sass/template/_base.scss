@@ -48,6 +48,9 @@ h2 {
 
 h3, legend, label {
   @include typestyle($sans-sm-bld);
+  padding-top: .0918125rem !important;
+    padding-bottom: .1581875rem !important;
+    margin-bottom: -.5rem !important;
 }
 
 h4 {
