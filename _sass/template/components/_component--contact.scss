@@ -61,7 +61,6 @@
     padding: bl(3);
     box-sizing: border-box;
     border-radius: 8px;
-    margin-top: 24px !important;
   }
 
   .contact__email:focus,
@@ -77,6 +76,7 @@
     border-top: none;
     border-right: none;
     border-radius: 0;
+    margin-top: 24px !important;
   }
 
   label.floater {
