@@ -20,6 +20,7 @@ We can connect you with contractors for:
 - Drainage and grading
 - Ongoing garden maintenance, particularly for clients outside our service area
 
+<br>
 
 ## A note on installation
 
@@ -28,7 +29,7 @@ We think there's real value in installing your own garden. It saves money, and t
 
 ## Prefer to hand it off completely?
 
-If you'd rather not coordinate contractors yourself, we can manage that for you. We'll handle the referrals, coordinate the work, and make sure the installation follows the plan. All you need to do is enjoy the result.
+If you&rsquo;d rather not coordinate contractors yourself, we can manage that for you. We'll handle the referrals, coordinate the work, and make sure the installation follows the plan. All you need to do is enjoy the result.
 
 ___
 

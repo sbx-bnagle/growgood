@@ -79,14 +79,16 @@ mark{
   text-align: center;
   color: color(green, X);
   @include typestyle($sans-sm-bld);
-  // grid-column: 1/5;
   white-space: nowrap;
   position: relative;
   margin-left: bl(11);
   border: 2px solid color(green, XXX);
   padding: 0 bl(6);
   transition: all .1s ease-in;
-  display: inline-block;
+  display: flex;
+  align-items: center; 
+  width: fit-content;
+
 
   &:hover {
     color: color(green, XXX);

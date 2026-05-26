@@ -20,6 +20,7 @@ We work with block clubs, neighborhood associations, schools, park districts, an
 - Community plant sales, including organization and logistics
 - Talks and workshops for community groups, schools, and neighborhood organizations
 
+<br>
 
 ## How it works
 

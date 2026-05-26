@@ -23,8 +23,10 @@ We come out to your space and assess soil conditions, light exposure, and draina
 - A summary of realistic options for your space and budget
 - Clear next steps, whether that's a full garden design or a DIY plan you can act on yourself
 
+<br>
+
 ## Cost
-$[X] for a standalone consultation. If you decide to move forward with a custom garden design, the fee is applied toward your project.
+$100 for a standalone consultation. If you decide to move forward with a custom garden design, the fee is applied toward your project.
 
 ___
 

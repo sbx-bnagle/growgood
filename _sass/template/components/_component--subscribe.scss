@@ -108,7 +108,7 @@
     width: calc(100% - 168px);
     @include stack(sm);
     @include typestyle($sans-sm-reg);
-    padding: bl(4) bl(3) bl(3);
+    padding: bl(4) bl(3) bl(3) !important;
     box-sizing: border-box;
     outline: none;
     background-color: color(neutral, XXX);
