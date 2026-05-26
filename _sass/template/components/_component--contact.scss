@@ -46,7 +46,7 @@
   .contact__form label {
     display: block;
     // @include stack(xs);
-    padding-bottom: bl(4);
+    padding-bottom: bl(4) !important;
   }
 
   .contact__email,
