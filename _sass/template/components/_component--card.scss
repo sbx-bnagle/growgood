@@ -37,9 +37,11 @@
 		white-space: nowrap;
 		margin-left: bl(11);
 		border: 2px solid color(neutral, X);
-		padding: bl(2) bl(6) 0;
+		padding: 0 bl(6);
 		transition: all .1s ease-in;
-		display: inline-block;
+		// display: inline-block;
+		display: flex;
+    	justify-content: center;
 
 
 		&::before {
