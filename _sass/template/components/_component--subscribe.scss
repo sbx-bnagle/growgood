@@ -16,7 +16,7 @@
   h2 {
     @include typestyle($sans-sm-bld);
     position: relative;
-    padding-top: 14px;
+    padding-top: 14px !important;
   }
 
   h2::before {
