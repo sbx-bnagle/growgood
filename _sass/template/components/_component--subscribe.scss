@@ -19,7 +19,7 @@
     padding-top: 14px;
   }
 
-  h2::before {
+  h2:before {
     content: '\e900';
     @include typestyle($icon-xs);
     color: color(neutral, X);
