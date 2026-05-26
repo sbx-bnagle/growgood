@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Site assessment & consultation
+title: Site Assessment & Consultation
 permalink: /consult
 ---
 
-# Site assessment & consultation
+# Site Assessment & Consultation
 
 <p class='deck'>
 	Not sure what will grow in your space? We can help!
@@ -31,9 +31,9 @@ ___
 
 ## Ready to get started?
 
-We're flexible and happy to talk through whatever you have in mind, big or small. 
+We&rsquo;re flexible and happy to talk through whatever you have in mind, big or small. 
 
-<button class='gg_button'>Get in touch</button>
+<a href='#contact' class='gg_button'>Get in touch</a>
 
 ___
 

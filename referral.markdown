@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Contractor referrals
+title: Contractor Referrals
 permalink: /referral
 ---
 
-# Contractor referrals
+# Contractor Referrals
 
 <p class='deck'>
 	Contractors we trust for the work we don't do.
@@ -35,9 +35,9 @@ ___
 
 ## Ready to get started?
 
-We're flexible and happy to talk through whatever you have in mind, big or small. 
+We&rsquo;re flexible and happy to talk through whatever you have in mind, big or small. 
 
-<button class='gg_button'>Get in touch</button>
+<a href='#contact' class='gg_button'>Get in touch</a>
 
 ___
 

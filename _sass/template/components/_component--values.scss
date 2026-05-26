@@ -9,13 +9,13 @@
   width: 100vw;
   background: color(green, X);
   color: color(purple, XX);
-  @include stack(lg);
+  // @include stack(lg);
   padding: 0 0 50px 0;
   text-align: center;
   position: relative;
   @include respond-to(m){
     padding: 30px 0 50px 0;
-    @include stack(xl);
+    // @include stack(xl);
   }
 
 
@@ -26,13 +26,13 @@
     @include respond-to(m){
       display: block;
       width: 212px;
-      top: 32px;
+      top: 60px; //was 32px
       right: 120px;
     }
     @include respond-to(l){
       display: block;
       width: 300px;
-      top: -52px;
+      top: 0; //was -52px
       right: 140px;
     }
   }
@@ -41,7 +41,7 @@
     z-index: 50;
     position: absolute;
     left: 80px;
-    bottom: 420px;
+    bottom: 550px; //was 420px
     width: 120px;
     display: none;
     @include respond-to(l){
@@ -76,6 +76,11 @@
       grid-column: 1/-1;
       @include stack(sm);
     }
+
+    hr {
+      // margin-bottom: bl(2) !important;
+      @include stack(xs);
+     }
 
     .values__item {
       grid-column: span 16;

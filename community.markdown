@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Community projects
+title: Community Projects
 permalink: /community
 ---
 
-# Community projects
+# Community Projects
 
 <p class='deck'>
 	Bringing gardens to shared spaces across Chicagoland.
@@ -30,9 +30,9 @@ ___
 
 ## Ready to get started?
 
-We're flexible and happy to talk through whatever you have in mind, big or small. 
+We&rsquo;re flexible and happy to talk through whatever you have in mind, big or small. 
 
-<button class='gg_button'>Get in touch</button>
+<a href='#contact' class='gg_button'>Get in touch</a>
 
 ___
 

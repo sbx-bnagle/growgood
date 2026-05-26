@@ -13,9 +13,9 @@ permalink: /services
   <img class='services__map' src='{{ site.url }}/assets/images/gg_map.png'>
 </p>
 
-<button class='gg_button'>Get in touch to talk through your project.</button>
+<a href='#contact' class='gg_button'>Get in touch to talk through your project.</a>
 
-<br>
+<!-- <br>
 
 <div class="carousel-wrap">
   <div class="main-image" id="mainImg">
@@ -27,7 +27,7 @@ permalink: /services
     </div>
   </div>
   <div class="thumbs" id="thumbs"></div>
-</div>
+</div> -->
 
 
 ___
@@ -88,7 +88,7 @@ ___
             How much does native garden design cost Chicago?
          </div>
          <div class='faq_a hidden' id='faq-1'>
-            Every project is different, so we don't publish fixed prices. A site visit and consultation starts at $[X], which is applied toward your garden plan if you decide to move forward. Get in touch and we'll give you a clear picture of what to expect before you commit to anything.
+            Every project is different, so we don't publish fixed prices. A site visit and consultation starts at $100, which is applied toward your garden plan if you decide to move forward. Get in touch and we'll give you a clear picture of what to expect before you commit to anything.
          </div>
       </li>
       <li>
@@ -156,10 +156,27 @@ ___
 
 We're flexible and happy to talk through whatever you have in mind, big or small. 
 
-<button class='gg_button'>Get in touch</button>
+<a href='#contact' class='gg_button'>Get in touch</a>
+
+<script>
+  // This is for the FAQ Accordion
+  // ---------------------------------------------------------------------------------
+  document.querySelectorAll('.faq_q').forEach(trigger => {
+     trigger.addEventListener('click', () => {
+       const isOpen   = trigger.getAttribute('aria-expanded') === 'true';
+       const drawer   = document.getElementById(trigger.getAttribute('aria-controls'));
+       trigger.setAttribute('aria-expanded', !isOpen);
+       if (isOpen) {
+         drawer.classList.add('hidden');
+       } else {
+         drawer.classList.remove('hidden');
+       }
+     });
+   });
+</script>
 
 
-<script src="{{site.url}}/assets/js/carousel.js"></script>
+<!-- <script src="{{site.url}}/assets/js/carousel.js"></script>
 <style>
   .carousel-wrap { 
   	grid-column: 1/-1;
@@ -337,5 +354,5 @@ We're flexible and happy to talk through whatever you have in mind, big or small
     position: sticky;
     top: 92px;
   }
-</style>
+</style> -->
 

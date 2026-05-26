@@ -22,6 +22,3 @@ layout: home
 
 
 
-{% include community.html %}
-
-

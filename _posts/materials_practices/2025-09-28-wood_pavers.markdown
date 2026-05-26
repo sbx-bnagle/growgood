@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Wood Paved Paths"
+title:  "Wood paved paths"
 category: "materials_practices"
 ---
 
