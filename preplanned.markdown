@@ -14,7 +14,7 @@ permalink: /preplanned/
 <ul class='gridlist-icons'>
    <li>
       <img src='/assets/images/spot-map.gif'>
-      Native and climate-adapted to the upper midwest 
+      Native and climate-adapted to the upper midwest
    </li>
    <li>
       <img src='/assets/images/spot-gardening.gif'>
@@ -44,36 +44,7 @@ permalink: /preplanned/
       <img src='/assets/images/spot-cutting.gif'>
       Grow something that benefits you, your neighbors, and the ecosystem around you
    </li>
-
-
-
-<!--    <li>
-      <img src='/assets/images/spot-gardening.gif'>
-      Selected for naturalistic home gardens
-   </li>
-   <li>
-      <img src='/assets/images/spot-bee.gif'>
-      Reduce erosion and stormwater runoff
-   </li>
-   <li>
-      <img src='/assets/images/spot-modular.gif'>
-      Modular design can be scaled up or down
-   </li>  
-   <li>
-      <img src='/assets/images/spot-trowel.gif'>
-      Ready to go in the ground
-   </li>  
-   <li>
-      <img src='/assets/images/spot-earth.gif'>
-      A daily connection to the natural world
-   </li>
-      -->  
 </ul>
-
-
-
-   
-
 
 
 <hr>
@@ -96,7 +67,7 @@ permalink: /preplanned/
 
 <div class='right'>
    <h3>Detailed Instructions</h3>
-   <p>Each kit comes with detailed instructions on how intall and care for your garden.</p>
+   <p>Each kit comes with detailed instructions on how to install and care for your garden.</p>
    <ul>
       <li>Layout and arrangement instructions with options to pair with additional kits</li>
       <li>Planting instructions to ensure your plants health</li>
@@ -128,107 +99,7 @@ permalink: /preplanned/
 
 <hr>
 
-<div class='faq'>
-   <h2>FAQ</h2>
-   <ul>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-1'>
-            How long with they keep before being planted?
-         </div>
-         <div class='faq_a hidden' id='faq-1'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-2'>
-            Returns/unhealthy plants?
-         </div>
-         <div class='faq_a hidden' id='faq-2'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-3'>
-            Where are plants sourced from?
-         </div>
-         <div class='faq_a hidden' id='faq-3'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-4'>
-            Why the long lead times?
-         </div>
-         <div class='faq_a hidden' id='faq-4'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-5'>
-            Which growing zones?
-         </div>
-         <div class='faq_a hidden' id='faq-5'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-6'>
-            What types of plants are in your kits?
-         </div>
-         <div class='faq_a hidden' id='faq-6'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-9'>
-            Are your plants native to the upper midwest?
-         </div>
-         <div class='faq_a hidden' id='faq-9'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-10'>
-            Can I mix kits in the same garden?
-         </div>
-         <div class='faq_a hidden' id='faq-10'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-11'>
-            How much maintenance do these gardens require?
-         </div>
-         <div class='faq_a hidden' id='faq-11'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-12'>
-            When is the best time to plant?
-         </div>
-         <div class='faq_a hidden' id='faq-12'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-13'>
-            What if some plants don't survive?
-         </div>
-         <div class='faq_a hidden' id='faq-13'>
-            Answers!
-         </div>
-      </li>
-      <li>
-         <div class='faq_q' aria-expanded='false' aria-controls='faq-15'>
-            Are these plants safe for pets and children?
-         </div>
-         <div class='faq_a hidden' id='faq-15'>
-            Answers!
-         </div>
-      </li>     
-   </ul>
-</div>
+{% include faq.html set="kits" %}
 
 
 <br>
@@ -236,18 +107,16 @@ permalink: /preplanned/
 <div class='cta-services banner rounded'>
    <h2>Custom Garden Design & Consulting</h2>
    <p>We also offer custom garden design, on-site consulting, and contractor referrals for installation.</p>
-   <a href='#' class='button'>See Our Services</a>
-   <p>or <a href='#'>get in touch</a> to talk through your project</p>
+   <a href='{{ site.url }}/services' class='button'>See Our Services</a>
+   <p>or <a href='#contact'>get in touch</a> to talk through your project</p>
 </div>
 
 
-
-
-
-
-
-
-
+{%- comment -%}
+  Kit checkout. The FAQ accordion script that used to live here has been
+  removed — accordion behaviour is now handled by assets/js/faq.js, loaded
+  below. Content for the FAQ comes from _data/faqs.yml.
+{%- endcomment -%}
 <script>
 
 	compilePlan = function(){
@@ -272,21 +141,21 @@ permalink: /preplanned/
     const clientId = crypto.randomUUID();
 
     let workerUrl = "https://stripe-payment-link.fagan-leah.workers.dev/create-checkout";
-    let postData = { 
+    let postData = {
         client_id: clientId,  // send this to the worker
-        qty: qty, 
-        qtyII: qtyII, 
-        qtyIII: qtyIII, 
+        qty: qty,
+        qtyII: qtyII,
+        qtyIII: qtyIII,
         plan: plan,
         success_url: "https://growgoodgardens.com/success",
         cancel_url: "https://growgoodgardens.com/cancel"
     };
 
     fetch(workerUrl, {
-        method: 'POST', 
+        method: 'POST',
         mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(postData),   
+        body: JSON.stringify(postData),
     })
     .then(res => res.json())
     .then(data => {
@@ -295,24 +164,9 @@ permalink: /preplanned/
     })
     .catch(err => console.error("Fetch Error:", err));
   });
-
-
-  // This is for the FAQ Accordion
-  // ---------------------------------------------------------------------------------
-  document.querySelectorAll('.faq_q').forEach(trigger => {
-     trigger.addEventListener('click', () => {
-       const isOpen   = trigger.getAttribute('aria-expanded') === 'true';
-       const drawer   = document.getElementById(trigger.getAttribute('aria-controls'));
-       trigger.setAttribute('aria-expanded', !isOpen);
-       if (isOpen) {
-         drawer.classList.add('hidden');
-       } else {
-         drawer.classList.remove('hidden');
-       }
-     });
-   });
 </script>
+
+<script src="{{ site.url }}/assets/js/faq.js"></script>
 
 
 {% include gardenolator.html %}
-

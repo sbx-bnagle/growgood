@@ -1,0 +1,26 @@
+{%- comment -%}
+  Call-to-action block used at the foot of every service page.
+
+  Usage:   {% include cta.html %}
+           {% include cta.html heading="Ready to plan your garden?" %}
+           {% include cta.html body="Custom copy here." button="Contact us" %}
+
+  Params (all optional):
+    heading — section heading.   Default: "Ready to get started?"
+    body    — paragraph copy.    Default: the standard "we're flexible" line.
+    button  — button label.      Default: "Get in touch"
+    href    — button target.     Default: "#contact"
+
+  Previously this block was copy-pasted into services, consult, custom,
+  community, and referral. Edit it HERE ONLY.
+{%- endcomment -%}
+
+<div class="cta">
+  <h2>{{ include.heading | default: "Ready to get started?" }}</h2>
+
+  <p>{{ include.body | default: "We're flexible and happy to talk through whatever you have in mind, big or small." }}</p>
+
+  <a href="{{ include.href | default: '#contact' }}" class="gg_button">
+    {{ include.button | default: "Get in touch" }}
+  </a>
+</div>

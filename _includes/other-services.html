@@ -1,0 +1,29 @@
+{%- comment -%}
+  "Other services" card grid.
+
+  Usage:   {% include other-services.html exclude="consult" %}
+           {% include other-services.html %}                  (shows all)
+           {% include other-services.html heading="Explore" %}
+
+  Params:
+    exclude (optional) — service `id` to leave out (so a page doesn't link
+                         to itself). Match the values in _data/services.yml.
+    heading (optional) — section heading. Default: "Other services".
+
+  Card content lives in _data/services.yml. Previously each service page
+  hand-maintained its own list of card.html calls; adding a service meant
+  editing five files. Now it is data-driven from one place.
+{%- endcomment -%}
+
+<h2>{{ include.heading | default: "Other services" }}</h2>
+
+{%- for service in site.data.services -%}
+  {%- unless service.id == include.exclude -%}
+    {%- include card.html
+        title = service.title
+        blurb = service.blurb
+        dest  = service.dest
+        link  = service.link
+        color = service.color -%}
+  {%- endunless -%}
+{%- endfor -%}

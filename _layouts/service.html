@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
+
+  <body class='service page'>
+
+    {%- include header.html -%}
+
+    <div class='content-wrapper'>
+      {{ content }}
+    </div>
+
+    {%- include subscribe.html -%}
+    {%- include contact.html -%}
+    {%- include footer.html -%}
+
+    <!-- FAQ accordion behaviour, used by {% raw %}{% include faq.html %}{% endraw %} -->
+    <script src="{{ site.url }}/assets/js/faq.js"></script>
+
+  </body>
+
+</html>

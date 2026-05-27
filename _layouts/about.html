@@ -6,12 +6,16 @@
 
     {%- include header.html -%}
 
-    
     <div class='content-wrapper'>
       {{ content }}
     </div>
-    
-    <!-- {% include quotes.html %} 
+
+    {%- comment -%}
+      Originally a stray "<!--" before the quotes include left this comment
+      unclosed, which swallowed subscribe/contact/footer and the closing
+      </body></html> tags. Restored below; re-enable quotes if wanted.
+    {%- endcomment -%}
+    {%- comment -%} {% include quotes.html %} {%- endcomment -%}
     {%- include subscribe.html -%}
     {%- include contact.html -%}
     {%- include footer.html -%}
@@ -19,6 +23,3 @@
   </body>
 
 </html>
-
-
-

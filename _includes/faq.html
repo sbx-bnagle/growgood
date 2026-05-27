@@ -1,0 +1,34 @@
+{%- comment -%}
+  FAQ accordion.
+
+  Usage:   {% include faq.html set="services" %}
+           {% include faq.html set="kits" heading="Common Questions" %}
+
+  Params:
+    set      (required) — key in _data/faqs.yml to render
+    heading  (optional) — section heading text. Defaults to "FAQ".
+
+  Content comes from _data/faqs.yml. Accordion behaviour is wired up by
+  assets/js/faq.js — include that script once on any page that uses this
+  partial (the service layout already does).
+
+  Item IDs are namespaced as `faq-{set}-{index}` so multiple FAQ sets can
+  appear on the same page without anchor collisions.
+{%- endcomment -%}
+
+<div class="faq">
+  <h2>{{ include.heading | default: "FAQ" }}</h2>
+  <ul>
+    {%- for item in site.data.faqs[include.set] -%}
+      {%- assign panel_id = include.set | append: "-" | append: forloop.index -%}
+      <li>
+        <div class="faq_q" aria-expanded="false" aria-controls="faq-{{ panel_id }}">
+          {{ item.q }}
+        </div>
+        <div class="faq_a hidden" id="faq-{{ panel_id }}">
+          {{ item.a }}
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>

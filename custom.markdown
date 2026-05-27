@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: service
 title: Custom Garden Design
 permalink: /custom
 ---
@@ -18,7 +18,7 @@ We start with a conversation about your space, your goals, and your budget. This
 #### You Receive
 - Shared understanding of scope, goals, and budget
 - A sense of whether the project is a good fit
-- Outline of next steps, typiically a scheduled site visit
+- Outline of next steps, typically a scheduled site visit
 
 <br>
 
@@ -73,42 +73,8 @@ Once your garden is in the ground, we're still available. We're happy to answer 
 
 ___
 
-
-## Ready to get started?
-
-We&rsquo;re flexible and happy to talk through whatever you have in mind, big or small. 
-
-<a href='#contact' class='gg_button'>Get in touch</a>
+{% include cta.html %}
 
 ___
 
-## Other services
-
-{% 
-  include card.html 
-  title = "Site Assessment & Consultation" 
-  blurb = "Not sure what will grow in your space? We'll come out and take a look. We assess soil conditions, light exposure, and drainage to make sure the plants we recommend are the right fit for your site. A site visit takes the guesswork out of gardening and sets your garden up for long-term success."
-  dest = "consult"
-  link = "Learn More"
-  color = "gold"
-%}
-
-{% 
-  include card.html 
-  title = "Contractor Referrals" 
-  blurb = "We design and supply. For installation, we work with a network of trusted local contractors we're happy to connect you with. If you'd prefer to install the garden yourself, we'll make sure you have everything you need to do it with confidence."
-  dest = "referral"
-  link = "Learn More"
-  color = "red"
-%}
-
-{% 
-  include card.html 
-  title = "Community Projects" 
-  blurb = "We work with neighborhood groups, park districts, block clubs, and schools to bring gardens to shared spaces. Whether you're planning a community planting, organizing a plant sale, or looking for someone to lead a workshop or give a talk, we're glad to help. Get in touch and tell us what you have in mind."
-  dest = "community"
-  link = "Learn More"
-  color = "green"
-%}
-
-
+{% include other-services.html exclude="custom" %}

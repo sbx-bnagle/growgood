@@ -1,0 +1,25 @@
+{%- comment -%}
+  Image carousel.
+
+  Usage:   {% include carousel.html %}
+
+  Renders the carousel shell (main image stage + thumbnail strip). The
+  slides themselves are populated by assets/js/carousel.js, which must be
+  loaded on any page that uses this partial (the kits layout already does).
+
+  Previously this markup was hand-written inline in _layouts/kits.html and
+  also lived commented-out in services.markdown — extracted here so there
+  is one definition.
+{%- endcomment -%}
+
+<div class="carousel-wrap">
+  <div class="main-image" id="mainImg">
+    <div class="arrow arrow-prev disabled" id="prevBtn">
+      <img src="{{ site.url }}/assets/images/arrow-bw.svg" alt="Previous">
+    </div>
+    <div class="arrow arrow-next" id="nextBtn">
+      <img src="{{ site.url }}/assets/images/arrow-bw.svg" alt="Next">
+    </div>
+  </div>
+  <div class="thumbs" id="thumbs"></div>
+</div>

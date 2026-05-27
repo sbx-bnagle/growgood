@@ -1,0 +1,35 @@
+/**
+  * Component: CTA
+  *
+  * @description
+  * The "Ready to get started?" call-to-action block used at the foot of
+  * every service page (rendered by _includes/cta.html).
+  *
+  * Before the refactor, this block was loose markdown — a bare <h2> and
+  * <p> that inherited `grid-column: 1 / 13` from the base typography rule,
+  * sitting as direct children of .content-wrapper's 16-col grid.
+  *
+  * Wrapping it in <div class="cta"> made it a single grid child with no
+  * column rule (div is not in the base `grid-column` selector list), so it
+  * collapsed to one column. This restores the original layout: the block
+  * spans all 16 columns at every breakpoint, and re-confines its own
+  * children to columns 1 / 13 to match the previous text width.
+  */
+
+.cta {
+  @include grid-child($cols: 16);
+  grid-column: 1 / -1;
+  @include stack(lg);
+
+  h2,
+  p {
+    grid-column: 1 / -1;
+    @include respond-to(m) {
+      grid-column: 1 / 13;
+    }
+  }
+
+  .gg_button {
+    grid-column: 1 / -1;
+  }
+}

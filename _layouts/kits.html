@@ -5,21 +5,10 @@
   <body class='kits'>
 
     {%- include header.html -%}
-    
+
     <div class='order-wrapper'>
       <div class='order-image'>
-        <div class="carousel-wrap">
-          <div class="main-image" id="mainImg">
-            <div class="arrow arrow-prev disabled" id="prevBtn">
-              <img src='/assets/images/arrow-bw.svg'>
-            </div>
-            <div class="arrow arrow-next" id="nextBtn">
-              <img src='/assets/images/arrow-bw.svg'>
-            </div>
-          </div>
-          <div class="thumbs" id="thumbs"></div>
-        </div>
-        <!-- <img src='/assets/images/fpo.png'> -->
+        {%- include carousel.html -%}
       </div>
       <div class='order-info'>
         <h1>Garden Kits</h1>
@@ -46,7 +35,6 @@
               <div></div>
             </div>
           </div>
-          <!-- <span class='purchase__delivery'>Delivery Spring 2026</span> -->
         </div>
         <p>
           Our kits bring together native perennial plants designed for beauty, function, and your local habitat. Every kit delivers real color and texture alongside real benefits for birds, bugs, and the community that grows around them.
@@ -69,8 +57,7 @@
     <div class='content-wrapper'>
       {{ content }}
     </div>
-    
-    
+
     {%- include subscribe.html -%}
     {%- include contact.html -%}
     {%- include footer.html -%}
@@ -81,10 +68,7 @@
         spinner.style.opacity = '1';
       });
     </script>
-    <script src="{{site.url}}/assets/js/carousel.js"></script>
+    <script src="{{ site.url }}/assets/js/carousel.js"></script>
   </body>
 
 </html>
-
-
-
