@@ -5,12 +5,18 @@
 	@include stack(lg);
 
 	h2 {
-		grid-column: 4 / 14;
+		grid-column: 1 / -1;
+		@include respond-to(m){
+			grid-column: 4 / 14;
+		}
 		@include stack(xs);
 	}
 
 	ul {
-		grid-column: 4 / 14;
+		grid-column: 1 / -1;
+		@include respond-to(m){
+			grid-column: 4 / 14;
+		}
 		list-style: none;
 	}
 

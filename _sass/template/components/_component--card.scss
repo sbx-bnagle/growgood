@@ -2,7 +2,10 @@
 
 .card {
 	display: grid;
-	grid-column: span 8;
+	grid-column: span 16;
+	@include respond-to(m){
+		grid-column: span 8;
+  	}
 	min-height: 10rem;
 	box-sizing: border-box;
 	@include stack(sm);
