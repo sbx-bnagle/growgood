@@ -39,17 +39,15 @@
   *
   */
 
+// Values come from the Grow Good tokens (growgood-brand D-021, D-046). Each site level maps to the
+// token level the Phase 1 ramps recorded for it.
+@import 'gg/tokens';
 $colors   : (
-  neutral : 
-  (X: #f0efeb, XX: #dadbd9, XXX: #1a1a1a),
-  green : 
-  (X: #dee6df, XX: #4ff062, XXX: #323431),
-  red : 
-  (X: #e0513e, XX: #b84233),
-  gold : 
-  (X: #ccb528, XX: #877223),
-  purple : 
-  (X: #6f63b0, XX: #504867, XXX: #413b54), //5c5278   
+  neutral : (X: $gg-color-neutral-100, XX: $gg-color-neutral-200, XXX: $gg-color-neutral-400),
+  green   : (X: $gg-color-green-100,   XX: $gg-color-green-200,   XXX: $gg-color-green-400),
+  red     : (X: $gg-color-red-200,     XX: $gg-color-red-300),
+  gold    : (X: $gg-color-gold-200,    XX: $gg-color-gold-300),
+  purple  : (X: $gg-color-purple-200,  XX: $gg-color-purple-300,  XXX: $gg-color-purple-400),
 );
 
 
