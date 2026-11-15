@@ -80,108 +80,23 @@ $icon: (
 
 
 
-$sans-xl-bld: (
-  null    : (normal, normal, 700, 5,  13,  $sans, 0, 0),
-  s       : (normal, normal, 700, 5,  13,  $sans, 0, 0),
-  m       : (normal, normal, 700, 7,  24,  $sans, 0, 0),
-  l       : (normal, normal, 700, 7,  24,  $sans, 0, 0),   
-);
-
-$sans-xl-reg: (
-  null    : (normal, normal, 400, 5,  13,  $sans, 0, 0),
-  s       : (normal, normal, 400, 5,  13,  $sans, 0, 0),
-  m       : (normal, normal, 400, 7,  24,  $sans, 0, 0),
-  l       : (normal, normal, 400, 7,  24,  $sans, 0, 0),   
-);
-
-
-
-// LG 72/72
-
-$sans-lg-reg: (
-  null    : (normal, normal, 400, 3,  13,  $sans, 0, 0),
-  s       : (normal, normal, 400, 3,  13,  $sans, 0, 0),
-  m       : (normal, normal, 400, 5,  19,  $sans, 0, 0),
-  l       : (normal, normal, 400, 5,  19,  $sans, 0, 0),   
-);
-
-$sans-lg-bld: (
-  null    : (normal, normal, 700, 3,  13,  $sans, 0, 0),
-  s       : (normal, normal, 700, 3,  13,  $sans, 0, 0),
-  m       : (normal, normal, 700, 5,  19,  $sans, 0, 0),
-  l       : (normal, normal, 700, 5,  19,  $sans, 0, 0),   
-);
-
-
-// MD2  
-
-$sans-md2-reg: (
-  null    : (normal, normal, 400, 2,     9,  $sans, 0, 0),
-  s       : (normal, normal, 400, 2,     9,  $sans, 0, 0),
-  m       : (normal, normal, 400, 2.5,  13,  $sans, 0, 0),
-  l       : (normal, normal, 400, 2.5,  13,  $sans, 0, 0),   
-);
-
-$sans-md2-bld: (
-  null    : (normal, normal, 700, 2,     9,  $sans, 0, 0),
-  s       : (normal, normal, 700, 2,     9,  $sans, 0, 0),
-  m       : (normal, normal, 700, 2.5,  13,  $sans, 0, 0),
-  l       : (normal, normal, 700, 2.5,  13,  $sans, 0, 0),   
-);
-
-
-
-// MD 52/52   
-
-$sans-md-reg: (
-  null    : (normal, normal, 400, 2.25,  9,  $sans, 0, 0),
-  s       : (normal, normal, 400, 2.25,  9,  $sans, 0, 0),
-  m       : (normal, normal, 400, 3.25,  13,  $sans, 0, 0),
-  l       : (normal, normal, 400, 3.25,  13,  $sans, 0, 0),   
-);
-
-$sans-md-bld: (
-  null    : (normal, normal, 700, 2.25,  9,  $sans, 0, 0),
-  s       : (normal, normal, 700, 2.25,  9,  $sans, 0, 0),
-  m       : (normal, normal, 700, 3.25,  13,  $sans, 0, 0),
-  l       : (normal, normal, 700, 3.25,  13,  $sans, 0, 0),   
-);
-
-
-// SM 20/24
-
-$sans-sm-reg: (
-  null    : (normal, normal, 400, 1.25,    6,  $sans, 0, 0),
-  s       : (normal, normal, 400, 1.25,    6,  $sans, 0, 0),
-  m       : (normal, normal, 400, 1.3125,  6,  $sans, 0, 0),
-  l       : (normal, normal, 400, 1.3125,  6,  $sans, 0, 0),   
-);
-
-$sans-sm-bld: (
-  null    : (normal, normal, 700, 1.25,    6,  $sans, 0, 0),
-  s       : (normal, normal, 700, 1.25,    6,  $sans, 0, 0),
-  m       : (normal, normal, 700, 1.3125,  6,  $sans, 0, 0),
-  l       : (normal, normal, 700, 1.3125,  6,  $sans, 0, 0),   
-);
-
-
-// XS 16/20
-
-$sans-xs-reg: (
-  null    : (normal, normal, 400, 1,  5,  $sans, 0, 0),
-  s       : (normal, normal, 400, 1,  5,  $sans, 0, 0),
-  m       : (normal, normal, 400, 1,  5,  $sans, 0, 0),
-  l       : (normal, normal, 400, 1,  5,  $sans, 0, 0),   
-);
-
-$sans-xs-bld: (
-  null    : (normal, normal, 700, 1,  5,  $sans, 0, 0),
-  s       : (normal, normal, 700, 1,  5,  $sans, 0, 0),
-  m       : (normal, normal, 700, 1,  5,  $sans, 0, 0),
-  l       : (normal, normal, 700, 1,  5,  $sans, 0, 0),   
-);
-
-
+// Each sans style is a Grow Good type role (growgood-brand D-049). Its size, line height and
+// weight come from the role: the Narrow set below 768px, the Wide set above (D-026, D-027).
+// The site's older names stay, so no component Sass has to change. Icon styles below keep
+// their own values.
+@import 'gg/tokens';
+$sans-xl-bld  : (role: display);
+$sans-xl-reg  : (role: display);
+$sans-lg-bld  : (role: h1);
+$sans-lg-reg  : (role: lead);
+$sans-md-bld  : (role: h2);
+$sans-md-reg  : (role: h2);
+$sans-md2-bld : (role: h3);
+$sans-md2-reg : (role: h3);
+$sans-sm-bld  : (role: h4);
+$sans-sm-reg  : (role: body);
+$sans-xs-bld  : (role: small, weight: 700); // a label at the small size; O-18 decides whether it becomes a role
+$sans-xs-reg  : (role: small);
 
 $icon-xl: (
   null    : (normal, normal, 400, 8.5,  34,  $icon, -.025, 0),

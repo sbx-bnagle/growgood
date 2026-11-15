@@ -150,16 +150,39 @@
 // to set type styles
 // depends on plumber and the make-typestyle util mixin below
 @mixin typestyle($ts-map, $breakpoints: $breakpoints) {
+  // A Grow Good type role (growgood-brand D-049): plain declarations that read the role's
+  // custom properties, which switch between the Narrow and Wide sets in config/_type-roles.
+  // No nested media query, so declarations written after this include keep their order.
+  @if map-has-key($ts-map, role) {
+    $role: map-get($ts-map, role);
+    $weight: if(map-has-key($ts-map, weight), map-get($ts-map, weight), map-get(map-get($gg-type, $role), weight));
+    font-size: var(--ts-#{$role}-font-size);
+    line-height: var(--ts-#{$role}-line-height);
+    margin-top: var(--ts-#{$role}-margin-top);
+    padding-top: var(--ts-#{$role}-padding-top);
+    padding-bottom: var(--ts-#{$role}-padding-bottom);
+    margin-bottom: var(--ts-#{$role}-margin-bottom);
+    font-style: if($role == caption, italic, normal);
+    font-variant: normal;
+    font-weight: $weight;
+    font-family: map-get($sans, stack);
+    letter-spacing: 0em;
+    word-spacing: 0em;
+  }
+  @else {
+    // Older list styles (the icon font). A breakpoint whose values match the base adds nothing.
+    $ts-base: map-get($ts-map, null);
     @each $ts-breakpoint, $ts-style in $ts-map {
-    @if $ts-breakpoint == null {
-      @include make-typestyle($ts-style);
-    }
-    @else {
-      @if map-has-key($breakpoints, $ts-breakpoint) {
-        $ts-breakpoint: map-get($breakpoints, $ts-breakpoint);
-      }
-      @media screen and (min-width: $ts-breakpoint) {
+      @if $ts-breakpoint == null {
         @include make-typestyle($ts-style);
+      }
+      @else if $ts-style != $ts-base {
+        @if map-has-key($breakpoints, $ts-breakpoint) {
+          $ts-breakpoint: map-get($breakpoints, $ts-breakpoint);
+        }
+        @media screen and (min-width: $ts-breakpoint) {
+          @include make-typestyle($ts-style);
+        }
       }
     }
   }
