@@ -99,7 +99,7 @@ permalink: /preplanned/
 
 <hr>
 
-{% include faq.html set="kits" %}
+{% include gg/faq.html set="kits" %}
 
 
 <br>

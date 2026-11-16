@@ -33,7 +33,7 @@ If you&rsquo;d rather not coordinate contractors yourself, we can manage that fo
 
 ___
 
-{% include cta.html %}
+{% include gg/cta.html %}
 
 ___
 

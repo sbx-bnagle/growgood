@@ -28,7 +28,7 @@ Community projects don't follow a fixed process. Some groups come to us with a c
 
 ___
 
-{% include cta.html %}
+{% include gg/cta.html %}
 
 ___
 

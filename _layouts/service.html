@@ -4,17 +4,17 @@
 
   <body class='service page'>
 
-    {%- include header.html -%}
+    {%- include gg/header.html -%}
 
     <div class='content-wrapper'>
       {{ content }}
     </div>
 
-    {%- include subscribe.html -%}
+    {%- include gg/subscribe.html -%}
     {%- include contact.html -%}
-    {%- include footer.html -%}
+    {%- include gg/footer.html -%}{%- include scripts.html -%}
 
-    <!-- FAQ accordion behaviour, used by {% raw %}{% include faq.html %}{% endraw %} -->
+    <!-- FAQ accordion behaviour, used by {% raw %}{% include gg/faq.html %}{% endraw %} -->
     <script src="{{ site.url }}/assets/js/faq.js"></script>
 
   </body>

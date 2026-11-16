@@ -73,7 +73,7 @@ Once your garden is in the ground, we're still available. We're happy to answer 
 
 ___
 
-{% include cta.html %}
+{% include gg/cta.html %}
 
 ___
 
