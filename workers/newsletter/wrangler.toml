@@ -1,0 +1,23 @@
+# The newsletter sign-up Worker (src/worker.js). It answers on the site's own domain, so the
+# subscribe forms post to /api/newsletter with no cross-site request.
+#
+# Deploy from this folder:
+#   npx wrangler secret put MAILERLITE_TOKEN    a new MailerLite API token
+#   npx wrangler secret put RECAPTCHA_SECRET    the secret key paired with recaptcha_sitekey in _config.yml
+#   npx wrangler deploy
+# Secrets are never written in this file or anywhere in the repo.
+
+name = "growgood-newsletter"
+main = "src/worker.js"
+compatibility_date = "2026-02-23"
+workers_dev = false
+
+routes = [
+  { pattern = "growgoodgardens.com/api/newsletter", zone_name = "growgoodgardens.com" },
+]
+
+[vars]
+# Hosts allowed to post sign-ups, checked against the Origin header and reCAPTCHA's hostname.
+ALLOWED_HOSTS = "growgoodgardens.com"
+# Optional: the MailerLite group new subscribers join, from MailerLite's Groups page.
+# MAILERLITE_GROUP_ID = ""

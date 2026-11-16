@@ -24,6 +24,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Test the newsletter Worker
+        run: node --test workers/newsletter/test/worker.test.mjs
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
