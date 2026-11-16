@@ -6,7 +6,8 @@
 // the site's code or the browser.
 //
 // Replies with JSON: { ok: true } or { ok: false, error } where error is one of
-// method, origin, body, email, captcha, config, upstream.
+// method, origin, body, email, captcha, config, upstream. Each refusal past the email check is
+// logged with its reason (see `wrangler tail`); the email address and the token never are.
 
 const SITEVERIFY = 'https://www.google.com/recaptcha/api/siteverify';
 const MAILERLITE = 'https://connect.mailerlite.com/api/subscribers';
@@ -16,6 +17,8 @@ const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const json = (data, status = 200, headers = {}) =>
   new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json', ...headers } });
+
+const refuse = (reason, detail) => console.log(JSON.stringify({ refused: reason, ...detail }));
 
 const allowedHosts = (env) =>
   String(env.ALLOWED_HOSTS || 'growgoodgardens.com').split(',').map((h) => h.trim()).filter(Boolean);
@@ -29,10 +32,13 @@ export default {
     if (origin) {
       let host = '';
       try { host = new URL(origin).hostname; } catch { /* malformed origin */ }
-      if (!hosts.includes(host)) return json({ ok: false, error: 'origin' }, 403);
+      if (!hosts.includes(host)) { refuse('origin', { host }); return json({ ok: false, error: 'origin' }, 403); }
     }
 
-    if (!env.MAILERLITE_TOKEN || !env.RECAPTCHA_SECRET) return json({ ok: false, error: 'config' }, 500);
+    if (!env.MAILERLITE_TOKEN || !env.RECAPTCHA_SECRET) {
+      refuse('config', { mailerlite: !!env.MAILERLITE_TOKEN, recaptcha: !!env.RECAPTCHA_SECRET });
+      return json({ ok: false, error: 'config' }, 500);
+    }
 
     let body;
     try { body = await request.json(); } catch { return json({ ok: false, error: 'body' }, 400); }
@@ -53,7 +59,10 @@ export default {
     const human = check.success === true
       && hosts.includes(check.hostname)
       && (check.score === undefined || (check.score >= MIN_SCORE && check.action === ACTION));
-    if (!human) return json({ ok: false, error: 'captcha' }, 403);
+    if (!human) {
+      refuse('captcha', { success: check.success, score: check.score, action: check.action, hostname: check.hostname, errors: check['error-codes'] });
+      return json({ ok: false, error: 'captcha' }, 403);
+    }
 
     const subscriber = { email };
     if (env.MAILERLITE_GROUP_ID) subscriber.groups = [String(env.MAILERLITE_GROUP_ID)];
@@ -66,8 +75,13 @@ export default {
       },
       body: JSON.stringify(subscriber),
     });
-    if (added.status === 422) return json({ ok: false, error: 'email' }, 400);
-    if (!added.ok) return json({ ok: false, error: 'upstream' }, 502);
+    if (!added.ok) {
+      const reply = await added.text().catch(() => '');
+      let message = '';
+      try { message = JSON.parse(reply).message || ''; } catch { /* not JSON */ }
+      refuse('mailerlite', { status: added.status, message: String(message).slice(0, 200) });
+      return added.status === 422 ? json({ ok: false, error: 'email' }, 400) : json({ ok: false, error: 'upstream' }, 502);
+    }
     return json({ ok: true });
   },
 };
