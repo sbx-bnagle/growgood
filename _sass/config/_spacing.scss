@@ -1,3 +1,4 @@
+@use "sass:math";
 /**
 	* Spacing Configuration
 	*
@@ -37,13 +38,15 @@
   *
   */
 
+// Steps in 4px baseline units, from the Grow Good space tokens (growgood-brand D-046).
+@import 'gg/tokens';
 $spacing: (
-  x   : 0,
-  xxs : 1, 
-  xs  : 3,
-  sm  : 5,  
-  md  : 8,   
-  lg  : 20,   
-  xl  : 34,
-  xxl : 39
-  );
+  x   : math.div($gg-space-x, 4px),
+  xxs : math.div($gg-space-xxs, 4px),
+  xs  : math.div($gg-space-xs, 4px),
+  sm  : math.div($gg-space-sm, 4px),
+  md  : math.div($gg-space-md, 4px),
+  lg  : math.div($gg-space-lg, 4px),
+  xl  : math.div($gg-space-xl, 4px),
+  xxl : math.div($gg-space-xxl, 4px)
+);

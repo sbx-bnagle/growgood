@@ -1,3 +1,5 @@
+// Grids and breakpoints from the Grow Good layout tokens (growgood-brand D-046).
+@import 'gg/tokens';
 /**
   * Layout Configuration
   *
@@ -41,39 +43,39 @@
   */
 
 $grid-16: (
-  columns   : 16,
+  columns   : $gg-grid-16-columns,
   rows      : auto,
-  gutter-h  : 24px,
+  gutter-h  : $gg-grid-16-gutter,
   gutter-v  : 0,
-  width     : calc(100% - 80px * 2),
-  max-width : 1240px,
+  width     : calc(100% - #{$gg-grid-16-margin * 2}),
+  max-width : $gg-grid-16-maxWidth,
 );
 
 $grid-mobile: (
-  columns   : 16,
+  columns   : $gg-grid-mobile-columns,
   rows      : auto,
-  gutter-h  : 20px,
+  gutter-h  : $gg-grid-mobile-gutter,
   gutter-v  : 0,
-  width     : calc(100% - 20px * 2),
-  max-width : 1240px,
+  width     : calc(100% - #{$gg-grid-mobile-margin * 2}),
+  max-width : $gg-grid-mobile-maxWidth,
 );
 
 $grid-full: (
-  columns   : 16,
+  columns   : $gg-grid-full-columns,
   rows      : auto,
-  gutter-h  : 20px,
+  gutter-h  : $gg-grid-full-gutter,
   gutter-v  : 0,
   width     : 100%,
-  max-width : 1800px,
+  max-width : $gg-grid-full-maxWidth,
 );
 
 $grid-selected: (
-  columns   : 12,
+  columns   : $gg-grid-selected-columns,
   rows      : auto,
-  gutter-h  : 24px,
+  gutter-h  : $gg-grid-selected-gutter,
   gutter-v  : 0,
-  width     : calc(100% - 12px * 2),
-  max-width : 2100px,
+  width     : calc(100% - #{$gg-grid-selected-margin * 2}),
+  max-width : $gg-grid-selected-maxWidth,
 );
 
 
@@ -92,7 +94,7 @@ $grid-selected: (
   */
 
 $breakpoints: (
-  s : 640px,
-  m : 768px,
-  l : 1024px,
+  s : $gg-breakpoint-s,
+  m : $gg-breakpoint-m,
+  l : $gg-breakpoint-l,
 );
