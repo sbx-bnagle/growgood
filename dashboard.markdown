@@ -2,6 +2,7 @@
 layout: dashboard
 title: Internal Dashboard
 permalink: /dashboard/
+noindex: true
 ---
 
 <br><br><br>

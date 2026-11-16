@@ -14,9 +14,9 @@
 services:
   - q: How much does native garden design cost in Chicago?
     a: >-
-      Every project is different, so we don't publish fixed prices. A site
+      Every project is different, so we don’t publish fixed prices. A site
       visit and consultation starts at $100, which is applied toward your
-      garden plan if you decide to move forward. Get in touch and we'll give
+      garden plan if you decide to move forward. Get in touch and we’ll give
       you a clear picture of what to expect before you commit to anything.
 
   - q: Can I install a native garden myself?
@@ -25,15 +25,15 @@ services:
       step-by-step instructions for bed preparation, planting, and long-term
       care. Installing your own garden saves money and the process of getting
       your hands in the soil is part of what makes a garden worth having. If
-      you'd prefer to hand off the installation, we can connect you with a
+      you’d prefer to hand off the installation, we can connect you with a
       trusted contractor.
 
   - q: What is a garden site assessment?
     a: >-
       A site assessment is a one-hour visit to your space where we assess soil
-      conditions, light exposure, and drainage. You'll receive written site
+      conditions, light exposure, and drainage. You’ll receive written site
       notes, native plant recommendations suited to your specific conditions,
-      and a clear summary of your options and next steps. It's the first step
+      and a clear summary of your options and next steps. It’s the first step
       in any custom design project and a useful service on its own.
 
   - q: How long do native perennials take to establish?
@@ -46,7 +46,7 @@ services:
 
   - q: Do you only use native plants?
     a: >-
-      We prioritize native plants because they're the best fit for our
+      We prioritize native plants because they’re the best fit for our
       climate, require less maintenance once established, and provide the most
       benefit to local wildlife. That said, we occasionally include non-native
       but non-invasive plants when they serve the design well. We never use
@@ -55,11 +55,11 @@ services:
   - q: Do you guarantee your plants?
     a: >-
       We source healthy, climate-adapted plants from trusted nurseries and
-      stand behind their quality at the time of delivery. We don't offer a
+      stand behind their quality at the time of delivery. We don’t offer a
       guarantee against plant loss after installation since establishment
       depends on factors outside our control, including watering, weather, and
       site conditions. We do provide detailed care instructions and are happy
-      to troubleshoot if something isn't performing as expected.
+      to troubleshoot if something isn’t performing as expected.
 
   - q: Do I need a site visit before getting a garden plan?
     a: >-
@@ -71,9 +71,9 @@ services:
 
   - q: Can I get a garden plan without buying plants from you?
     a: >-
-      Yes. We're happy to provide a garden plan as a standalone service.
-      You're welcome to source plants yourself, use a local nursery, or
-      purchase through us. We'll note our recommendations either way and can
+      Yes. We’re happy to provide a garden plan as a standalone service.
+      You’re welcome to source plants yourself, use a local nursery, or
+      purchase through us. We’ll note our recommendations either way and can
       advise on what to look for when sourcing plants independently.
 
 kits:
@@ -107,7 +107,7 @@ kits:
   - q: When is the best time to plant?
     a: Answers!
 
-  - q: What if some plants don't survive?
+  - q: What if some plants don’t survive?
     a: Answers!
 
   - q: Are these plants safe for pets and children?

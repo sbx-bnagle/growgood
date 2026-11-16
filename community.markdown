@@ -1,16 +1,16 @@
 ---
 layout: service
-title: Community Projects
+title: Community projects
 permalink: /community
 ---
 
-# Community Projects
+# Community projects
 
 <p class='deck'>
 	Bringing gardens to shared spaces across Chicagoland.
 </p>
 
-We work with block clubs, neighborhood associations, schools, park districts, and community groups to plan and plant gardens in shared spaces. Every project is different, and we're happy to talk through yours from the beginning.
+We work with block clubs, neighborhood associations, schools, park districts, and community groups to plan and plant gardens in shared spaces. Every project is different, and we’re happy to talk through yours from the beginning.
 
 
 ## What we can help with
@@ -24,7 +24,7 @@ We work with block clubs, neighborhood associations, schools, park districts, an
 
 ## How it works
 
-Community projects don't follow a fixed process. Some groups come to us with a clear plan and just need plants. Others are starting from scratch and want help thinking it through. Either way, it starts with a conversation about what you're trying to accomplish and what kind of support would be most useful.
+Community projects don’t follow a fixed process. Some groups come to us with a clear plan and just need plants. Others are starting from scratch and want help thinking it through. Either way, it starts with a conversation about what you’re trying to accomplish and what kind of support would be most useful.
 
 ___
 

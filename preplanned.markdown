@@ -1,7 +1,8 @@
 ---
 layout: kits
-title: Garden Kits
+title: Garden kits
 permalink: /preplanned/
+noindex: true
 ---
 
 
@@ -9,39 +10,39 @@ permalink: /preplanned/
 
 
 
-<h2>Our Plants</h2>
-<p class='gridlist-intro'>A selection of perennials chosen for upper midwest gardens</p>
+<h2>Our plants</h2>
+<p class='gridlist-intro'>A selection of perennials chosen for Upper Midwest gardens</p>
 <ul class='gridlist-icons'>
    <li>
-      <img src='/assets/images/spot-map.gif'>
+      <img src='/assets/images/spot-map.gif' alt=''>
       Native and climate-adapted to the upper midwest
    </li>
    <li>
-      <img src='/assets/images/spot-gardening.gif'>
+      <img src='/assets/images/spot-gardening.gif' alt=''>
       Low maintenance perennials
    </li>
    <li>
-      <img src='/assets/images/spot-caterpillar.gif'>
+      <img src='/assets/images/spot-caterpillar.gif' alt=''>
       Pollinator and wildlife friendly
    </li>
    <li>
-      <img src='/assets/images/spot-bird.gif'>
+      <img src='/assets/images/spot-bird.gif' alt=''>
       Habitat forming for birds and the local ecosystem
    </li>
    <li>
-      <img src='/assets/images/spot-snowman.gif'>
+      <img src='/assets/images/spot-snowman.gif' alt=''>
       Maintains seasonal interest year round
    </li>
    <li>
-      <img src='/assets/images/spot-grill.gif'>
+      <img src='/assets/images/spot-grill.gif' alt=''>
       Well-behaved in home gardens
    </li>
    <li>
-      <img src='/assets/images/spot-modular.gif'>
+      <img src='/assets/images/spot-modular.gif' alt=''>
       Sized to your space, from parkway gardens to full backyards
    </li>
    <li>
-      <img src='/assets/images/spot-cutting.gif'>
+      <img src='/assets/images/spot-cutting.gif' alt=''>
       Grow something that benefits you, your neighbors, and the ecosystem around you
    </li>
 </ul>
@@ -50,23 +51,23 @@ permalink: /preplanned/
 <hr>
 
 
-## What You Get
+## What you get
 
 
 <div class='left'>
-   <h3>Curated Plant Selection</h3>
+   <h3>Curated plant selection</h3>
    <p>Our plants come as clearly labeled plugs that are ready for the ground.</p>
    <ul>
-      <li>how they're delivered (time, packaging)</li>
+      <li>how they’re delivered (time, packaging)</li>
       <li>clearly labeled</li>
-      <li>what's a plug (pic)</li>
-      <li>don't guarantee exact plant, based on availability. See current batch</li>
+      <li>what’s a plug (pic)</li>
+      <li>don’t guarantee exact plant, based on availability. See current batch</li>
    </ul>
 </div>
 
 
 <div class='right'>
-   <h3>Detailed Instructions</h3>
+   <h3>Detailed instructions</h3>
    <p>Each kit comes with detailed instructions on how to install and care for your garden.</p>
    <ul>
       <li>Layout and arrangement instructions with options to pair with additional kits</li>
@@ -79,20 +80,20 @@ permalink: /preplanned/
 </div>
 
 <div class='full'>
-   <img class='rounded' src='/assets/images/plug_anim.gif'>
+   <img class='rounded' src='/assets/images/plug_anim.gif' alt=''>
 </div>
 
 <br>
 
 <div class='left'>
-   <img class='rounded' src='/assets/images/pots.png'>
+   <img class='rounded' src='/assets/images/pots.png' alt=''>
 </div>
 
 <div class='right'>
-   <h2>For All</h2>
-   <h3>Priced for Accessibility</h3>
+   <h2>For all</h2>
+   <h3>Priced for accessibility</h3>
    <p>Our kits are predesigned and ordered in volume, so you get professional results without the custom design cost.</p><br>
-   <h3>Install it Yourself</h3>
+   <h3>Install it yourself</h3>
    <p>Every kit comes with detailed step-by-step instructions for bed preparation, planting, and long-term care. No experience necessary.</p>
 </div>
 
@@ -105,9 +106,9 @@ permalink: /preplanned/
 <br>
 
 <div class='cta-services banner rounded'>
-   <h2>Custom Garden Design & Consulting</h2>
+   <h2>Custom garden design & consulting</h2>
    <p>We also offer custom garden design, on-site consulting, and contractor referrals for installation.</p>
-   <a href='{{ site.url }}/services' class='button'>See Our Services</a>
+   <a href='{{ site.url }}/services' class='button'>See our services</a>
    <p>or <a href='#contact'>get in touch</a> to talk through your project</p>
 </div>
 
