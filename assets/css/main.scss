@@ -2,56 +2,60 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+// The Sass foundation and the six shared components come from the Grow Good theme's site
+// layer (gg/site/, growgood-brand D-051); the rest are this site's own. Order is kept, so the
+// cascade is unchanged.
+
 // @import 'minima';
 
 
 // import vendor files
 @import
-	'z_boilerplate/plumber';
+	'gg/site/z_boilerplate/plumber';
 
 
 // import files from utils folder
 @import
-	'utils/mixins',
-	'utils/functions';
+	'gg/site/utils/mixins',
+	'gg/site/utils/functions';
 
 
 // import files from config folder
 @import
-	'config/type',
-	'config/layout',
-	'config/color',
-	'config/spacing',
-	'config/type-roles';
+	'gg/site/config/type',
+	'gg/site/config/layout',
+	'gg/site/config/color',
+	'gg/site/config/spacing',
+	'gg/site/config/type-roles';
 
 
 // import files from base folder
 @import
-	'z_boilerplate/reset',	
-	'z_boilerplate/typography';
+	'gg/site/z_boilerplate/reset',	
+	'gg/site/z_boilerplate/typography';
 
 
 // import base file
 @import
-	'template/base';
+	'gg/site/template/base';
 
 
 
 // import files from components folder
 @import
 	'template/components/component--banner',
-	'template/components/component--card',
+	'gg/site/template/components/component--card',
 	'template/components/component--dashboard',
 	'template/components/component--gardenolator',
-	'template/components/component--faq',
+	'gg/site/template/components/component--faq',
 	'template/components/component--comments',
-	'template/components/component--subscribe',
+	'gg/site/template/components/component--subscribe',
 	'template/components/component--coming-soon',
 	'template/components/component--entries-today',
 	'template/components/component--journal-top',
 	'template/components/component--community',
 	'template/components/component--diy',
-	'template/components/component--header',
+	'gg/site/template/components/component--header',
 	'template/components/component--hero',
 	'template/components/component--order-block',
 	'template/components/component--post-content',
@@ -59,7 +63,7 @@
 	'template/components/component--values',
 	'template/components/component--quotes',
 	'template/components/component--contact',
-	'template/components/component--cta',
-	'template/components/component--footer',
+	'gg/site/template/components/component--cta',
+	'gg/site/template/components/component--footer',
 	'template/components/component--entry-list';
 

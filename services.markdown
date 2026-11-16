@@ -25,7 +25,7 @@ ___
   Full service grid. Cards are defined in _data/services.yml — edit there.
 {%- endcomment -%}
 {% for service in site.data.services %}
-{% include card.html
+{% include gg/card.html
    title = service.title
    blurb = service.blurb
    dest  = service.dest
@@ -35,8 +35,8 @@ ___
 
 ___
 
-{% include faq.html set="services" %}
+{% include gg/faq.html set="services" %}
 
 ___
 
-{% include cta.html %}
+{% include gg/cta.html %}

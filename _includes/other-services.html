@@ -19,7 +19,7 @@
 
 {%- for service in site.data.services -%}
   {%- unless service.id == include.exclude -%}
-    {%- include card.html
+    {%- include gg/card.html
         title = service.title
         blurb = service.blurb
         dest  = service.dest

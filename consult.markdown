@@ -30,7 +30,7 @@ $100 for a standalone consultation. If you decide to move forward with a custom 
 
 ___
 
-{% include cta.html %}
+{% include gg/cta.html %}
 
 ___
 

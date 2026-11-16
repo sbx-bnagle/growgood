@@ -1,0 +1,16 @@
+# Social links for the theme's footer (gg/footer.html): name, the icon class, and the URL.
+- name: Instagram
+  class: instagram
+  url: https://www.instagram.com/growgood_gardens/
+- name: Facebook
+  class: facebook
+  url: https://www.facebook.com/profile.php?id=61582029068083
+- name: YouTube
+  class: youtube
+  url: https://www.youtube.com/channel/UCz8u8EUhjmwLa2hrjlgTd0g
+- name: TikTok
+  class: tiktok
+  url: https://www.tiktok.com/@growgood_gardens
+- name: Pinterest
+  class: pinterest
+  url: https://www.pinterest.com/growgood_gardens/
