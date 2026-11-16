@@ -3,10 +3,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/vpa7ous.css">
+  {%- comment -%} Alegreya Sans 400, 400 italic, 700 and 800 from the theme (growgood-brand D-045). {%- endcomment -%}
+  {% include gg/head.html css="none" %}
   <link rel="stylesheet" href="{{site.url}}/assets/css/main.css">
   <link rel="shortcut icon" href="{{site.url}}/favicon.ico">
   {%- feed_meta -%}

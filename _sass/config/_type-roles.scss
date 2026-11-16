@@ -1,0 +1,48 @@
+@use "sass:math";
+@use "sass:map";
+
+// Custom properties for each Grow Good type role (growgood-brand D-049): font size, line height,
+// and the margins and paddings that sit each line's baseline on the 4px grid, worked out as the
+// plumber mixin does. Narrow below 768px, Wide above (D-026, D-027). typestyle() reads these.
+
+@function ts-role-metrics($size, $line, $ratio) {
+  $grid: $baseline-height * 1rem;
+  $fs: math.div($size, 4px);                    // font size in baselines
+  $lh: math.div($line, 4px);                    // line height in baselines, a whole number
+  $leading-top: math.ceil($fs);
+  $leading-bottom: 0;
+  $from-bottom: math.div($lh - $fs, 2) + $fs * $ratio;
+  $corrected: math.round($from-bottom);
+  $difference: $corrected - $from-bottom;
+  $leading-top: $leading-top - ($lh - $corrected);
+  $leading-bottom: $leading-bottom - $corrected;
+  $metrics: (font-size: $fs * $grid, line-height: $lh * $grid);
+  @if $difference < 0 {
+    $metrics: map.merge($metrics, (margin-top: $leading-top * $grid, padding-top: - $difference * $grid,
+      padding-bottom: (1 + $difference) * $grid, margin-bottom: ($leading-bottom - 1) * $grid));
+  } @else {
+    $metrics: map.merge($metrics, (margin-top: ($leading-top - 1) * $grid, padding-top: (1 - $difference) * $grid,
+      padding-bottom: $difference * $grid, margin-bottom: $leading-bottom * $grid));
+  }
+  @return $metrics;
+}
+
+@mixin ts-role-properties($set) {
+  @each $role, $spec in $gg-type {
+    $sizes: map.get($spec, $set);
+    $metrics: ts-role-metrics(map.get($sizes, size), map.get($sizes, line), map.get($sans, ratio));
+    @each $property, $value in $metrics {
+      --ts-#{$role}-#{$property}: #{$value};
+    }
+  }
+}
+
+:root {
+  @include ts-role-properties(narrow);
+}
+
+@media screen and (min-width: map.get($breakpoints, m)) {
+  :root {
+    @include ts-role-properties(wide);
+  }
+}

@@ -33,7 +33,3 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # gem 'jekyll-admin', group: :jekyll_plugins
-# Dart Sass 1.92 changed how declarations written after nested rules are ordered. The site's Sass
-# has several, and the live site (GitHub's legacy build) shows the old order. Pinned until the
-# site's type moves to the token type scale, which replaces the typestyle() mixin behind them.
-gem "sass-embedded", "~> 1.91.0"
