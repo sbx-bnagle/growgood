@@ -1,10 +1,7 @@
-{%- comment -%} The site's page scripts, loaded after the theme's footer (gg/footer.html). {%- endcomment -%}
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
-function onSubmit(token) {
- document.getElementById("demo-form").submit();
-}
-</script>
+{%- comment -%} The site's page scripts, loaded after the theme's footer (gg/footer.html).
+  reCAPTCHA v3 loads with the site key so newsletter.js can request a token on submit; the
+  newsletter Worker (workers/newsletter) checks the token. {%- endcomment -%}
+<script src="https://www.google.com/recaptcha/api.js?render={{ site.recaptcha_sitekey }}"></script>
 <script src="{{site.url}}/assets/js/newsletter.js"></script>
 <script src="{{site.url}}/assets/js/float-label.js"></script>
 <script src="{{site.url}}/assets/js/dropdown.js"></script>
