@@ -6,11 +6,11 @@ permalink: /services
 
 {% include coming-soon.html %}
 
-# Custom Garden Design & Consulting Services
+# Custom garden design & consulting services
 
 <p class='deck'>
-  For Chicagoland and the upper midwest.
-  <img class='services__map' src='{{ site.url }}/assets/images/gg_map.png'>
+  For Chicagoland and the Upper Midwest.
+  <img class='services__map' src='{{ site.url }}/assets/images/gg_map.png' alt='Map of the United States with the Upper Midwest highlighted'>
 </p>
 
 <a href='#contact' class='gg_button'>Get in touch to talk through your project.</a>

@@ -21,11 +21,10 @@
 title: Grow Good Gardens
 email: leah@growgoodgardens.com 
 description: >- # this means to ignore newlines until "baseurl:"
-  Sustainable Landscaping Design Chicago
+  Sustainable landscaping design Chicago
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# Absolute links for the canonical URL, social sharing tags and the feed. `jekyll serve` uses localhost.
+url: "https://growgoodgardens.com"
 
 # Build settings
 # The Grow Good theme, pinned to a release (growgood-brand decision D-040). The site's own files
