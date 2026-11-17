@@ -37,9 +37,10 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      # The copy check (growgood-brand D-054, checks/lint-copy.md): the brand repo's linter, at the
-      # theme release this site pins, reads the built pages. Report only until launch (O-20); the
-      # findings go to the run summary.
+      # The brand checks (growgood-brand D-054, checks/): the brand repo, at the theme release this
+      # site pins, runs every check that applies here in one command, tools/checks-site.mjs: copy
+      # on the built pages, styles on the site's own Sass. Report only until launch (O-20); the
+      # findings go to the run summary. A new check arrives with a theme release.
       - name: Find the pinned theme release
         id: theme
         run: |
@@ -55,12 +56,10 @@ jobs:
         with:
           node-version: 22
 
-      - name: Lint the built pages' copy
-        env:
-          LINT_COPY_TITLE: Copy on the built site
+      - name: Run the brand checks
         run: |
           npm ci --prefix .brand --no-audit --no-fund
-          node .brand/tools/lint-copy.mjs --report _site
+          node .brand/tools/checks-site.mjs .
 
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
