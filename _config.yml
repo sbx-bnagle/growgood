@@ -29,7 +29,7 @@ url: "https://growgoodgardens.com"
 # Build settings
 # The Grow Good theme, pinned to a release (growgood-brand decision D-040). The site's own files
 # override the theme's, so pages move to the theme's gg/ includes one at a time.
-remote_theme: sbx-bnagle/growgood-brand@v0.7.0
+remote_theme: sbx-bnagle/growgood-brand@v0.8.0
 
 # Read by the theme's footer and subscribe includes (growgood-brand D-051). The reCAPTCHA site
 # key is public by design.

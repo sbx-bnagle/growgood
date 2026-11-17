@@ -15,7 +15,7 @@ noindex: true
 <ul class='gridlist-icons'>
    <li>
       <img src='/assets/images/spot-map.gif' alt=''>
-      Native and climate-adapted to the upper midwest
+      Native and climate-adapted to the Upper Midwest
    </li>
    <li>
       <img src='/assets/images/spot-gardening.gif' alt=''>

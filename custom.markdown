@@ -13,7 +13,7 @@ permalink: /custom
 ## Our process
 
 ### Step 1: Initial conversation
-We start with a conversation about your space, your goals, and your budget. This can happen over email, phone, or in person — whatever works best for you.
+We start with a conversation about your space, your goals, and your budget. This can happen over email, phone, or in person, whatever works best for you.
 
 #### You receive
 - Shared understanding of scope, goals, and budget

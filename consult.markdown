@@ -7,7 +7,7 @@ permalink: /consult
 # Site assessment & consultation
 
 <p class='deck'>
-	Not sure what will grow in your space? We can help!
+	Not sure what will grow in your space? We can help.
 </p>
 
 A site visit is the first step in any custom garden design project and a useful service on its own. Whether you’re planning a full garden design or just want expert eyes on your space, a visit gives you a clear, honest picture of what will work and why.

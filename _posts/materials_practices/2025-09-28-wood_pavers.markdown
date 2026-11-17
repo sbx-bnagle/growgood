@@ -36,7 +36,7 @@ BUT: commercial black locust pavers aren’t cheap, especially with shipping. SO
 
 ### DIY 
 
-For a DIY path, your best untreated lumber options in the upper midwest are:
+For a DIY path, your best untreated lumber options in the Upper Midwest are:
 
 - **Black locust boards:** the best performing option if you can find them. Check regional sawyers and local lumber suppliers. Robi sells milled black locust boards if local sourcing is not an option.
 - **Northern white cedar:** widely available at mainstream lumber yards, naturally rot-resistant, native to the region, and easy to work with. Expect a lifespan of 10 to 15 years depending on conditions.
