@@ -13,11 +13,11 @@ Perennial plants can be expensive and difficult to find. And the information ava
 
 
 ### Affordable gardens for small spaces
-You shouldn&rsquo;t have to drop a ton of cash or have acres of sunshine to create a beautiful garden. We specialize in small spaces and tight budgets, with a focus on plants that thrive in the upper midwest climate. Shady patios and crowded parkways are just as worthy as spacious yards. You can save money by installing the garden yourself. We&rsquo;re also happy to point you toward a trusted contractor.
+You shouldn&rsquo;t have to drop a ton of cash or have acres of sunshine to create a beautiful garden. We specialize in small spaces and tight budgets, with a focus on plants that thrive in the Upper Midwest climate. Shady patios and crowded parkways are just as worthy as spacious yards. You can save money by installing the garden yourself. We&rsquo;re also happy to point you toward a trusted contractor.
 
 
 ### Sustainable garden design
-We&rsquo;re into gardens that sustain and restore their surroundings. We emphasize native plants that grow naturally in your area. They provide food and habitat for birds, butterflies, and other local critters. And once established, they conserve water rather than consume it. A responsible garden is easier to maintain and fuller of life. A win-win 😎.
+We&rsquo;re into gardens that sustain and restore their surroundings. We emphasize native plants that grow naturally in your area. They provide food and habitat for birds, butterflies, and other local critters. And once established, they conserve water rather than consume it. A responsible garden is easier to maintain and fuller of life. A win-win.
 
 
 ### Low-maintenance native plants
