@@ -42,7 +42,8 @@ jobs:
       # findings go to the run summary.
       - name: Find the pinned theme release
         id: theme
-        run: echo "ref=$(sed -n 's#^remote_theme: sbx-bnagle/growgood-brand@##p' _config.yml)" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "ref=$(sed -n 's#^remote_theme: sbx-bnagle/growgood-brand@##p' _config.yml)" >> "$GITHUB_OUTPUT"
 
       - uses: actions/checkout@v4
         with:
