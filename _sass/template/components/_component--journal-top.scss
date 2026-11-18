@@ -8,37 +8,67 @@
   */
 
 .journalpage__top {
-  @include grid-parent();
+  // One column below m, with the phone margins: 16 columns and their gaps are wider than a
+  // phone, and the page scrolled sideways (A11Y-008).
+  @include grid-parent($grid-mobile);
+  grid-template-columns: minmax(0, 1fr);
+  @include respond-to(m){
+    @include grid-parent($grid-16);
+  }
   @include stack(lg);
 
   h1 {
-    grid-column: 1/13;
+    grid-column: 1/-1;
+    @include respond-to(m){
+      grid-column: 1/13;
+    }
     @include stack(md);
   }
 
+  // Below l the bar stacks: the follow icons, then the filter and the search. In one row they
+  // need about 880px, and from m to l the icons wrapped across the bar's border. It stays
+  // sticky, below the header, which is taller below m.
   .journalpage__controlbar {
-    grid-column: 1/-1;
     @include grid-child($cols: 16);
+    grid-column: 1/-1;
+    grid-template-columns: minmax(0, 1fr);
     background-color: color(neutral, X);
     border-top: 1px solid color(neutral, XXX);
     border-bottom: 1px solid color(neutral, XXX);
     position: sticky;
-    top: 72px;
-    height: 60px;
+    top: 96px;
+    // The filter and the search hang 12px below their boxes (the baseline grid), so the padding
+    // clears them by 8px, as the bar's top clears them.
+    padding-bottom: bl(5);
     align-self: start;
     @include stack(sm);
     z-index: 20;
+    @include respond-to(m){
+      top: 72px;
+    }
+    @include respond-to(l){
+      grid-template-columns: repeat(16, 1fr);
+      height: 60px;
+      padding-bottom: 0;
+    }
   }
 
   .journalpage__subscribe {
-    grid-column: 1/8;
+    grid-column: 1/-1;
+    @include respond-to(l){
+      grid-column: 1/8;
+    }
     list-style: none;
     margin-top: 16px;
   }
 
+  // Narrower gaps below m keep the six icons on one row at 320px.
   .journalpage__subscribe li {
     display: inline-block;
-    margin-right: bl(2);
+    margin-right: bl(1);
+    @include respond-to(m){
+      margin-right: bl(2);
+    }
     height: 20px;
     width: 24px;
     border-radius: 24px;
@@ -98,9 +128,18 @@
 
 
 
+  // Below m the filter takes the row the search leaves. From m to l the filter and the search
+  // keep their desktop widths, under the icons.
   .journalpage__helpers {
-    grid-column: 8/-1;
-    justify-self: end;
+    grid-column: 1/-1;
+    display: flex;
+    margin-top: bl(1);
+    @include respond-to(l){
+      grid-column: 8/-1;
+      justify-self: end;
+      display: block;
+      margin-top: 0;
+    }
   }
 
 
@@ -108,9 +147,13 @@
     color: color(green, XXX);
     margin-top: 8px;
     position: relative;
-    width: 240px;
+    flex: 1;
     margin-right: bl(4);
     display: inline-block;
+    @include respond-to(m){
+      flex: none;
+      width: 240px;
+    }
   }
 
   .cat_select_bttn {
@@ -121,6 +164,7 @@
     border: 2px solid color(green, XXX);
     background-color: color(neutral, X);
     width: 100%;
+    white-space: nowrap;
   } 
 
   .cat_select_unavailable {
@@ -164,6 +208,11 @@
     position: relative;
   }
 
+  // Below m an open search shares the row with the filter.
+  .journalpage__search:focus-within {
+    flex: 1;
+  }
+
   #search-input {
     @include typestyle($sans-sm-bld);
     width: 43px;
@@ -191,7 +240,10 @@
   }
 
   #search-input:focus {
-    width: 240px;
+    width: 100%;
+    @include respond-to(m){
+      width: 240px;
+    }
     padding-left: bl(10);
     outline: none;
   }

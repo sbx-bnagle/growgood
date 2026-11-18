@@ -20,13 +20,20 @@
   width: 100vw;
   background: color(green, X);
   @include grid-parent($grid-mobile);
+  // Below m one column across the full width, as the band is from m up: two columns and their
+  // gaps were wider than a phone, and the page scrolled sideways (A11Y-008).
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
     @include respond-to(m){
       @include grid-parent($grid-full);
     }
 
   .order-image,
   .order-info {
-    grid-column: span 8;
+    grid-column: 1 / -1;
+    @include respond-to(m){
+      grid-column: span 8;
+    }
   }
 
 
@@ -191,9 +198,12 @@
     color: var(--color-text-tertiary); 
   }
 
+  // Below m the image and the order sit inside the page margins.
   .order-image {
-    padding: bl(4) 0 bl(6) bl(4);
-
+    padding: bl(4) bl(5) 0;
+    @include respond-to(m){
+      padding: bl(4) 0 bl(6) bl(4);
+    }
   }
 
   .order-image .carousel-wrap {
@@ -203,7 +213,10 @@
   }
 
   .order-info {
-    padding: bl(4) bl(12) bl(12) bl(4);
+    padding: bl(4) bl(5) bl(12);
+    @include respond-to(m){
+      padding: bl(4) bl(12) bl(12) bl(4);
+    }
   }
 
   .order-info h2 {
