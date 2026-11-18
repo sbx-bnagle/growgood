@@ -25,8 +25,9 @@
     @include stack(md);
   }
 
-  // Below m the bar stacks: the follow icons, then the filter and the search. It stays sticky,
-  // below the taller phone header.
+  // Below l the bar stacks: the follow icons, then the filter and the search. In one row they
+  // need about 880px, and from m to l the icons wrapped across the bar's border. It stays
+  // sticky, below the header, which is taller below m.
   .journalpage__controlbar {
     @include grid-child($cols: 16);
     grid-column: 1/-1;
@@ -43,8 +44,10 @@
     @include stack(sm);
     z-index: 20;
     @include respond-to(m){
-      grid-template-columns: repeat(16, 1fr);
       top: 72px;
+    }
+    @include respond-to(l){
+      grid-template-columns: repeat(16, 1fr);
       height: 60px;
       padding-bottom: 0;
     }
@@ -52,7 +55,7 @@
 
   .journalpage__subscribe {
     grid-column: 1/-1;
-    @include respond-to(m){
+    @include respond-to(l){
       grid-column: 1/8;
     }
     list-style: none;
@@ -125,12 +128,13 @@
 
 
 
-  // Below m the filter takes the row the search leaves.
+  // Below m the filter takes the row the search leaves. From m to l the filter and the search
+  // keep their desktop widths, under the icons.
   .journalpage__helpers {
     grid-column: 1/-1;
     display: flex;
     margin-top: bl(1);
-    @include respond-to(m){
+    @include respond-to(l){
       grid-column: 8/-1;
       justify-self: end;
       display: block;
@@ -147,6 +151,7 @@
     margin-right: bl(4);
     display: inline-block;
     @include respond-to(m){
+      flex: none;
       width: 240px;
     }
   }

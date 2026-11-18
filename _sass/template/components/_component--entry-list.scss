@@ -9,10 +9,13 @@
   // @include grid-parent();
   // @include stack(lg);
   grid-column: 1/-1;
-  // Filtering scrolls the list to just below the sticky control bar, which sits lower on a
-  // phone, below the taller header, and is two rows deep.
+  // Filtering scrolls the list to just below the sticky control bar. Below l the bar is two rows
+  // deep, and below m it sits lower, under the taller header.
   scroll-margin-top: 200px;
   @include respond-to(m){
+    scroll-margin-top: 180px;
+  }
+  @include respond-to(l){
     scroll-margin-top: 120px;
   }
 
