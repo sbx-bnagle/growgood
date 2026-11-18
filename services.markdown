@@ -13,7 +13,7 @@ permalink: /services
   <img class='services__map' src='{{ site.url }}/assets/images/gg_map.png' alt='Map of the United States with the Upper Midwest highlighted'>
 </p>
 
-<a href='#contact' class='gg_button'>Get in touch to talk through your project.</a>
+<a href='#contact' class='gg_button'>Get in touch</a>
 
 ___
 

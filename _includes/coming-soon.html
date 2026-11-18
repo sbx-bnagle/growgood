@@ -1,5 +1,5 @@
 <div class='coming-soon'>
-  <div id='js_subscribe__text' class='subscribe__text'>
+  <div id='js_coming-soon__text' class='subscribe__text'>
 
     <h2>Coming soon</h2>
     <p>Subscribe below to stay in the loop</p>
@@ -7,15 +7,16 @@
 
     <form
       class = 'subscribe__form'
-      id = 'js_subscribe__form'
+      id = 'js_coming-soon__form'
     >
       <input 
-        id='js_subscribe__email' 
+        id='js_coming-soon__email' 
         type="email" 
         name="email" 
+        autocomplete='email' 
         class='subscribe__email js_float-label' 
       >
-      <label class='floater js_unfloat'>Your email address</label>    
+      <label for='js_coming-soon__email' class='floater js_unfloat'>Your email address</label>    
       <button 
         type='submit'
         data-sitekey='{{ site.recaptcha_sitekey }}'

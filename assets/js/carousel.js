@@ -13,8 +13,11 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 function updateArrows() {
-  prevBtn.classList.toggle('disabled', current === 0);
-  nextBtn.classList.toggle('disabled', current === images.length - 1);
+  // aria-disabled, not disabled, so a keyboard user on the button keeps their place.
+  [[prevBtn, current === 0], [nextBtn, current === images.length - 1]].forEach(([btn, off]) => {
+    btn.classList.toggle('disabled', off);
+    btn.setAttribute('aria-disabled', String(off));
+  });
 }
 
 function makeSlide(img, extraClass) {
@@ -40,7 +43,7 @@ function initSlides() {
 }
 
 function setActive(i) {
-  if (i === current || animating) return;
+  if (i === current || animating || i < 0 || i >= images.length) return;
   animating = true;
 
   const direction = i > current ? 'right' : 'left';
@@ -66,6 +69,7 @@ function setActive(i) {
   updateArrows();
   document.querySelectorAll('.thumb').forEach((t, idx) => {
     t.classList.toggle('active', idx === i);
+    if (idx === i) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current');
   });
 }
 
@@ -73,8 +77,11 @@ prevBtn.addEventListener('click', () => setActive(current - 1));
 nextBtn.addEventListener('click', () => setActive(current + 1));
 
 images.forEach((img, i) => {
-  const thumb = document.createElement('div');
+  // A button, so the keyboard reaches each image (A11Y-007); its image's alt text names it.
+  const thumb = document.createElement('button');
+  thumb.type = 'button';
   thumb.className = 'thumb' + (i === 0 ? ' active' : '');
+  if (i === 0) thumb.setAttribute('aria-current', 'true');
   if (img.src) {
     const t = document.createElement('img');
     t.src = img.src; t.alt = img.label;

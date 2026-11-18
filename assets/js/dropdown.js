@@ -30,6 +30,7 @@ const paneOpen = function(){
   pane.classList.add('js-dd__pane-visible');
   toggle.classList.remove('js-dd__toggle-closed');
   toggle.classList.add('js-dd__toggle-open');
+  toggle.setAttribute('aria-expanded', 'true');
 }
 
 const paneClose = function(){
@@ -37,6 +38,7 @@ const paneClose = function(){
   pane.classList.add('js-dd__pane-hidden');
   toggle.classList.remove('js-dd__toggle-open');
   toggle.classList.add('js-dd__toggle-closed');
+  toggle.setAttribute('aria-expanded', 'false');
 }
 
 

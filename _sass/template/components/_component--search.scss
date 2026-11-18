@@ -1,0 +1,16 @@
+/**
+  * Component: Search
+  * The search page's form: the field matches the brand button's 42px height (D-033),
+  * so both are large enough to tap (A11Y-006).
+  */
+
+.header-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: bl(2);
+}
+
+#search-box {
+  min-height: 42px;
+}
